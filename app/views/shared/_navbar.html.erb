@@ -9,16 +9,16 @@
       <% if user_signed_in? %>
         <li class="nav-item">
           <div class="nav-item">
-            <%= link_to "Logout", destroy_user_session_path, class: "btn btn-primary" %>
+            <%= link_to "Logout", destroy_user_session_path, class: "nav-link-small" %>
           </div>
         </li>
       <% else %>
         <li>
-          <%= link_to "Sign Up", new_user_registration_path, class: "btn btn-primary" %>
+          <%= link_to "Sign Up", new_user_registration_path, class: "nav-link-small" %>
         </li>
         <li>
           <div class="nav-item">
-            <%= link_to "Login", new_user_session_path, class: "btn btn-primary" %>
+            <%= link_to "Login", new_user_session_path, class: "nav-link-small" %>
           </div>
         </li>
       <% end %>

@@ -7,9 +7,13 @@
   <h2>Search by ingredient</h2>
   <div class="ingredient-dropdown">
     <i class="fas fa-plus-circle dropdown-toggle" id="ingredientDropdown" data-toggle="dropdown"></i>
-      <% @ingredients.each do |ingredient| %>
-          <a class="dropdown-item" href="#"><%= ingredient.name %></a>
-      <% end %>
+      <a class="dropdown-item">
+        <% @ingredients.each do |ingredient| %>
+            <% if ingredient.season ==  "june"%>
+              <%= ingredient.name %>
+            <% end %>
+        <% end %>
+      </a>
   </div>
 </div>
 
@@ -26,6 +30,7 @@
       <% end %>
     </div>
   </div>
+
   <div class="container-shopping-list">
     <h2>Shopping List</h2>
       <ul class="list-inline flex-row">
