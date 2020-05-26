@@ -1,8 +1,3 @@
-// Import page-specific CSS files here.
-@import "home";
-@import "_recipes_show";
-
-
 .index-headings {
   display: flex;
   flex-direction: column;
@@ -29,13 +24,8 @@
 }
 
 .list-inline {
-  list-style: none;
-  padding-left: 0px;
-}
-
-.list-inline > li {
+  list-style-type: none;
   display: inline-block;
-  padding: 0px 20px;
 }
 
 .card {
@@ -56,20 +46,30 @@
   }
 }
 
-.card-description:hover {
-  color: black;
-  text-decoration: none;
+.dropdown-menu-ingredients {
+  a {
+    font-family: $body-font;
+    font-size: 14px;
+    text-align: right;
+    color: black;
+    &:hover {
+      color: $highlight;
+      background-color: transparent;
+      text-decoration: none;
+    }
+  }
 }
 
 a {
-  text-decoration: none;
-  color: black;
+  .dropdown-menu-ingredients {
+    font-family: $body-font;
+    font-size: 18px;
+    text-align: right;
+    color:black;
+    &:hover {
+      color: $highlight;
+      background-color: transparent;
+      text-decoration: none;
+    }
+  }
 }
-
-a:hover {
-  text-decoration: none;
-  color: black;
-}
-
-@import "recipes_index";
-

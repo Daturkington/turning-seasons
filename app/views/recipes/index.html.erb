@@ -7,10 +7,12 @@
   <a class="nav-link" data-toggle="dropdown" href="#">Search by ingredient <i class="fas fa-plus-circle" id="ingredientDropdown"></i></a>
   <div class="dropdown-menu">
     <% @ingredients.each do |ingredient| %>
-      <% if ingredient.season ==  Date.today.strftime("%B").downcase%>
-        <a href="#"><%= ingredient.name %>, </a>
+      <%# if ingredient.season ==  Date.today.strftime("%B").downcase%>
+      <% if ingredient.season ==  'june'%>
+        <%= link_to ingredient.name  %>
       <% end %>
     <% end %>
+
   </div>
 </div>
 
