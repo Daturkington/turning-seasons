@@ -3,6 +3,13 @@ class RecipesController < ApplicationController
 
   def index
     @recipes = Recipe.all
+    @ingredients = Ingredient.all
+    @recipe = Recipe.new
+    if ShoppingList.find_by(completed: false)
+      @shopping_list = ShoppingList.find_by(completed: false)
+    else
+      @shopping_list = ShoppingList.new
+    end
   end
 
   def show
