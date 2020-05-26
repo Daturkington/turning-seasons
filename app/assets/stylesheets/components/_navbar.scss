@@ -1,12 +1,87 @@
-.navbar-lewagon {
+.navbar-ts {
   justify-content: space-between;
-  background: white;
+  height: 110px;
+  align-content: center;
+  padding: 0 24px;
 }
 
-.navbar-lewagon .navbar-collapse {
+.navbar-ts .navbar-collapse {
   flex-grow: 0;
 }
 
-.navbar-lewagon .navbar-brand img {
+.navbar-ts .navbar-brand img {
   width: 40px;
 }
+
+.nav-link {
+  font-family: $body-font;
+  font-size: 18px;
+  text-decoration: none;
+  color: $main-body;
+  margin-right:24px;
+  padding: 8px;
+}
+
+.dropdown-toggle {
+  font-family: $body-font;
+  font-size: 18px;
+  text-decoration: none;
+  color: $main-body;
+  a {
+    font-size: 18px;
+    text-decoration: none;
+  }
+}
+
+.navbar-nav {
+  display: flex;
+  align-items: center;
+}
+
+.dropdown {
+  margin-bottom: 0;
+  font-family: $body-font;
+  font-size: 18px;
+  text-decoration: none;
+  color: $main-body;
+  a {
+    font-size: 18px;
+    text-decoration: none;
+    color: $main-body;
+
+  }
+}
+
+.login {
+  font-size: 12px;
+  margin-right: 16px;
+}
+
+.dropdown-menu {
+  background-color: transparent;
+  border: 0;
+  a {
+    font-family: $body-font;
+    font-size: 14px;
+    text-align: right;
+    &:hover {
+      color: $highlight;
+      background-color: transparent;
+    }
+  }
+}
+
+.dropdown-item {
+    margin-bottom: 12px;
+  }
+
+a {
+  transition: 0.3s;
+  &:hover {
+    color: $highlight;
+    background-color: transparent;
+  }
+}
+
+
+
