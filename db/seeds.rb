@@ -49,13 +49,13 @@ STEP 5
 
 Once the cheesecake has set, take it out of the fridge, carefully remove from the tin and transfer to a serving plate. Pour over the strawberry sauce, top with the remaining halved strawberries and serve.')
 
-Quantity.new(measurement: 150, ingredient_id: 1, recipe_id: 1)
-Quantity.new(measurement: 300, ingredient_id: 2, recipe_id: 1)
-Quantity.new(measurement: 650, ingredient_id: 3, recipe_id: 1)
-Quantity.new(measurement: 150, ingredient_id: 4, recipe_id: 1)
-Quantity.new(measurement: 300, ingredient_id: 5, recipe_id: 1)
-Quantity.new(measurement: 1, ingredient_id: 6, recipe_id: 1)
-Quantity.new(measurement: 200, ingredient_id: 7, recipe_id: 1)
+Quantity.create(measurement: 150, ingredient_id: 1, recipe_id: 1)
+Quantity.create(measurement: 300, ingredient_id: 2, recipe_id: 1)
+Quantity.create(measurement: 650, ingredient_id: 3, recipe_id: 1)
+Quantity.create(measurement: 150, ingredient_id: 4, recipe_id: 1)
+Quantity.create(measurement: 300, ingredient_id: 5, recipe_id: 1)
+Quantity.create(measurement: 1, ingredient_id: 6, recipe_id: 1)
+Quantity.create(measurement: 200, ingredient_id: 7, recipe_id: 1)
 
 Recipe.create(name: "Strawberry Milkshake", author: "Julie Clark", description: "Learn how to make the creamiest homemade strawberry milkshakes with fresh strawberries. Top with homemade whipped cream for a delicious summer dessert!
  ", instructions: "1- Add the cream, vanilla and sugar to a medium bowl.
@@ -63,13 +63,13 @@ Recipe.create(name: "Strawberry Milkshake", author: "Julie Clark", description: 
 4- Pour into 4 large glasses and top with whipped cream and extra strawberries if desired.
 5- Serve immediately.")
 
-Quantity.new(measurement: 1, ingredient_id: 8, recipe_id: 2)
-Quantity.new(measurement: 150, ingredient_id: 9, recipe_id: 2)
-Quantity.new(measurement: 2, ingredient_id: 10, recipe_id: 2)
-Quantity.new(measurement: 20, ingredient_id: 12, recipe_id: 2)
-Quantity.new(measurement: 300, ingredient_id: 12, recipe_id: 2)
-Quantity.new(measurement: 1, ingredient_id: 7, recipe_id: 2)
-Quantity.new(measurement: 200, ingredient_id: 13, recipe_id: 2)
+Quantity.create(measurement: 1, ingredient_id: 8, recipe_id: 2)
+Quantity.create(measurement: 150, ingredient_id: 9, recipe_id: 2)
+Quantity.create(measurement: 2, ingredient_id: 10, recipe_id: 2)
+Quantity.create(measurement: 20, ingredient_id: 12, recipe_id: 2)
+Quantity.create(measurement: 300, ingredient_id: 12, recipe_id: 2)
+Quantity.create(measurement: 1, ingredient_id: 7, recipe_id: 2)
+Quantity.create(measurement: 200, ingredient_id: 13, recipe_id: 2)
 
 
 Recipe.create(name:"Pumpkin soup", author:"Barney Desmazery", description:"Whip up this easy pumpkin soup as a starter for a dinner party or a light supper when you need a bit of comfort – it has a lovely silky texture", instructions:"1- Heat 2 tbsp olive oil in a large saucepan, then gently cook 2 finely chopped onions for 5 mins, until soft but not coloured.
@@ -103,9 +103,9 @@ Recipe.create(name:"Rhubarb & custard French toast", author:"Esther Clark", desc
 3- Fry in the butter over a medium heat for 4 mins, then flip and cook for 4 mins more, until golden on both sides. Top with the rhubarb and warm custard.")
 
 
-Quantity.new(measurement: 200, ingredient_id: 19, recipe_id: 5)
-Quantity.new(measurement: 1, ingredient_id: 21, recipe_id: 3)
-Quantity.new(measurement: 150, ingredient_id: 20, recipe_id: 4)
+Quantity.create(measurement: 200, ingredient_id: 19, recipe_id: 5)
+Quantity.create(measurement: 1, ingredient_id: 21, recipe_id: 3)
+Quantity.create(measurement: 150, ingredient_id: 20, recipe_id: 4)
 
 
 
