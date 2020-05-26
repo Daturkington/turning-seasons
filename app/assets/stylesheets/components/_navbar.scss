@@ -21,6 +21,18 @@
   padding: 8px;
 }
 
+.nav-link-small {
+  font-family: $body-font;
+  font-size: 14px;
+  text-decoration: none;
+  color: $main-body;
+  margin-right:24px;
+  padding: 8px;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
 .dropdown-toggle {
   font-family: $body-font;
   font-size: 18px;
@@ -66,6 +78,7 @@
     &:hover {
       color: $highlight;
       background-color: transparent;
+      text-decoration: none;
     }
   }
 }
