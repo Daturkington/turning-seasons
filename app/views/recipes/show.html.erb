@@ -1,1 +1,41 @@
-<h1>Recipe Info</h1>
+<div class="container d-flex justify-content-around flex-column">
+  <div class="headings text-center">
+    <h1 class="recipe-name"><%= @recipe.name %></h1>
+    <h2 class="recipe-author"><%= @recipe.author %></h2>
+  </div>
+
+  <div class="container-recipe d-flex">
+
+    <div class="recipe-content">
+
+      <div class="recipe-description">
+        <p><%= @recipe.description %></p>
+      </div>
+
+      <div class="recipe-image">
+        <%= image_tag('cake.png') %>
+      </div>
+
+      <div class="recipe-instructions">
+        <%= @recipe.instructions %>
+      </div>
+    </div>
+
+    <div class="shopping-list-ingredients">
+      <div class="shopping-list">
+        <h3>Shopping List</h3>
+      </div>
+      <div class="ingredients">
+        <h3>Ingredients</h3>
+        <ul>
+          <% @recipe.quantities.each do |quantity| %>
+            <li><%= quantity.measurement %> <%= quantity.ingredient.name %></li>
+          <% end %>
+        </ul>
+        <%= link_to 'Add' %>
+      </div>
+    </div>
+
+  </div>
+
+</div>
