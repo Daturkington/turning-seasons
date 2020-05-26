@@ -4,16 +4,13 @@
   <h2>Recipes</h2>
 </div>
 <div class="ingredient-options flex-inline">
-  <h2>Search by ingredient</h2>
-  <div class="ingredient-dropdown">
-    <i class="fas fa-plus-circle dropdown-toggle" id="ingredientDropdown" data-toggle="dropdown"></i>
-      <a class="dropdown-item">
-        <% @ingredients.each do |ingredient| %>
-            <% if ingredient.season ==  "june"%>
-              <%= ingredient.name %>
-            <% end %>
-        <% end %>
-      </a>
+  <a class="nav-link" data-toggle="dropdown" href="#">Search by ingredient <i class="fas fa-plus-circle" id="ingredientDropdown"></i></a>
+  <div class="dropdown-menu">
+    <% @ingredients.each do |ingredient| %>
+      <% if ingredient.season ==  Date.today.strftime("%B").downcase%>
+        <a href="#"><%= ingredient.name %>, </a>
+      <% end %>
+    <% end %>
   </div>
 </div>
 
