@@ -18,12 +18,14 @@
   <div class="container-recipes">
     <div class="row">
       <% @recipes.each do |recipe| %>
+        <a href='#'>
           <div class="card flex-column">
             <%# <div class="card-image" style="background-image: ..."></div> %>
             <div class="card-description">
               <p><%= recipe.name %> <%= recipe.description %> <%= recipe.author %></p>
             </div>
           </div>
+        </a>
       <% end %>
     </div>
   </div>
