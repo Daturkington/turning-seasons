@@ -1,0 +1,29 @@
+.card-product {
+  overflow: hidden;
+  height: 120px;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+}
+  
+.card-product img {
+  height: 100%;
+  width: 120px;
+  object-fit: cover;
+}
+  
+.card-product-info {
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 8px;
+  margin-bottom: 0px;
+  font-family: $body-font;
+}
+
+.c-d-i-paragraph {
+  font-size: 12px;
+  opacity: 0.7;
+  font-weight: normal;
+  font-family: $body-font;
+}  
