@@ -29,12 +29,15 @@
               </div>
             <% end %>
             <div class="card-description">
-              <p><%= recipe.name %> <%= recipe.description %> <%= recipe.author %></p>
+              <h2><%= recipe.name %></h2>
+              <h3>~ <%= recipe.author %> ~</h3>
             </div>
-            <button type="button" class="" data-toggle="modal" data-target="#exampleModal">
+            <div>
+            <button type="button" class="circle" data-toggle="modal" data-target="#exampleModal">
               <i class="plus fas fa-plus"></i>
             </button>
             <%= render 'shopping_list_items/shopping_list_item_form', recipe: recipe %>
+            </div>
           </div>
         <% end %>
       </div>
@@ -53,6 +56,3 @@
     </div>
   </div>
 </div>
-
-<!-- Modal -->
-
