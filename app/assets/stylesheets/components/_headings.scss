@@ -1,0 +1,21 @@
+.headings {
+  width: 100%;
+  text-align: center;
+  margin: auto;
+  justify-content: center;
+  width: 65%;
+  h2 {
+    font-family: $serif-font;
+    font-size: 36px;
+    letter-spacing: 6px;
+    margin-top: -14px;
+  }
+
+  h1 {
+    font-family: $headers-font;
+    font-size: 64px;
+    letter-spacing: 6px;
+    font-weight: 600;
+    line-height: 1;
+  }
+}
