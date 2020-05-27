@@ -1,1 +1,13 @@
+<h1>Welcome <%= current_user.username %>!</h1>
+<div class="profile-shopping-list">
+  <h2>Your shopping list</h2>
+  <ul>
+    <% current_user.shopping_list.shopping_list_items.each do |items| %>
+      <% items.ingredients.each do |ing| %>
+        <li><%= ing.name %></li>
+      <% end %>
+    <% end %>
+  </ul>
+</div>
+
 
