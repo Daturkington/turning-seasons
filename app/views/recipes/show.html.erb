@@ -3,6 +3,26 @@
     <h1 class="recipe-name"><%= @recipe.name %></h1>
     <h2 class="recipe-author"><%= @recipe.author %></h2>
   </div>
+  <div class="buttons d-flex justify-content-center">
+    <div class="button-icon">
+      <%= link_to recipes_path do %>
+        <i class="fas fa-arrow-circle-left"></i>
+        <p>Back</p>
+      <% end %>
+    </div>
+    <div class="button-icon">
+      <%= link_to recipes_path do %>
+        <i class="fa fa-plus-circle"></i>
+        <p>Add to shopping list</p>
+      <% end %>
+    </div>
+    <div class="button-icon">
+      <%= link_to recipes_path do %>
+        <i class="fab fa-gratipay"></i>
+        <p>Save to favourites</p>
+      <% end %>
+    </div>
+  </div>
 
   <div class="recipe-description">
     <p><%= @recipe.description %></p>
@@ -22,9 +42,7 @@
     </div>
 
     <div class="shopping-list-ingredients">
-      <div class="shopping-list">
-        <h3>Shopping List</h3>
-      </div>
+      <%= render 'shared/shopping_list' %>
       <div class="ingredients">
         <h3>Ingredients</h3>
         <ul>
