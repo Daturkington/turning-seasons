@@ -3,9 +3,21 @@ class RecipesController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
-    @recipes = Recipe.all
     @ingredients = Ingredient.all
-    @recipe = Recipe.new
+    if params[:ingredient]
+      ingredient = Ingredient.find(params[:ingredient])
+      @ingredien
+      @recipes = []
+      Recipe.all.each do |recipe|
+        if recipe.ingredients.include?(ingredient)
+          @recipes << recipe
+        end
+      end
+    else
+      @recipes = Recipe.all
+      @recipe = Recipe.new
+    end
+
     if ShoppingList.find_by(completed: false)
       @shopping_list = ShoppingList.find_by(completed: false)
     else

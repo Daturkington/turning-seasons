@@ -5,11 +5,16 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Quantity.destroy_all
+Ingredient.destroy_all
+Recipe.destroy_all
 
-Ingredient.create(name: 'butter')
-Ingredient.create(name: 'digestive biscuits')
-Ingredient.create(name: 'soft cheese')
-Ingredient.create(name: 'icing sugar')
+
+ingredient1 = Ingredient.create(name: 'butter')
+p ingredient1.errors
+ingredient2 = Ingredient.create(name: 'digestive biscuits')
+ingredient3 = Ingredient.create(name: 'soft cheese')
+ingredient4 = Ingredient.create(name: 'icing sugar')
 Ingredient.create(name: 'double cream')
 Ingredient.create(name: 'vanilla pod')
 Ingredient.create(name: "heavy cream")
@@ -19,7 +24,7 @@ Ingredient.create(name: "sugar")
 Ingredient.create(name: "flour")
 Ingredient.create(name: "whipping cream")
 Ingredient.create(name: "eggs")
-Ingredient.create(name: 'stawberries', season: "june", description: 'The garden strawberry (or simply strawberry; Fragaria × ananassa) is a widely grown hybrid species of the genus Fragaria, collectively known as the strawberries, which are cultivated worldwide for their fruit. ')
+ingredient14 = Ingredient.create(name: 'strawberries', season: "june", description: 'The garden strawberry (or simply strawberry; Fragaria × ananassa) is a widely grown hybrid species of the genus Fragaria, collectively known as the strawberries, which are cultivated worldwide for their fruit. ')
 Ingredient.create(name: "tomato", season: "june", description: "Tomatoes were not grown in England until the 1590s. One of the earliest cultivators was John Gerard, a barber-surgeon.[29]:17 Gerard's Herbal, published in 1597, and largely plagiarized from continental sources, is also one of the earliest discussions of the tomato in England. Gerard knew the tomato was eaten in Spain and Italy.[29]:17 Nonetheless, he believed it was poisonous[29]:17 (in fact, the plant and raw fruit do have low levels of tomatine, but are not generally dangerous; see below). Gerard's views were influential, and the tomato was considered unfit for eating (though not necessarily poisonous) for many years in Britain and its North American colonies.")
 Ingredient.create(name: "asparagus", season: "june", description: "Asparagus, or garden asparagus, folk name sparrow grass, scientific name Asparagus officinalis, is a perennial flowering plant species in the genus Asparagus. Its young shoots are used as a spring vegetable.")
 Ingredient.create(name: "leek", season:"december", description:"The leek is a vegetable, a cultivar of Allium ampeloprasum, the broadleaf wild leek. The edible part of the plant is a bundle of leaf sheaths that is sometimes erroneously called a stem or stalk. The genus Allium also contains the onion, garlic, shallot, scallion, chive, and Chinese onion.")
@@ -29,7 +34,7 @@ Ingredient.create(name: "red onion", season:"march", description:"Red onions are
 Ingredient.create(name: "pumpkin", season:"october", description:"A pumpkin is a cultivar of winter squash that is round with smooth, slightly ribbed skin, and most often deep yellow to orange in coloration. The thick shell contains the seeds and pulp.")
 
 
-Recipe.create(name: "Strawberry cheese cake", author: 'Amanda James', description: 'Combine two classic summer desserts in this no-bake cheesecake topped with a sweet strawberry sauce, ideal for al fresco entertaining', instructions: 'STEP 1
+recipe1 = Recipe.create(name: "Strawberry cheese cake", author: 'Amanda James', description: 'Combine two classic summer desserts in this no-bake cheesecake topped with a sweet strawberry sauce, ideal for al fresco entertaining', instructions: 'STEP 1
 
 Lightly butter the base and sides of a deep 20cm springform cake tin and line the bottom with baking paper. Put the digestive biscuits into a food processor and whizz to crumbs, then add the melted butter and pulse again briefly. Tip into the tin, spread out and press down firmly to make an even base. Put into the fridge to set.
 
@@ -49,27 +54,29 @@ STEP 5
 
 Once the cheesecake has set, take it out of the fridge, carefully remove from the tin and transfer to a serving plate. Pour over the strawberry sauce, top with the remaining halved strawberries and serve.')
 
-Quantity.create(measurement: 150, ingredient_id: 1, recipe_id: 1)
-Quantity.create(measurement: 300, ingredient_id: 2, recipe_id: 1)
-Quantity.create(measurement: 650, ingredient_id: 3, recipe_id: 1)
-Quantity.create(measurement: 150, ingredient_id: 4, recipe_id: 1)
-Quantity.create(measurement: 300, ingredient_id: 5, recipe_id: 1)
+Quantity.create(measurement: 150, ingredient_id: ingredient1, recipe_id: 1)
+Quantity.create(measurement: 300, ingredient_id: ingredient2, recipe_id: 1)
+Quantity.create(measurement: 650, ingredient_id: ingredient3, recipe_id: 1)
+Quantity.create(measurement: 150, ingredient_id: ingredient4, recipe_id: 1)
+Quantity.create(measurement: 300, ingredient: ingredient14, recipe: recipe1)
 Quantity.create(measurement: 1, ingredient_id: 6, recipe_id: 1)
 Quantity.create(measurement: 200, ingredient_id: 7, recipe_id: 1)
 
-Recipe.create(name: "Strawberry Milkshake", author: "Julie Clark", description: "Learn how to make the creamiest homemade strawberry milkshakes with fresh strawberries. Top with homemade whipped cream for a delicious summer dessert!
+recipe2 = Recipe.create(name: "Strawberry Milkshake", author: "Julie Clark", description: "Learn how to make the creamiest homemade strawberry milkshakes with fresh strawberries. Top with homemade whipped cream for a delicious summer dessert!
  ", instructions: "1- Add the cream, vanilla and sugar to a medium bowl.
 2- Whip with a stand or hand mixer until stiff peaks form. Keep refrigerated until ready to use. 3- Blend the ice cream, heavy cream, milk, vanilla and strawberries in a large blender until smooth and creamy.
 4- Pour into 4 large glasses and top with whipped cream and extra strawberries if desired.
 5- Serve immediately.")
+p recipe2.errors
 
-Quantity.create(measurement: 1, ingredient_id: 8, recipe_id: 2)
-Quantity.create(measurement: 150, ingredient_id: 9, recipe_id: 2)
-Quantity.create(measurement: 2, ingredient_id: 10, recipe_id: 2)
-Quantity.create(measurement: 20, ingredient_id: 12, recipe_id: 2)
-Quantity.create(measurement: 300, ingredient_id: 12, recipe_id: 2)
-Quantity.create(measurement: 1, ingredient_id: 7, recipe_id: 2)
-Quantity.create(measurement: 200, ingredient_id: 13, recipe_id: 2)
+quantity1 = Quantity.create(measurement: 1, ingredient: ingredient1, recipe: recipe2)
+p quantity1.errors
+Quantity.create(measurement: 150, ingredient_id: ingredient2, recipe_id: recipe2)
+Quantity.create(measurement: 2, ingredient_id: ingredient3, recipe_id: recipe2)
+Quantity.create(measurement: 20, ingredient_id: ingredient4, recipe_id: recipe2)
+Quantity.create(measurement: 300, ingredient_id: 12, recipe_id: recipe2)
+Quantity.create(measurement: 1, ingredient_id: 7, recipe_id: recipe2)
+Quantity.create(measurement: 200, ingredient_id: 13, recipe_id: recipe2)
 
 
 Recipe.create(name:"Pumpkin soup", author:"Barney Desmazery", description:"Whip up this easy pumpkin soup as a starter for a dinner party or a light supper when you need a bit of comfort – it has a lovely silky texture", instructions:"1- Heat 2 tbsp olive oil in a large saucepan, then gently cook 2 finely chopped onions for 5 mins, until soft but not coloured.

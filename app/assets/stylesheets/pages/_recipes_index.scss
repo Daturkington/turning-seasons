@@ -51,31 +51,28 @@
   }
 }
 
-.dropdown-menu-ingredients {
+#ingredient-dropdown {
+    margin-top: -16px;
+    background-color: transparent;
+    border: 0;
   a {
-    font-family: $body-font;
-    font-size: 14px;
-    text-align: right;
-    color: black;
+    font-family: $serif-font;
+    font-size: 30px;
+    transition: 0.3s;
     &:hover {
       color: $highlight;
       background-color: transparent;
-      text-decoration: none;
     }
   }
 }
 
-a {
-  .dropdown-menu-ingredients {
-    font-family: $body-font;
-    font-size: 18px;
-    text-align: right;
-    color:black;
-    &:hover {
-      color: $highlight;
-      background-color: transparent;
-      text-decoration: none;
-    }
+#ingredientDropdown {
+  padding-left: 0;
+  margin: 50px 0 40px 0;
+  font-family: $body-font;
+  font-size: 24px;
+  &:hover {
+    color: $highlight;
   }
 }
 
