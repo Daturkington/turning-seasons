@@ -21,7 +21,6 @@
     <div class="container-recipes">
       <div class="row">
         <% @recipes.each_with_index do |recipe, index| %>
-
           <div class="card flex-column <%#= index.odd? ? 'card-odd' : '' %>">
             <%= link_to recipe_path(recipe) do %>
               <div class="card-image">
@@ -33,10 +32,15 @@
               <h3>~ <%= recipe.author %> ~</h3>
             </div>
             <div>
-            <button type="button" class="circle" data-toggle="modal" data-target="#exampleModal">
-              <i class="plus fas fa-plus"></i>
-            </button>
-            <%= render 'shopping_list_items/shopping_list_item_form', recipe: recipe %>
+              <button type="button" class="circle" data-toggle="modal" data-target="#exampleModal">
+                <i class="plus fas fa-plus"></i>
+              </button>
+              <%= render 'shopping_list_items/shopping_list_item_form', recipe: recipe %>
+            </div>
+            <div class="heart-index-icon">
+              <%= link_to recipes_path do %>
+                <i class="fab fa-gratipay"></i>
+              <% end %>
             </div>
           </div>
         <% end %>
@@ -47,12 +51,23 @@
       <h2>Shopping List</h2>
       <ul class="list-inline flex-row">
         <li>
-          <i class="fas fa-location-arrow"></i>
+          <div class="button-index-icon">
+            <%= link_to recipes_path do %>
+              <i class="fas fa-location-arrow"></i>
+              <p>Where to buy ingredients</p>
+            <% end %>
+          </div>
         </li>
         <li>
-          <i class="far fa-check-circle"></i>
+          <div class="button-index-icon">
+            <%= link_to recipes_path do %>
+              <i class="far fa-check-circle"></i>
+              <p>Shopping completed</p>
+            <% end %>
+          </div>
         </li>
       </ul>
     </div>
   </div>
 </div>
+
