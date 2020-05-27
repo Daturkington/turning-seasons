@@ -1,5 +1,5 @@
-class ShoppinglistsController < ApplicationController
-  before_action :set_shopping_list, only: [:show]
+class ShoppingListsController < ApplicationController
+    before_action :set_shopping_list, only: [:show]
 
   def show
   end

@@ -19,15 +19,23 @@
 <div class="container-index d-flex justify-content-around flex-row">
   <div class="container-recipes">
     <div class="row">
-      <% @recipes.each do |recipe| %>
-        <a href='#'>
-          <div class="card flex-column">
-            <%# <div class="card-image" style="background-image: ..."></div> %>
+      <% @recipes.each_with_index do |recipe, index| %>
+        
+          <div class="card flex-column <%#= index.odd? ? 'card-odd' : '' %>">
+          <%= link_to recipe_path(recipe) do %>
+            <div class="card-image">
+              <%= image_tag "cake.png"%>
+            </div>
+            <% end %>
             <div class="card-description">
               <p><%= recipe.name %> <%= recipe.description %> <%= recipe.author %></p>
             </div>
+          <button type="button" class="btn" data-toggle="modal" data-target="#exampleModal">
+            <i class="plus fas fa-plus"></i>
+          </button>
           </div>
-        </a>
+        
+
       <% end %>
     </div>
   </div>
@@ -46,16 +54,16 @@
 </div>
 
 <!-- Modal -->
-<%# <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true"> %>
-  <%# <div class="modal-dialog" role="document"> %>
-    <%# <div class="modal-content"> %>
-      <%# <div class="modal-body"> %>
-        <%# <button type="button" class="close" data-dismiss="modal" aria-label="Close"> %>
-          <%# <span aria-hidden="true">&times;</span> %>
-        <%# </button> %>
-        <%# <%= render 'recipe_form' %>
-      <%# </div> %>
-    <%# </div> %>
-  <%# </div> %>
-<%# </div> %>
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true"> %>
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <%#= render 'shopping_list_items/shopping_list_item_form' %>
+      </div>
+    </div>
+  </div>
+ </div>
 </div>
