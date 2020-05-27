@@ -1,47 +1,47 @@
 <div class="container">
-<div class="headings text-center">
-  <h1 class="recipe-name">Recipes</h1>
-  <h2 class="recipe-author"><%= Date.today.strftime("%B") %></h2>
-</div>
-<div class="ingredient-options flex-inline">
-  <a class="nav-link" data-toggle="dropdown" href="#" id="ingredientDropdown">Search by ingredient <i class="fa fa-plus-circle"></i></a>
-  <div class="dropdown-menu" id="ingredient-dropdown">
-    <% @ingredients.each do |ingredient| %>
-      <%# if ingredient.season ==  Date.today.strftime("%B").downcase%>
-      <% if ingredient.season ==  'june'%>
-        <%= link_to ingredient.name, recipes_path(ingredient: ingredient) %>
-      <% end %>
-    <% end %>
-
+  <div class="headings text-center">
+    <h1 class="recipe-name">Recipes</h1>
+    <h2 class="recipe-author"><%= Date.today.strftime("%B") %></h2>
   </div>
-</div>
 
-<div class="container-index d-flex justify-content-around flex-row">
-  <div class="container-recipes">
-    <div class="row">
-      <% @recipes.each_with_index do |recipe, index| %>
+  <div class="ingredient-options flex-inline">
+    <a class="nav-link" data-toggle="dropdown" href="#" id="ingredientDropdown">Search by ingredient <i class="fa fa-plus-circle"></i></a>
+    <div class="dropdown-menu" id="ingredient-dropdown">
+      <% @ingredients.each do |ingredient| %>
+        <%# if ingredient.season ==  Date.today.strftime("%B").downcase%>
+        <% if ingredient.season ==  'june'%>
+          <%= link_to ingredient.name, recipes_path(ingredient: ingredient) %>
+        <% end %>
+      <% end %>
+
+    </div>
+  </div>
+
+  <div class="container-index d-flex justify-content-around flex-row">
+    <div class="container-recipes">
+      <div class="row">
+        <% @recipes.each_with_index do |recipe, index| %>
 
           <div class="card flex-column <%#= index.odd? ? 'card-odd' : '' %>">
-          <%= link_to recipe_path(recipe) do %>
-            <div class="card-image">
-              <%= image_tag "cake.png"%>
-            </div>
+            <%= link_to recipe_path(recipe) do %>
+              <div class="card-image">
+                <%= image_tag "cake.png"%>
+              </div>
             <% end %>
             <div class="card-description">
               <p><%= recipe.name %> <%= recipe.description %> <%= recipe.author %></p>
             </div>
-          <button type="button" class="" data-toggle="modal" data-target="#exampleModal">
-            <i class="plus fas fa-plus"></i>
-          </button>
+            <button type="button" class="" data-toggle="modal" data-target="#exampleModal">
+              <i class="plus fas fa-plus"></i>
+            </button>
+            <%= render 'shopping_list_items/shopping_list_item_form', recipe: recipe %>
           </div>
-
-
-      <% end %>
+        <% end %>
+      </div>
     </div>
-  </div>
 
-  <div class="container-shopping-list">
-    <h2>Shopping List</h2>
+    <div class="container-shopping-list">
+      <h2>Shopping List</h2>
       <ul class="list-inline flex-row">
         <li>
           <i class="fas fa-location-arrow"></i>
@@ -50,20 +50,9 @@
           <i class="far fa-check-circle"></i>
         </li>
       </ul>
+    </div>
   </div>
 </div>
 
 <!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true"> %>
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-body">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-        <%= render 'shopping_list_items/shopping_list_item_form' %>
-      </div>
-    </div>
-  </div>
- </div>
-</div>
+
