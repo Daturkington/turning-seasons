@@ -1,0 +1,21 @@
+.shopping-list-ingredients {
+  margin-top: 60px;
+  width: 20%;
+  text-align: right;
+  h3 {
+    font-family: $body-font;
+    font-size: 18px;
+    font-weight: 600;
+  }
+  ul {
+    list-style-type: none;
+  }
+}
+
+.shopping-list {
+  min-height: 400px;
+}
+
+.empty {
+  font-size: 12px;
+}

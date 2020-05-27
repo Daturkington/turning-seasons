@@ -1,0 +1,29 @@
+.buttons {
+  height: 30px;
+  margin-top: 24px;
+  text-align: center;
+  margin: auto;
+  font-size: 21px;
+  p {
+    font-size: 12px;
+    opacity: 0;
+    color: $highlight;
+    transition: 0.3s;
+    margin-bottom: 0;
+  }
+  a {
+    margin: 0 6px;
+    transition: 0.3s;
+  &:hover {
+    color: $highlight;
+    p {
+      opacity: 1;
+      }
+    }
+  }
+}
+
+.button-icon {
+  width: 100px;
+}
+
