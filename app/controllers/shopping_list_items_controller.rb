@@ -14,7 +14,6 @@ class ShoppingListItemsController < ApplicationController
 
     @shoppinglistitem = ShoppingListItem.new(recipe: @recipe)
     @shoppinglistitem.shopping_list = shopping_list
-    raise
     if @shoppinglistitem.save
       redirect_to user_path(current_user)
     else
