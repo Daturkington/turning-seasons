@@ -28,7 +28,8 @@
 
         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown" id="navbar-dropdown">
           <%#= link_to "Shopping List", shopping_list_path(current_user.shopping_list), class: "dropdown-item" %>
-          <%= link_to "Profile", "#", class: "dropdown-item" %>
+          <%= link_to "Profile", user_path(current_user), class: "dropdown-item" %>
+          <%= link_to "Recipes", recipes_path, class: "dropdown-item" %>
         </div>
       </li>
     </ul>

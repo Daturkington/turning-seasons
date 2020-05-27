@@ -1,7 +1,8 @@
 // Import page-specific CSS files here.
 @import "home";
-@import "_recipes_show";
-
+@import "profile_show";
+@import "recipes_show";
+@import "recipes_index";
 
 .index-headings {
   display: flex;
@@ -71,5 +72,5 @@ a:hover {
   color: black;
 }
 
-@import "recipes_index";
+
 
