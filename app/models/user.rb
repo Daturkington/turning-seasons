@@ -10,4 +10,8 @@ class User < ApplicationRecord
   def shopping_list
     ShoppingList.where(user: self).where(completed: false).first
   end
+
+  def completed_shopping_lists
+    ShoppingList.where(user: self).where(completed: true)
+  end
 end
