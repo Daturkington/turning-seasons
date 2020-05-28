@@ -29,7 +29,7 @@
       <% end %>
     </div>
     <div class="button-icon-small">
-      <%= link_to recipes_path do %>
+      <%= link_to shopping_list_path(current_user.shopping_list), method: :put do %>
         <i class="far fa-check-circle"></i>
         <p>Shopping completed</p>
       <% end %>

@@ -3,17 +3,19 @@
     <h1 class="recipe-name">Recipes</h1>
     <h2 class="recipe-author"><%= Date.today.strftime("%B") %></h2>
   </div>
+  <div class="sub-heading">
+    <p>Turning Seasons aims to promote an understanding of food seasons. Each month we share recipes based on what's currently in season. Browse our recipes and build a seasonal shopping list which you can send to your phone.</p>
+  </div>
 
   <div class="ingredient-options flex-inline">
     <a class="nav-link" data-toggle="dropdown" href="#" id="ingredientDropdown">Search by ingredient <i class="fa fa-plus-circle"></i></a>
-    <div class="dropdown-menu" id="ingredient-dropdown">
-      <% @ingredients.each do |ingredient| %>
-        <%# if ingredient.season ==  Date.today.strftime("%B").downcase%>
-        <% if ingredient.season ==  'june'%>
-          <%= link_to ingredient.name, recipes_path(ingredient: ingredient) %>
+      <div class="dropdown-menu" id="ingredient-dropdown">
+        <% @ingredients.each do |ingredient| %>
+          <% if ingredient.in_season? %>
+            <%= link_to ingredient.name, recipes_path(ingredient: ingredient) %>
+          <% end %>
         <% end %>
-      <% end %>
-
+      </div>
     </div>
   </div>
 
@@ -50,28 +52,5 @@
     <div class="shopping-list-ingredients">
       <%= render 'shared/shopping_list' %>
     </div>
-
-    <!-- <div class="container-shopping-list">
-      <h2>Shopping List</h2>
-      <ul class="list-inline flex-row">
-        <li>
-          <div class="button-index-icon">
-            <%= link_to recipes_path do %>
-              <i class="fas fa-location-arrow"></i>
-              <p>Where to buy ingredients</p>
-            <% end %>
-          </div>
-        </li>
-        <li>
-          <div class="button-index-icon">
-            <%= link_to recipes_path do %>
-              <i class="far fa-check-circle"></i>
-              <p>Shopping completed</p>
-            <% end %>
-          </div>
-        </li>
-      </ul>
-    </div> -->
   </div>
 </div>
-
