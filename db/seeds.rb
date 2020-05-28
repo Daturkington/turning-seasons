@@ -9,7 +9,7 @@ Quantity.destroy_all
 Ingredient.destroy_all
 Recipe.destroy_all
 
-artichoke = Ingredient.create(name: "artichoke", season: "june")
+artichoke = Ingredient.create(name: "artichoke", season: [6, 7, 8, 9, 10, 11])
 oil = Ingredient.create(name: "glug of extra-virgin olive oil")
 garlic = Ingredient.create(name: "garlic glove")
 salt = Ingredient.create(name: "pinch of sea salt")
@@ -35,7 +35,7 @@ Quantity.create(measurement: 1, ingredient: flatbread, recipe: artichoke_recipe)
 Quantity.create(measurement: 1, ingredient: pesto, recipe: artichoke_recipe)
 Quantity.create(measurement: 2, ingredient: mint, recipe: artichoke_recipe)
 
-asparagus = Ingredient.create(name: "asparagus", season: "june")
+asparagus = Ingredient.create(name: "asparagus", season: [4, 5, 6])
 eggs = Ingredient.create(name: "eggs")
 butter = Ingredient.create(name: "butter")
 parsley = Ingredient.create(name: "parsley")
@@ -74,7 +74,7 @@ Quantity.create(measurement: 300, ingredient: oil, recipe: asparagus_recipe)
 Quantity.create(measurement: 1, ingredient: salt, recipe: asparagus_recipe)
 
 
-aubergines = Ingredient.create(name: "aubergine", season: "june")
+aubergines = Ingredient.create(name: "aubergine", season: [5, 6, 7, 8, 9, 10])
 pistachios = Ingredient.create(name: "pistachios")
 limes = Ingredient.create(name: "limes")
 greek_yoghurt = Ingredient.create(name: "greek yoghurt")
@@ -97,13 +97,13 @@ Quantity.create(measurement: 250, ingredient: greek_yoghurt, recipe: aubergine_r
 Quantity.create(measurement: 1, ingredient: sumac, recipe: aubergine_recipe)
 
 coconut_oil = Ingredient.create(name: "coconut oil")
-shallots = Ingredient.create(name: "shallots", season: "june")
+shallots = Ingredient.create(name: "shallots")
 ginger = Ingredient.create(name: "ginger")
 lemongrass = Ingredient.create(name: "lemongrass")
 lime_leaves = Ingredient.create(name: "makrut lime leave")
-red_chilli = Ingredient.create(name: "red chillies", season: "july")
+red_chilli = Ingredient.create(name: "red chillies")
 ground_coriander = Ingredient.create(name: "ground coriander")
-vine_tomatoes = Ingredient.create(name: "vine tomatoes", season: "june")
+vine_tomatoes = Ingredient.create(name: "vine tomatoes", season: [6, 7, 8, 9, 10])
 tamarind_paste = Ingredient.create(name: "tamarind paste")
 coconut_milk = Ingredient.create(name: "coconut milk")
 vegetable_stock = Ingredient.create(name: "vegetable stock")
@@ -129,13 +129,13 @@ Quantity.create(measurement: 2, ingredient: tamarind_paste, recipe: aubergine_re
 Quantity.create(measurement: 400, ingredient: coconut_milk, recipe: aubergine_recipe2)
 Quantity.create(measurement: 200, ingredient: vegetable_stock, recipe: aubergine_recipe2)
 
-beetroot = Ingredient.create(name: "beetroot", season: "june")
+beetroot = Ingredient.create(name: "beetroot", season: [6, 7, 8, 9, 10, 11, 12, 1, 2, 3])
 black_olives = Ingredient.create(name: "black olives")
 cumin_seeds = Ingredient.create(name: "cumin seeds")
 coriander_seeds = Ingredient.create(name: "coriander seeds")
 nigella_seeds = Ingredient.create(name: "nigella seeds")
 red_wine_vinegar = Ingredient.create(name: "red wine vinager")
-orange = Ingredient.create(name: "orange", season: "january")
+orange = Ingredient.create(name: "orange", season: [1, 2, 3])
 feta = Ingredient.create(name: "feta")
 
 beetroot_recipe = Recipe.create(name:"Whole baked beetroot, roasted beet leaves, whipped feta, crisp olives", author:"Anna Jones", description: "This is as suited to the oven as it is to the barbecue. The simple foil-covered method for roasting works every time", instructions: "Heat the oven to 180C/160C fan/390F/gas 4. If the beetroots still have their leafy tops, cut them off close to the top of the beet, leaving yourself enough to grip.
@@ -162,13 +162,52 @@ Quantity.create(measurement: 100, ingredient: feta, recipe: beetroot_recipe)
 Quantity.create(measurement: 50, ingredient: greek_yoghurt, recipe: beetroot_recipe)
 
 
-broad_beans = Ingredient.create(name: "broad beans", season: "june")
-carrots = Ingredient.create(name: "carrots", season: "june")
+broad_beans = Ingredient.create(name: "broad beans", season: [5, 6, 7, 8, 9])
+carrots = Ingredient.create(name: "carrots", season: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12])
 coppa = Ingredient.create(name: "coppa")
 harissa_paste = Ingredient.create(name: "harrisa paste")
 wholegrain_mustard = Ingredient.create(name: "wholegrain mustard")
 white_wine_vinegar = Ingredient.create(name: "white wine vinagar")
 egg = Ingredient.create(name: "egg")
+
+broadbean_recipe = Recipe.create(name: "Harissa broad beans, coppa salad", author: "Nigel Slater", description: "I am hardly the most patient of cooks, but I can always find a few minutes to skin a broad bean. Once cooked, they pop from their papery skins easily enough and the difference is astonishing. A skinned broad bean is altogether fresher and greener tasting. I suggest you start with just 1 tsp of harissa paste for the dressing, adding more if you like a little more heat. A little sugar mellows the result.", instructions: "Peel the garlic and mash it to a paste using a pestle and mortar. Stir in the harissa paste, mustard and vinegar then mix in the egg yolk and the sugar. You should have a glossy, paste-like dressing. The flavour at this point will be quite strong. It will soften as you fold in the other ingredients.
+
+Cook the broad beans in boiling, lightly salted water for 4-8 minutes, depending on their size. (They should be quite small at this time of year.) Drain them and, if you wish, pop them from their papery skins by holding them between your finger and thumb. It doesn’t take long once you get into the swing of it. Peel the carrots, unless they are very young, then cut into thin discs and put them into a mixing bowl with the broad beans.
+
+Scrape the dressing into the broad beans and carrots and fold gently to mix. Serve with the slices of coppa.")
+
+Quantity.create(measurement: 300, ingredient: broad_beans, recipe: broadbean_recipe)
+Quantity.create(measurement: 150, ingredient: carrots, recipe: broadbean_recipe)
+Quantity.create(measurement: 75, ingredient: coppa, recipe: broadbean_recipe)
+Quantity.create(measurement: 1, ingredient: garlic, recipe: broadbean_recipe)
+Quantity.create(measurement: 2, ingredient: harissa_paste, recipe: broadbean_recipe)
+Quantity.create(measurement: 2, ingredient: wholegrain_mustard, recipe: broadbean_recipe)
+Quantity.create(measurement: 2, ingredient: white_wine_vinegar, recipe: broadbean_recipe)
+Quantity.create(measurement: 1, ingredient: egg, recipe: broadbean_recipe)
+Quantity.create(measurement: 10, ingredient: sugar, recipe: broadbean_recipe)
+
+brown_lentils = Ingredient.create(name: "small brown lentils")
+cracked_wheat = Ingredient.create(name: "cracked wheat")
+spring_onions = Ingredient.create(name: "spring onions")
+sprouted_mung_beans = Ingredient.create(name: "sprouted mung beans")
+lemon_juice = Ingredient.create(name: "lemon juice")
+micro_herbs = Ingredient.create(name: "micro herbs")
+
+asparagus_recipe2 = Recipe.create(name: "Grilled asparagus, lentils and wheat", author: "Nigel Slater", description: "Most of the cracked wheat sold here, also known as bulgur or pourgouri, has already been broken, cooked and dried and doesn’t need the 20 minutes of boiling that some packets suggest. Instead, cover the grains by a centimetre or so of just-boiled water from the kettle, cover and leave for 15 minutes. Job done. Tenderly running a fork through the swollen grains will give a lighter, more open texture. I use young sprouting herbs in this salad, mostly coriander and beetroot, but any “micro-salad” – such as radish sprouts – would add a similar freshness.", instructions: "Boil the lentils in deep, unsalted water for 20 minutes until tender, but still with a nutty bite to them, then drain and set aside.
+
+Put the kettle on. Tip the cracked wheat into a mixing bowl then, when the kettle has boiled, pour enough boiling water over the grains to cover by a centimetre or so. Cover the bowl with a lid and leave for 15 minutes.
+
+Get a griddle pan hot. Trim the ends from the asparagus. Toss the spears in a little olive oil, just enough to make them shine, then place on the griddle and cook at a moderate heat for 3 or 4 minutes. Turn the spears over – it’s simplest using kitchen tongs – once the undersides are browning patchily and continue cooking for a further 3 or 4 minutes until the spears are just tender enough to bend a little. Remove the asparagus from the griddle and cut into short pieces, 3 or 4cm in length.
+
+Put the parsley into a mixing bowl. Trim and finely slice the spring onions into rings and add them to the parsley. Rinse the mung beans in cold water, drain thoroughly and fold through the parsley and spring onions.
+
+Check that the cracked wheat has absorbed all the water. Loosen the mass of grains by teasing them with the tines of a fork. Add the drained lentils, asparagus and wheat to the parsley and spring onions.
+
+Mix together the lemon juice and olive oil, then season with salt and a little pepper. You want a really bright-tasting, citrus-sharp dressing. Pour over the salad and turn briefly with a fork to combine.
+
+Add the young herbs to the salad then pile on to a serving dish.")
+
+
 
 # ingredient1 = Ingredient.create(name: 'butter')
 # ingredient2 = Ingredient.create(name: 'digestive biscuits')
