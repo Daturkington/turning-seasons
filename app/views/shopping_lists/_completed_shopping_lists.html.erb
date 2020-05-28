@@ -1,0 +1,17 @@
+<div class="completed-shopping-lists">
+  <h2>Past Shopping Lists</h3>
+  <div class="completed-card flex-row">
+    <% unless current_user.completed_shopping_lists.empty? %>
+      <% current_user.completed_shopping_lists.each do |list| %>
+        <div class="completed-card-item">
+          <h3><%= list.updated_at.strftime("%B") %></h3>
+          <% list.shopping_list_items.each do |items| %>
+            <% items.ingredients.each do |ing| %>
+              <li><%= ing.name %></li>
+            <% end %>
+          <% end %>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>
