@@ -4,5 +4,10 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  has_one :shopping_list
+  has_many :shopping_lists
+  has_many :favourites
+
+  def shopping_list
+    ShoppingList.where(user: self).where(completed: false).first
+  end
 end
