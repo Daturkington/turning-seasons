@@ -3,38 +3,31 @@
   <% if current_user.shopping_list.present? %>
     <ul>
       <% current_user.shopping_list.shopping_list_items.each do |items| %>
-        <% items.ingredients.each do |ing| %>
-          <li><%= ing.name %></li>
-        <% end %>
-      <% end %>
-    </ul>
-    <ul>
-      <% current_user.shopping_list.shopping_list_items.each do |items| %>
         <% items.quantities.each do |quantity| %>
-          <li><%= quantity.measurement %></li>
+          <li><%= quantity.measurement %> <%= quantity.unit %> <%= quantity.ingredient.name %></li>
         <% end %>
       <% end %>
     </ul>
     <div class="buttons d-flex justify-content-end">
-    <div class="button-icon-small">
-      <%= link_to recipes_path do %>
-        <i class="fas fa-pencil-alt"></i>
-        <p>Edit list</p>
-      <% end %>
+      <div class="button-icon-small">
+        <%= link_to user_path(current_user) do %>
+          <i class="fas fa-pencil-alt"></i>
+          <p>Edit list</p>
+        <% end %>
+      </div>
+      <div class="button-icon-small">
+        <%= link_to recipes_path do %>
+          <i class="far fa-paper-plane"></i>
+          <p>Send list</p>
+        <% end %>
+      </div>
+      <div class="button-icon-small">
+        <%= link_to shopping_list_path(current_user.shopping_list), method: :put do %>
+          <i class="far fa-check-circle"></i>
+          <p>Shopping completed</p>
+        <% end %>
+      </div>
     </div>
-    <div class="button-icon-small">
-      <%= link_to recipes_path do %>
-        <i class="far fa-paper-plane"></i>
-        <p>Send list</p>
-      <% end %>
-    </div>
-    <div class="button-icon-small">
-      <%= link_to shopping_list_path(current_user.shopping_list), method: :put do %>
-        <i class="far fa-check-circle"></i>
-        <p>Shopping completed</p>
-      <% end %>
-    </div>
-  </div>
   <% else %>
     <i class="far fa-frown-open"></i>
     <p class='empty'>Your shopping list is empty</p>
