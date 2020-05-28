@@ -153,3 +153,15 @@
     }
   }
 }
+
+.sub-heading {
+  text-align: center;
+  width: 60%;
+  padding-top: 20px;
+  margin: auto;
+  p {
+    font-family: $body-font;
+    font-size: 18px;
+    font-weight: 400;
+  }
+}
