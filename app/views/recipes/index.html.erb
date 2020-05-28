@@ -12,7 +12,7 @@
       <div class="dropdown-menu" id="ingredient-dropdown">
         <% @ingredients.each do |ingredient| %>
           <% if ingredient.in_season? %>
-            <%= link_to ingredient.name, recipes_path(ingredient: ingredient) %>
+            <p><%= link_to ingredient.name, recipes_path(ingredient: ingredient) %>, </p>
           <% end %>
         <% end %>
       </div>
@@ -34,7 +34,7 @@
               <h3>~ <%= recipe.author %> ~</h3>
             </div>
             <div>
-              <button type="button" class="circle" data-toggle="modal" data-target="#exampleModal">
+              <button type="button" class="circle" data-toggle="modal" data-target="#recipe_<%= recipe.id %>">
                 <i class="plus fas fa-plus"></i>
               </button>
               <%= render 'shopping_list_items/shopping_list_item_form', recipe: recipe %>

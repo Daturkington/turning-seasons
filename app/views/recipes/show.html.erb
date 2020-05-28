@@ -3,6 +3,14 @@
     <h1 class="recipe-name"><%= @recipe.name %></h1>
     <h2 class="recipe-author"><%= @recipe.author %></h2>
   </div>
+  <div class="time-servings d-flex justify-content-center">
+    <% if @recipe.servings.present? %>
+      <p>servings: <%= @recipe.servings %></p>
+    <% end %>
+    <% if @recipe.cooking_time.present? %>
+      <p>cooking time: <%= @recipe.cooking_time %>mins</p>
+    <% end %>
+  </div>
   <div class="buttons d-flex justify-content-center">
     <div class="button-icon">
       <%= link_to recipes_path do %>
@@ -47,7 +55,7 @@
         <h3>Ingredients</h3>
         <ul>
           <% @recipe.quantities.each do |quantity| %>
-            <li><%= quantity.measurement %> <%= quantity.ingredient.name %></li>
+            <li><%= quantity.measurement %> <%= quantity.unit %> <%= quantity.ingredient.name %></li>
           <% end %>
         </ul>
         <div class="buttons d-flex justify-content-end">
