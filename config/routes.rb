@@ -8,9 +8,3 @@ Rails.application.routes.draw do
   resources :shopping_lists
   resources :users, only: [:show]
 end
-
-#homepage
-#recipes/index(select recipes for shoppinglist new)
-#shoppinglist/create
-#shoppinglist/show
-#recipe/show
