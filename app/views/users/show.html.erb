@@ -8,12 +8,21 @@
   <div class="profile-shopping-list">
     <h2>Your shopping list</h2>
     <ul class="shopping-list-points">
+      <% if current_user.shopping_list.present? %>
       <% current_user.shopping_list.shopping_list_items.each do |items| %>
         <% items.ingredients.each do |ing| %>
           <li><%= ing.name %></li>
         <% end %>
       <% end %>
+        <% else %>
+    <i class="far fa-frown-open"></i>
+    <p class='empty'>Your shopping list is empty</p>
+  <% end %>
     </ul>
+
+  </div>
+  <div class="profile-completed-shopping-lists">
+    <%= render "shopping_lists/completed_shopping_lists" %>
   </div>
 </div>
 
