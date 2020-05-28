@@ -1,12 +1,18 @@
 class ShoppingListsController < ApplicationController
-    before_action :set_shopping_list, only: [:show]
+    before_action :set_shopping_list, only: [:show, :update]
 
   def show
+  end
+
+  def update
+    @shopping_list.completed = 'true'
+    @shopping_list.save
+    redirect_to recipes_path
   end
 
   private
 
   def set_shopping_list
-    @shoppinglist = ShoppingList.find(params[:id])
+    @shopping_list = ShoppingList.find(params[:id])
   end
 end
