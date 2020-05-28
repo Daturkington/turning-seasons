@@ -9,14 +9,13 @@
 
   <div class="ingredient-options flex-inline">
     <a class="nav-link" data-toggle="dropdown" href="#" id="ingredientDropdown">Search by ingredient <i class="fa fa-plus-circle"></i></a>
-    <div class="dropdown-menu" id="ingredient-dropdown">
-      <% @ingredients.each do |ingredient| %>
-        <%# if ingredient.season ==  Date.today.strftime("%B").downcase%>
-        <% if ingredient.season ==  'june'%>
-          <%= link_to ingredient.name, recipes_path(ingredient: ingredient) %>
+      <div class="dropdown-menu" id="ingredient-dropdown">
+        <% @ingredients.each do |ingredient| %>
+          <% if ingredient.in_season? %>
+            <%= link_to ingredient.name, recipes_path(ingredient: ingredient) %>
+          <% end %>
         <% end %>
-      <% end %>
-
+      </div>
     </div>
   </div>
 
