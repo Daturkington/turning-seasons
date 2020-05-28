@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   end
   resources :shopping_lists
   resources :users, only: [:show]
+  resources :favourites
 end
 
 #homepage

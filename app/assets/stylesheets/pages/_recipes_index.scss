@@ -154,6 +154,15 @@
   }
 }
 
+.heart-icon-red {
+  color: $highlight;
+  font-size: 25px;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  margin: 0 6px;
+}
+
 .sub-heading {
   text-align: center;
   width: 60%;
