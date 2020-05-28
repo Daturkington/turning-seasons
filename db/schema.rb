@@ -25,11 +25,11 @@ ActiveRecord::Schema.define(version: 2020_05_27_165731) do
   end
 
   create_table "ingredients", force: :cascade do |t|
-    t.string "season"
     t.string "name"
     t.text "description"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "season", default: [], array: true
   end
 
   create_table "markets", force: :cascade do |t|
