@@ -1,3 +1,6 @@
+@import "components/favourites";
+@import "components/completed_shopping_lists";
+
 #profile-welcome {
   text-align: center;
   font-family: $headers-font;
@@ -6,16 +9,34 @@
 .profile-content-box {
   display: flex;
   justify-content: space-around;
+  flex-direction: column;
+}
+
+.user-profile-shopping-list {
+  display:flex;
+  flex-direction:row;
+}
+
+.profile-shopping-list {
+  text-align: center;
+  margin:25px;
+  width: 35%;
+}
+
+.current-recipes {
+  text-align: center;
+  margin:25px;
+  width: 65%;
 }
 
 .favourites-container {
-  margin-top: 60px;
-  margin-left: 120px;
+  margin: 25px;
+  width: 65%;
 }
 
 .shopping-list-points {
   list-style: none;
-  margin-left: 20px;
+  margin-top: 20px;
   padding-left: 0px;
   text-align: left;
   padding: 20px;
@@ -23,12 +44,20 @@
   border-radius: 8px;
   background-color: white;
   overflow: scroll;
-  max-height: 280px;
+  min-height: 300px;
 }
 
-.profile-shopping-list {
-  text-align: right;
-  margin-right: 120px;
-  margin-top: 60px;
+.profile-lower-container {
+  display: inline-flex;
+  flex-direction: row;
 }
 
+.profile-completed-shopping-lists {
+ width: 35%;
+ margin:25px;
+ text-align: left;
+}
+
+.past-shopping-lists-title {
+  text-align:center;
+}
