@@ -26,7 +26,11 @@
           <div class="card flex-column <%#= index.odd? ? 'card-odd' : '' %>">
             <%= link_to recipe_path(recipe) do %>
               <div class="card-image">
-                <%= image_tag "cake.png"%>
+                <% if recipe.photo.attached? %>
+                    <%= cl_image_tag recipe.photo.key %>
+                  <% else %>
+                    <%= image_tag('cake.png') %>
+                <% end %>
               </div>
             <% end %>
             <div class="card-description">
