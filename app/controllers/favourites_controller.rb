@@ -5,7 +5,7 @@ class FavouritesController < ApplicationController
   def index
     @favourites = Favourite.all
   end
-  
+
   def new
     @favourites = Favourite.new
   end
@@ -14,7 +14,7 @@ class FavouritesController < ApplicationController
     @favourites = Favourite.new(recipe_id: @recipe.id)
     @favourites.user = current_user
     if @favourites.save
-      redirect_to user_path(current_user)
+      redirect_to recipes_path
      else
       render :new
     end

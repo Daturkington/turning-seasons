@@ -219,7 +219,7 @@ sprouted_mung_beans = Ingredient.create(name: "sprouted mung beans")
 lemon_juice = Ingredient.create(name: "lemon juice")
 micro_herbs = Ingredient.create(name: "micro herbs")
 
-asparagus_recipe2 = Recipe.create(name: "Grilled asparagus, lentils and wheat", author: "Nigel Slater", servings: 4, description: "Most of the cracked wheat sold here, also known as bulgur or pourgouri, has already been broken, cooked and dried and doesn’t need the 20 minutes of boiling that some packets suggest. Instead, cover the grains by a centimetre or so of just-boiled water from the kettle, cover and leave for 15 minutes. Job done. Tenderly running a fork through the swollen grains will give a lighter, more open texture. I use young sprouting herbs in this salad, mostly coriander and beetroot, but any “micro-salad” – such as radish sprouts – would add a similar freshness.", instructions: "Boil the lentils in deep, unsalted water for 20 minutes until tender, but still with a nutty bite to them, then drain and set aside.
+asparagus_recipe2 = Recipe.new(name: "Grilled asparagus, lentils and wheat", author: "Nigel Slater", servings: 4, description: "Most of the cracked wheat sold here, also known as bulgur or pourgouri, has already been broken, cooked and dried and doesn’t need the 20 minutes of boiling that some packets suggest. Instead, cover the grains by a centimetre or so of just-boiled water from the kettle, cover and leave for 15 minutes. Job done. Tenderly running a fork through the swollen grains will give a lighter, more open texture. I use young sprouting herbs in this salad, mostly coriander and beetroot, but any “micro-salad” – such as radish sprouts – would add a similar freshness.", instructions: "Boil the lentils in deep, unsalted water for 20 minutes until tender, but still with a nutty bite to them, then drain and set aside.
 
 Put the kettle on. Tip the cracked wheat into a mixing bowl then, when the kettle has boiled, pour enough boiling water over the grains to cover by a centimetre or so. Cover the bowl with a lid and leave for 15 minutes.
 
@@ -245,4 +245,22 @@ Quantity.create(measurement: 25, ingredient_id: micro_herbs.id, recipe: asparagu
 
 asparagus_recipe2.photo.attach(io: file7, filename: 'asparagus2_image.jpg', content_type: 'image/jpg')
 asparagus_recipe2.save
+
+
+# fennel_seeds = Ingredient.create(name: "fennel seeds")
+# blue_cheese = Ingredient.create(name: "blue cheese")
+
+# carrot_recipe1 = Recipe.new(name: "Warm pearl barley & roasted carrot salad with dill vinaigrette", author: "Georgina Fuggle", servings: 4, description: "This salad combines sweet carrots with the liquorice bite of a slightly acidic dressing and creamy blue cheese - a simple lunch or side dish", instructions: "Heat oven to 180C/160C fan/gas 4. Put the sliced carrots in a large roasting tin with the shallots, garlic and fennel seeds. Drizzle over the oil, toss everything together and season. Roast for 35-40 mins until everything has caramelised and the carrots are tender.
+
+# Meanwhile, boil the pearl barley in a large pan of salted water until al dente, about 30 mins. Make the dressing by whisking all the ingredients together with some seasoning. Remove the carrots from the oven.
+
+# Strain the pearl barley and toss through the dressing, carrots, dill, parsley and half the cheese. Finish with a few of the fennel tops and the remaining cheese. Serve warm or cold with a slice or two of warm buttered soda bread, if you like.")
+
+# Quantity.create(measurement: 1, ingredient_id: carrot, recipe: , unit:)
+# Quantity.create(measurement:, ingredient_id:, recipe: , unit:)
+# Quantity.create(measurement:, ingredient_id:, recipe: , unit:)
+# Quantity.create(measurement:, ingredient_id:, recipe: , unit:)
+# Quantity.create(measurement:, ingredient_id:, recipe: , unit:)
+# Quantity.create(measurement:, ingredient_id:, recipe: , unit:)
+
 
