@@ -1,1 +1,54 @@
 // Specific CSS for your home-page
+.headings-landing {
+  z-index: 1000;
+  position: relative;
+  text-align: center;
+  margin: auto;
+  justify-content: center;
+  width: 65%;
+  h2 {
+    width: 800px;
+    margin: auto;
+    font-family: $serif-font;
+    font-size: 36px;
+    letter-spacing: 6px;
+    margin-top: -2px;
+  }
+
+  h1 {
+    width: 800px;
+    margin: auto;
+    font-family: $headers-font;
+    font-size: 64px;
+    letter-spacing: 6px;
+    font-weight: 600;
+    line-height: 1;
+  }
+
+}
+
+.enter {
+  position: absolute;
+  z-index: 1000;
+  top: 63%;
+  background-color: $background;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  transition: 0.6s;
+  &:hover {
+    background-color: $highlight;
+    transition: 0.6s;
+  }
+}
+
+.landing-image {
+  margin: auto;
+  top: 201px;
+  position: absolute;
+  margin-bottom: 100px;
+  opacity: 0.85;
+}

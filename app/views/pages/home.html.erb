@@ -1,5 +1,16 @@
-<div class="landing-page">
-  <h1>Turning Seasons</h1>
-  <p>An easy way to eat seasonally</p>
-  <%= link_to "Enter", recipes_path(@recipes), class: "btn btn-primary" %>
+
+<div class="container d-flex justify-content-center">
+  <div class="headings-landing flex justify-content-center">
+    <h1 class="recipe-name">Turning Seasons</h1>
+    <h2 class="recipe-author">An easy way to eat seasonally</h2>
+  </div>
+
+  <div class="enter">
+    <%= link_to "Enter", recipes_path(@recipes), class: "button-icon" %>
+  </div>
+
+  <div class="landing-image">
+    <%= image_tag "landingpage.jpg", alt: "seasonal produce", width: 600 %>
+  </div>
 </div>
+
