@@ -39,16 +39,18 @@
               </button>
               <%= render 'shopping_list_items/shopping_list_item_form', recipe: recipe %>
             </div>
-            <% if current_user.favourites.find{|fav| fav.recipe_id == recipe.id}.nil? %>
-            <div class="heart-index-icon">
-              <%= link_to favourites_path(current_user.favourites, recipe_id: recipe.id), method: :create do %>
-                <i class="fab fa-gratipay"></i>
+            <% if user_signed_in? %>
+              <% if current_user.favourites.find{|fav| fav.recipe_id == recipe.id}.nil? %>
+                <div class="heart-index-icon">
+                  <%= link_to favourites_path(current_user.favourites, recipe_id: recipe.id), method: :create do %>
+                    <i class="fab fa-gratipay"></i>
+                  <% end %>
+                </div>
+              <% else %>
+                 <div class="heart-icon-red">
+                   <i class="fab fa-gratipay"></i>
+                 </div>
               <% end %>
-            </div>
-            <% else %>
-            <div class="heart-icon-red">
-                <i class="fab fa-gratipay"></i>
-            </div>
             <% end %>
           </div>
         <% end %>

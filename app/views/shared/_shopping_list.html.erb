@@ -1,5 +1,6 @@
 <div class="shopping-list">
   <h3>Shopping List</h3>
+  <% if user_signed_in? %>
   <% if current_user.shopping_list.present? %>
     <ul>
       <% current_user.shopping_list.shopping_list_items.map{|item| item.quantities}.flatten.group_by{|quantity| quantity.ingredient.name}.each do |key, value|  %>
@@ -24,11 +25,31 @@
           <i class="far fa-check-circle"></i>
           <p>Shopping completed</p>
         <% end %>
+      </ul>
+      <div class="buttons d-flex justify-content-end">
+        <div class="button-icon-small">
+          <%= link_to user_path(current_user) do %>
+            <i class="fas fa-pencil-alt"></i>
+            <p>Edit list</p>
+          <% end %>
+        </div>
+        <div class="button-icon-small">
+          <%= link_to recipes_path do %>
+            <i class="far fa-paper-plane"></i>
+            <p>Send list</p>
+          <% end %>
+        </div>
+        <div class="button-icon-small">
+          <%= link_to shopping_list_path(current_user.shopping_list), method: :put do %>
+            <i class="far fa-check-circle"></i>
+            <p>Shopping completed</p>
+          <% end %>
+        </div>
       </div>
-    </div>
-  <% else %>
-    <i class="far fa-frown-open"></i>
-    <p class='empty'>Your shopping list is empty</p>
+    <% else %>
+      <i class="far fa-frown-open"></i>
+      <p class='empty'>Your shopping list is empty</p>
+    <% end %>
   <% end %>
 </div>
 
