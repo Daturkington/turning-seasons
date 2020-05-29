@@ -1,9 +1,9 @@
 <div class="completed-shopping-lists">
-  <h2>Past Shopping Lists</h3>
+  <h2 class="past-shopping-lists-title">Past Shopping Lists:</h2>
   <div class="completed-card flex-row">
     <% unless current_user.completed_shopping_lists.empty? %>
       <% current_user.completed_shopping_lists.each do |list| %>
-        <div class="completed-card-item">
+        <div class="completed-shopping-card-item">
           <h3><%= list.updated_at.strftime("%B") %></h3>
           <% list.shopping_list_items.each do |items| %>
             <% items.ingredients.each do |ing| %>

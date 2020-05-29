@@ -1,29 +1,55 @@
 <h1 id="profile-welcome">Welcome <%= current_user.username %>!</h1>
 
-<div class="profile-content-box">
+<div class="profile-content-box container">
 
-  <div class="favourites-container">
-    <%= render "favourites/favourites" %>
-  </div>
+  <div class="user-profile-shopping-list">
 
-  <div class="profile-shopping-list">
-    <h2>Current Shopping List</h2>
-    <ul class="shopping-list-points">
+    <div class="current-recipes">
+      <h2 class="text-align-center">Recipes in you Shopping List:</h2>
       <% if current_user.shopping_list.present? %>
-        <% current_user.shopping_list.shopping_list_items.each do |items| %>
-          <% items.ingredients.each do |ing| %>
-            <li><%= ing.name %></li>
+        <ul class="unordered-list">
+          <% current_user.shopping_list.each do |list| %>
+              <div class="card-product flex-row">
+                <%= image_tag "cake.png"%>
+                <div class="card-product-info">
+                  <li><%= list.recipe.name %></li>
+                  <li><%= list.recipe.author %></li>
+                </div>
+              </div>
           <% end %>
-        <% end %>
+        </ul>
       <% else %>
-      <i class="far fa-frown-open"></i>
-      <p class='empty'>Your shopping list is empty</p>
+        <i class="far fa-frown-open"></i>
+        <p class="empty">Your shopping list is empty <br> Add some <strong><%= link_to "Recipes", recipes_path %></strong>!</p>
       <% end %>
-    </ul>
+    </div>
+
+    <div class="profile-shopping-list">
+      <h2>Current Shopping List:</h2>
+      <ul class="shopping-list-points">
+        <% if current_user.shopping_list.present? %>
+          <% current_user.shopping_list.shopping_list_items.each do |items| %>
+            <% items.ingredients.each do |ing| %>
+              <li><%= ing.name %></li>
+            <% end %>
+          <% end %>
+        <% else %>
+        <i class="far fa-frown-open"></i>
+        <p class='empty'>Your shopping list is empty</p>
+        <% end %>
+      </ul>
+    </div>
+
   </div>
 
-  <div class="profile-completed-shopping-lists">
-    <%= render "shopping_lists/completed_shopping_lists" %>
+  <div class="profile-lower-container align-self-start">
+    <div class="favourites-container">
+      <%= render "favourites/favourites" %>
+    </div>
+
+    <div class="profile-completed-shopping-lists">
+      <%= render "shopping_lists/completed_shopping_lists" %>
+    </div>
   </div>
 
 </div>
