@@ -44,7 +44,11 @@
     <div class="recipe-content">
 
       <div class="recipe-image">
-        <%= image_tag('cake.png') %>
+        <% if @recipe.photo.attached? %>
+          <%= cl_image_tag @recipe.photo.key %>
+          <% else %>
+          <%= image_tag('cake.png') %>
+        <% end %>
       </div>
 
       <div class="recipe-instructions">
