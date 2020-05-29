@@ -31,11 +31,25 @@
       <h2>Current Shopping List:</h2>
       <ul class="shopping-list-points">
         <% if current_user.shopping_list.present? %>
-          <% current_user.shopping_list.shopping_list_items.each do |items| %>
-            <% items.ingredients.each do |ing| %>
-              <li><%= ing.name %></li>
+          <ul>
+            <% current_user.shopping_list.shopping_list_items.map{|item| item.quantities}.flatten.group_by{|quantity| quantity.ingredient.name}.each do |key, value|  %>
+              <li><%= value.map{|r| r.measurement}.sum  %> <%= value.first.unit %> <%= key %></li>
             <% end %>
-          <% end %>
+          </ul>
+          <div class="buttons d-flex justify-content-end">
+            <div class="button-icon-small">
+              <%= link_to recipes_path do %>
+                <i class="far fa-paper-plane"></i>
+                <p class="button-text">Send list</p>
+              <% end %>
+            </div>
+            <div class="button-icon-small">
+              <%= link_to shopping_list_path(current_user.shopping_list), method: :put do %>
+                <i class="far fa-check-circle"></i>
+                <p class="button-text">Shopping completed</p>
+              <% end %>
+            </div>
+          </div>
         <% else %>
         <i class="far fa-frown-open"></i>
         <p class='empty'>Your shopping list is empty</p>
