@@ -12,18 +12,20 @@
       <div class="dropdown-menu" id="ingredient-dropdown">
         <% @ingredients.each do |ingredient| %>
           <% if ingredient.in_season? %>
-            <p><%= link_to ingredient.name, recipes_path(ingredient: ingredient) %>, </p>
+            <%= link_to "#{ingredient.name}, ", recipes_path(ingredient: ingredient) %>
           <% end %>
         <% end %>
+        <%= link_to "all.", recipes_path %>
       </div>
     </div>
   </div>
 
-  <div class="container-index d-flex justify-content-around flex-row">
+  <div class="container-index d-flex">
+
     <div class="container-recipes">
-      <div class="row">
+      <div class="cards">
         <% @recipes.each_with_index do |recipe, index| %>
-          <div class="card flex-column <%#= index.odd? ? 'card-odd' : '' %>">
+          <div class="card-category <%#= index.odd? ? 'card-odd' : '' %>">
             <%= link_to recipe_path(recipe) do %>
               <div class="card-image">
                 <%= image_tag "cake.png"%>
@@ -54,7 +56,6 @@
         <% end %>
       </div>
     </div>
-
     <div class="shopping-list-ingredients">
       <%= render 'shared/shopping_list' %>
     </div>
