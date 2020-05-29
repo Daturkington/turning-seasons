@@ -16,7 +16,7 @@ class ShoppingListItemsController < ApplicationController
       @shoppinglistitem = ShoppingListItem.new(recipe: @recipe)
       @shoppinglistitem.shopping_list = shopping_list
       if @shoppinglistitem.save
-        redirect_to user_path(current_user)
+        redirect_back fallback_location: recipes_path
       else
         render :new
       end

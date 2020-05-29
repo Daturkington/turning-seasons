@@ -7,42 +7,23 @@
         <li><%= value.map{|r| r.measurement}.sum  %> <%= value.first.unit %> <%= key %></li>
       <% end %>
     </ul>
-    <div class="buttons d-flex justify-content-end">
-      <div class="button-icon-small">
-        <%= link_to user_path(current_user) do %>
-          <i class="fas fa-pencil-alt"></i>
-          <p>Edit list</p>
-        <% end %>
-      </div>
-      <div class="button-icon-small">
-        <%= link_to recipes_path do %>
-          <i class="far fa-paper-plane"></i>
-          <p>Send list</p>
-        <% end %>
-      </div>
-      <div class="button-icon-small">
-        <%= link_to shopping_list_path(current_user.shopping_list), method: :put do %>
-          <i class="far fa-check-circle"></i>
-          <p>Shopping completed</p>
-        <% end %>
-      </ul>
       <div class="buttons d-flex justify-content-end">
         <div class="button-icon-small">
           <%= link_to user_path(current_user) do %>
             <i class="fas fa-pencil-alt"></i>
-            <p>Edit list</p>
+            <p class="button-text">Edit list</p>
           <% end %>
         </div>
         <div class="button-icon-small">
           <%= link_to recipes_path do %>
             <i class="far fa-paper-plane"></i>
-            <p>Send list</p>
+            <p class="button-text">Send list</p>
           <% end %>
         </div>
         <div class="button-icon-small">
           <%= link_to shopping_list_path(current_user.shopping_list), method: :put do %>
             <i class="far fa-check-circle"></i>
-            <p>Shopping completed</p>
+            <p class="button-text">Shopping completed</p>
           <% end %>
         </div>
       </div>

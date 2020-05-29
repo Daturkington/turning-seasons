@@ -15,14 +15,14 @@
     <div class="button-icon">
       <%= link_to recipes_path do %>
         <i class="fas fa-arrow-circle-left"></i>
-        <p>Back</p>
+        <p class="button-text">Back</p>
       <% end %>
     </div>
 
     <div>
       <button class="button-icon" data-toggle="modal" data-target="#recipe_<%= @recipe.id %>">
         <i class="fa fa-plus-circle"></i>
-        <p>Add to shopping list</p>
+        <p class="button-text">Add to shopping list</p>
       </button>
       <%= render 'shopping_list_items/shopping_list_item_form', recipe: @recipe %>
     </div>
@@ -30,7 +30,7 @@
     <div class="button-icon">
       <%= link_to recipes_path do %>
         <i class="fab fa-gratipay"></i>
-        <p>Save to favourites</p>
+        <p class="button-text">Save to favourites</p>
       <% end %>
     </div>
   </div>
