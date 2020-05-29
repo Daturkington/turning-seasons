@@ -8,4 +8,5 @@ Rails.application.routes.draw do
   resources :shopping_list_items, only: [:destroy]
   resources :shopping_lists
   resources :users, only: [:show]
+  resources :favourites
 end

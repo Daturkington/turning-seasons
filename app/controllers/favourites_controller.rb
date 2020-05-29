@@ -11,7 +11,7 @@ class FavouritesController < ApplicationController
   end
 
   def create
-    @favourites = Favourite.new(recipe_id: params[:recipe_id].to_i)
+    @favourites = Favourite.new(recipe_id: @recipe.id)
     @favourites.user = current_user
     if @favourites.save
       redirect_to user_path(current_user)
@@ -29,7 +29,7 @@ class FavouritesController < ApplicationController
   private
 
   def set_recipe
-    @recipes = Recipe.find(params[:recipe_id])
+    @recipe = Recipe.find(params[:recipe_id])
   end
 
 end
