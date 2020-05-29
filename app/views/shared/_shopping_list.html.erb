@@ -2,10 +2,8 @@
   <h3>Shopping List</h3>
   <% if current_user.shopping_list.present? %>
     <ul>
-      <% current_user.shopping_list.shopping_list_items.each do |items| %>
-        <% items.quantities.each do |quantity| %>
-          <li><%= quantity.measurement %> <%= quantity.unit %> <%= quantity.ingredient.name %></li>
-        <% end %>
+      <% current_user.shopping_list.shopping_list_items.map{|item| item.quantities}.flatten.group_by{|quantity| quantity.ingredient.name}.each do |key, value|  %>
+        <li><%= value.map{|r| r.measurement}.sum  %> <%= value.first.unit %> <%= key %></li>
       <% end %>
     </ul>
     <div class="buttons d-flex justify-content-end">
