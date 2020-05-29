@@ -89,7 +89,7 @@ asparagus_recipe.photo.attach(io: file2, filename: 'asparagus_image.jpg', conten
 asparagus_recipe.save
 
 aubergines = Ingredient.create(name: "aubergine", season: [5, 6, 7, 8, 9, 10])
-pistachios = Ingredient.create(name: "pistachios")
+pistachios = Ingredient.create(name: "pistachio")
 limes = Ingredient.create(name: "limes")
 greek_yoghurt = Ingredient.create(name: "greek yoghurt")
 sumac = Ingredient.create(name: "sumac")
@@ -117,8 +117,8 @@ coconut_oil = Ingredient.create(name: "coconut oil")
 shallots = Ingredient.create(name: "shallots")
 ginger = Ingredient.create(name: "ginger")
 lemongrass = Ingredient.create(name: "lemongrass")
-lime_leaves = Ingredient.create(name: "makrut lime leave")
-red_chilli = Ingredient.create(name: "red chillies")
+lime_leaves = Ingredient.create(name: "makrut lime leaves")
+red_chilli = Ingredient.create(name: "red chilli")
 ground_coriander = Ingredient.create(name: "ground coriander")
 vine_tomatoes = Ingredient.create(name: "vine tomatoes", season: [6, 7, 8, 9, 10])
 tamarind_paste = Ingredient.create(name: "tamarind paste")
@@ -150,7 +150,7 @@ aubergine_recipe2.photo.attach(io: file4, filename: 'aubergine2_image.jpg', cont
 aubergine_recipe2.save
 
 beetroot = Ingredient.create(name: "beetroot", season: [6, 7, 8, 9, 10, 11, 12, 1, 2, 3])
-black_olives = Ingredient.create(name: "black olives")
+black_olives = Ingredient.create(name: "black olive")
 cumin_seeds = Ingredient.create(name: "cumin seeds")
 coriander_seeds = Ingredient.create(name: "coriander seeds")
 nigella_seeds = Ingredient.create(name: "nigella seeds")
@@ -214,7 +214,7 @@ broadbean_recipe.save
 
 brown_lentils = Ingredient.create(name: "small brown lentils")
 cracked_wheat = Ingredient.create(name: "cracked wheat")
-spring_onions = Ingredient.create(name: "spring onions")
+spring_onions = Ingredient.create(name: "spring onion")
 sprouted_mung_beans = Ingredient.create(name: "sprouted mung beans")
 lemon_juice = Ingredient.create(name: "lemon juice")
 micro_herbs = Ingredient.create(name: "micro herbs")
