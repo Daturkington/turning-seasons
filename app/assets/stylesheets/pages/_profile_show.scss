@@ -78,11 +78,15 @@
   margin-bottom: 20px;
   border-radius: 8px;
   margin-top: 20px;
+  position: relative;
+  justify-content: center;
   img {
     height: 100%;
     width: 120px;
     object-fit: cover;
     border-radius: 8px 0 0 8px;
+    position: absolute;
+    left:0;
   }
 }
 
@@ -92,6 +96,9 @@
   border-radius: 20px;
   color: $highlight;
   margin-left:15px;
+  position: absolute;
+  right:15px;
+  top:45px;
   &:hover {
   opacity:1;
   transition:0.3s;
