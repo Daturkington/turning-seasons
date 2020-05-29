@@ -4,16 +4,19 @@
 
   <div class="user-profile-shopping-list">
 
-    <div class="current-recipes">
+    <div class="current-recipes-container">
       <h2 class="text-align-center">Recipes in you Shopping List:</h2>
       <% if current_user.shopping_list.present? %>
-        <ul class="unordered-list">
-          <% current_user.shopping_list.each do |list| %>
-              <div class="card-product flex-row">
+        <ul class="unordered-list-shopping">
+          <% current_user.shopping_list.shopping_list_items.each do |list| %>
+              <div class="card-product-shopping flex-row">
                 <%= image_tag "cake.png"%>
                 <div class="card-product-info">
                   <li><%= list.recipe.name %></li>
                   <li><%= list.recipe.author %></li>
+                </div>
+                <div>
+                  <%= link_to 'Delete', shopping_list_item_path(list), method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-ghost" %>
                 </div>
               </div>
           <% end %>

@@ -23,7 +23,7 @@
   width: 35%;
 }
 
-.current-recipes {
+.current-recipes-container {
   text-align: center;
   margin:25px;
   width: 65%;
@@ -60,4 +60,41 @@
 
 .past-shopping-lists-title {
   text-align:center;
+}
+
+.unordered-list-shopping {
+  padding: 0 15px;
+  margin-top: 20px;
+  list-style-type: none;
+  max-height: 150px;
+}
+
+.card-product-shopping {
+  height: 120px;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  margin-top: 20px;
+  img {
+    height: 100%;
+    width: 120px;
+    object-fit: cover;
+    border-radius: 8px 0 0 8px;
+  }
+}
+
+.btn-ghost {
+  border:solid 1px $highlight;
+  opacity:0.6;
+  border-radius: 20px;
+  color: $highlight;
+  margin-left:15px;
+  &:hover {
+  opacity:1;
+  transition:0.3s;
+  color: $highlight;
+  }
 }

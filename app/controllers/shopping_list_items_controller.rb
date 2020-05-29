@@ -26,7 +26,7 @@ class ShoppingListItemsController < ApplicationController
   def destroy
     @shoppinglistitem = ShoppingListItem.find(params[:id])
     @shoppinglistitem.destroy!
-    redirect_to recipes_path
+    redirect_to user_path(current_user)
   end
 
   private
