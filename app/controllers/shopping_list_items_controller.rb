@@ -21,6 +21,12 @@ class ShoppingListItemsController < ApplicationController
     end
   end
 
+  def destroy
+    @shoppinglistitem = ShoppingListItem.find(params[:id])
+    @shoppinglistitem.destroy!
+    redirect_to recipes_path
+  end
+
   private
 
   def set_recipe

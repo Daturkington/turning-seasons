@@ -1,22 +1,20 @@
-<div class=" container favourites">
+<div class="container favourites">
   <h1>Your Favourite Recipes:</h1>
   <% if current_user.favourites.present? %>
     <ul>
-      <% current_user.favourites.recipes.each do |items| %>
-        <% items.recipe.each do |item| %>
+      <% current_user.favourites.each do |favourite| %>
           <div class="card-product flex-row">
             <%= image_tag "cake.png"%>
             <div class="card-product-info">
-              <li><%= item.name %></li>
-              <li><%= item.author %></li>
-              <li class="c-d-i-paragraph"><%= item.description %></li>
+              <li><%= favourite.recipe.name %></li>
+              <li><%= favourite.recipe.author %></li>
+              <li class="c-d-i-paragraph"><%= favourite.recipe.description %></li>
             </div>
           </div>
-        <% end %>
       <% end %>
     </ul>
   <% else %>
     <i class="far fa-frown-open"></i>
-    <p class='empty'>You don't have any favourites saved</p>
+    <p class="empty">You haven't chosen any favourite recipes yet! <br> Have a look at what's in season here <strong><%= link_to "Recipes", recipes_path %></strong></p>
   <% end %>
 </div>
