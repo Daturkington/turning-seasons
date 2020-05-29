@@ -3,18 +3,11 @@
   <% if current_user.shopping_list.present? %>
     <ul>
       <% current_user.shopping_list.shopping_list_items.each do |items| %>
-      <h2><%= items.recipe.name %></h2>
-        <% items.ingredients.each do |ing| %>
-          <li><%= ing.name %></li>
-        <% end %>
-          <%= link_to 'Delete', shopping_list_item_path(items), method: :delete, data: {confirm: "Are you sure?"} %>
-      <% end %>
-    </ul>
-    <ul>
-      <% current_user.shopping_list.shopping_list_items.each do |items| %>
+       <h2><%= items.recipe.name %></h2>
         <% items.quantities.each do |quantity| %>
           <li><%= quantity.measurement %> <%= quantity.unit %> <%= quantity.ingredient.name %></li>
         <% end %>
+         <%= link_to 'Delete', shopping_list_item_path(items), method: :delete, data: {confirm: "Are you sure?"} %>
       <% end %>
     </ul>
     <div class="buttons d-flex justify-content-end">
