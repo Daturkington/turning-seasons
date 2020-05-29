@@ -45,7 +45,7 @@
 
       <div class="recipe-image">
         <% if @recipe.photo.attached? %>
-          <%= cl_image_tag @recipe.photo.key, class: 'cloud-image-show' %>
+          <%= cl_image_tag @recipe.photo.key %>
           <% else %>
           <%= image_tag('cake.png') %>
         <% end %>
@@ -69,7 +69,7 @@
           <div>
           <button class="button-icon" data-toggle="modal" data-target="#recipe_<%= @recipe.id %>">
             <i class="fa fa-plus-circle"></i>
-            <p>Add to shopping list</p>
+            <p class="button-text">Add to shopping list</p>
           </button>
           <%= render 'shopping_list_items/shopping_list_item_form', recipe: @recipe %>
         </div>
