@@ -17,17 +17,87 @@ file4 = URI.open('https://www.bbcgoodfood.com/sites/default/files/styles/recipe/
 file5 = URI.open('https://i.guim.co.uk/img/media/55e61a76e102d82860e7d787e49475bc315ad00a/243_460_8409_5045/master/8409.jpg?width=1300&quality=45&auto=format&fit=max&dpr=2&s=ca0c411e761e1e733ffbd49d981ef550')
 file6 = URI.open('https://i.guim.co.uk/img/media/43a71b25c31eebbc2cae3bfe5aa037a84aaa0214/0_3304_4912_2948/master/4912.jpg?width=620&quality=45&auto=format&fit=max&dpr=2&s=003b249a9a0b9ae994827b43f2492b05')
 file7 = URI.open('https://i.guim.co.uk/img/media/4a5a61a3d7247d13301b7b0a8a2dd883be1ba54c/0_2138_4912_2944/master/4912.jpg?width=620&quality=45&auto=format&fit=max&dpr=2&s=6762a630fa66755de5b4679aefd41d7f')
+file8 = URI.open('https://i2.wp.com/c4.staticflickr.com/9/8399/29396469571_996085ba30_z.jpg?resize=640%2C427&ssl=1')
+file9 = URI.open('https://www.bbcgoodfood.com/sites/default/files/styles/recipe/public/recipe/recipe-image/2019/12/rhubarb-custard-french-toast.jpg?itok=q5DbbAk_')
 
+anchovies = Ingredient.create(name: "anchovies")
 artichoke = Ingredient.create(name: "artichoke", season: [6, 7, 8, 9, 10, 11])
-oil = Ingredient.create(name: "extra-virgin olive oil")
-garlic = Ingredient.create(name: "garlic")
-salt = Ingredient.create(name: "sea salt")
-pepper = Ingredient.create(name: "black pepper")
-wine = Ingredient.create(name: "white wine")
+asparagus = Ingredient.create(name: "asparagus", season: [4, 5, 6])
+aubergines = Ingredient.create(name: "aubergine", season: [5, 6, 7, 8, 9, 10])
+beetroot = Ingredient.create(name: "beetroot", season: [6, 7, 8, 9, 10, 11, 12, 1, 2, 3])
+black_olives = Ingredient.create(name: "black olives")
+broad_beans = Ingredient.create(name: "broad beans", season: [5, 6, 7, 8, 9])
+brown_lentils = Ingredient.create(name: "small brown lentils")
 burrata = Ingredient.create(name: "burrata")
+butter = Ingredient.create(name: "butter")
+carrots = Ingredient.create(name: "carrots", season: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12])
+caster_sugar = Ingredient.create(name: "caster sugar")
+coconut_milk = Ingredient.create(name: "coconut milk")
+coconut_oil = Ingredient.create(name: "coconut oil")
+coppa = Ingredient.create(name: "coppa")
+coriander_seeds = Ingredient.create(name: "coriander seeds")
+cracked_wheat = Ingredient.create(name: "cracked wheat")
+cumin_seeds = Ingredient.create(name: "cumin seeds")
+custard = Ingredient.create(name: "custard")
+dried_chillies = Ingredient.create(name: "dried red chillies")
+egg = Ingredient.create(name: "egg")
+eggs = Ingredient.create(name: "eggs")
+feta = Ingredient.create(name: "feta")
 flatbread = Ingredient.create(name: "flatbread")
-pesto = Ingredient.create(name: "pesto")
+garlic = Ingredient.create(name: "garlic")
+greek_yoghurt = Ingredient.create(name: "greek yoghurt")
+ground_coriander = Ingredient.create(name: "ground coriander")
+ginger = Ingredient.create(name: "ginger")
+harissa_paste = Ingredient.create(name: "harrisa paste")
+hazelnuts = Ingredient.create(name: "hazelnuts")
+lemongrass = Ingredient.create(name: "lemongrass")
+lemon_juice = Ingredient.create(name: "lemon juice")
+lime_leaves = Ingredient.create(name: "makrut lime leave")
+limes = Ingredient.create(name: "limes")
+micro_herbs = Ingredient.create(name: "micro herbs")
+milk = Ingredient.create(name: "milk")
 mint = Ingredient.create(name: "springs of mint")
+nigella_seeds = Ingredient.create(name: "nigella seeds")
+oil = Ingredient.create(name: "extra-virgin olive oil")
+orange = Ingredient.create(name: "orange", season: [1, 2, 3])
+parsley = Ingredient.create(name: "parsley")
+pepper = Ingredient.create(name: "black pepper")
+pesto = Ingredient.create(name: "pesto")
+pistachios = Ingredient.create(name: "pistachios")
+rhubarb = Ingredient.create(name:"rhubarb", season: [1, 2, 3, 4, 5, 6, 7])
+red_chilli = Ingredient.create(name: "red chillies", season: [1, 2, 3, 12])
+red_wine_vinegar = Ingredient.create(name: "red wine vinager")
+salt = Ingredient.create(name: "sea salt")
+sesame = Ingredient.create(name: "sesame seeds")
+shallots = Ingredient.create(name: "shallots")
+spring_onions = Ingredient.create(name: "spring onions")
+sprouted_mung_beans = Ingredient.create(name: "sprouted mung beans")
+sugar = Ingredient.create(name: "caster sugar")
+sumac = Ingredient.create(name: "sumac")
+tamarind_paste = Ingredient.create(name: "tamarind paste")
+thai_basil = Ingredient.create(name: "thai basil")
+tomato = Ingredient.create(name: "tomato", season: [6, 7, 8, 9])
+vanilla_pod = Ingredient.create(name: "vanilla pod")
+vegetable_stock = Ingredient.create(name: "vegetable stock")
+vine_tomatoes = Ingredient.create(name: "vine tomatoes", season: [6, 7, 8, 9, 10])
+white_bread = Ingredient.create(name: "white bread")
+white_wine_vinegar = Ingredient.create(name: "white wine vinagar")
+wholegrain_mustard = Ingredient.create(name: "wholegrain mustard")
+wine = Ingredient.create(name: "white wine")
+
+
+
+# Ingredient.create(name: "")
+# Ingredient.create(name: "")
+# Ingredient.create(name: "")
+# Ingredient.create(name: "")
+
+# tomato_recipe = Recipe.new(name: "", author: "", servings: , description: "", instructions: "")
+# tomato_recipe = Recipe.new(name: "", author: "", servings: , description: "", instructions: "")
+# tomato_recipe = Recipe.new(name: "", author: "", servings: , description: "", instructions: "")
+# tomato_recipe = Recipe.new(name: "", author: "", servings: , description: "", instructions: "")
+# tomato_recipe = Recipe.new(name: "", author: "", servings: , description: "", instructions: "")
+
 
 artichoke_recipe = Recipe.new(name:"Artichoke and burrata salad", author:"Tom Hunt", servings: 2, description: "Next time you make a recipe that calls for just the artichoke hearts, don’t discard the leaves – they can be frozen for later use or turned into a distinctive stock. Or, if you’d like to upcycle them into something a little more elaborate, this dish does just that. Burrata and artichokes are a match made in heaven, and the pesto seals the deal.", instructions: "Heat a thick-based frying pan on a medium heat with a good glug of extra-virgin olive oil. Add the artichoke leaves and the whole garlic clove, and season with sea salt. Fry gently for a few minutes, then add a slosh of white wine and cover.
 
@@ -47,15 +117,6 @@ Quantity.create(measurement: 2, ingredient: mint, recipe: artichoke_recipe, unit
 artichoke_recipe.photo.attach(io: file1, filename: 'artichoke_image.jpg', content_type: 'image/jpg')
 artichoke_recipe.save
 
-asparagus = Ingredient.create(name: "asparagus", season: [4, 5, 6])
-eggs = Ingredient.create(name: "eggs")
-butter = Ingredient.create(name: "butter")
-parsley = Ingredient.create(name: "parsley")
-hazelnuts = Ingredient.create(name: "hazelnuts")
-sesame = Ingredient.create(name: "sesame seeds")
-dried_chillies = Ingredient.create(name: "dried red chillies")
-sugar = Ingredient.create(name: "caster sugar")
-anchovies = Ingredient.create(name: "anchovies")
 
 asparagus_recipe = Recipe.new(name:"Asparagus with fried egg and salsa macha", author:"Thomasina Miers", servings: 2, cooking_time: 25, description: "Salsa macha is a Mexican sauce I am in love with. Garlic is poached gently in oil, followed by peanuts, dried red chillies and sesame seeds. The resulting (highly addictive) oil is drizzled over the hundreds of different seafood tostadas; a dish found up and down the coastline of Baja California.
 
@@ -88,11 +149,7 @@ Quantity.create(measurement: 1, ingredient_id: salt.id, recipe: asparagus_recipe
 asparagus_recipe.photo.attach(io: file2, filename: 'asparagus_image.jpg', content_type: 'image/jpg')
 asparagus_recipe.save
 
-aubergines = Ingredient.create(name: "aubergine", season: [5, 6, 7, 8, 9, 10])
-pistachios = Ingredient.create(name: "pistachios")
-limes = Ingredient.create(name: "limes")
-greek_yoghurt = Ingredient.create(name: "greek yoghurt")
-sumac = Ingredient.create(name: "sumac")
+
 
 aubergine_recipe = Recipe.new(name:"Aubergine wedges with lime and pistachio crumb", author:"Anna Jones", servings: 4, cooking_time: 30, description: "Aubergine doesn’t get much attention in my kitchen; my husband, John, doesn’t like it (though I think this is because he has eaten so many badly cooked aubergines – not by me, of course). But a couple of weeks ago, I found myself pining for aubergine like it was a long-lost friend. I cooked up some fat wedges until they were dark and golden on the outside, topped them with a lime and pistachio crumb, and ate a happy solo lunch with flatbreads and salted yoghurt. I also tried it paired with tamarind in this sweet-and-sour curry, spooned on to sticky jasmine rice. My aubergine craving was quelled and, of course, John licked his plate clean.", instructions: "Cut the aubergines lengthways into six to eight wedges (see picture), depending on their size. In a large, nonstick frying pan, heat the oil and fry the aubergines in batches, turning carefully. Once each batch is golden all over, set aside on a roasting tray and keep warm in the oven while you fry the rest.
 
@@ -112,19 +169,6 @@ Quantity.create(measurement: 1, ingredient_id: sumac.id, recipe: aubergine_recip
 
 aubergine_recipe.photo.attach(io: file3, filename: 'aubergine_image.jpg', content_type: 'image/jpg')
 aubergine_recipe.save
-
-coconut_oil = Ingredient.create(name: "coconut oil")
-shallots = Ingredient.create(name: "shallots")
-ginger = Ingredient.create(name: "ginger")
-lemongrass = Ingredient.create(name: "lemongrass")
-lime_leaves = Ingredient.create(name: "makrut lime leave")
-red_chilli = Ingredient.create(name: "red chillies")
-ground_coriander = Ingredient.create(name: "ground coriander")
-vine_tomatoes = Ingredient.create(name: "vine tomatoes", season: [6, 7, 8, 9, 10])
-tamarind_paste = Ingredient.create(name: "tamarind paste")
-coconut_milk = Ingredient.create(name: "coconut milk")
-vegetable_stock = Ingredient.create(name: "vegetable stock")
-thai_basil = Ingredient.create(name: "thai basil")
 
 aubergine_recipe2 = Recipe.new(name:"Aubergine curry with basil and tamarind", author:"Anna Jones", servings: 4, cooking_time: 70, description: "Use Thai basil if you can get it (although normal basil will do). If you can’t get lime leaves, add a good squeeze of lime into your curry at the end.", instructions: "Put a large pan over a medium heat, add a little oil, then fry the aubergine in batches until golden. Set aside.
 
@@ -149,14 +193,7 @@ Quantity.create(measurement: 200, ingredient_id: vegetable_stock.id, recipe: aub
 aubergine_recipe2.photo.attach(io: file4, filename: 'aubergine2_image.jpg', content_type: 'image/jpg')
 aubergine_recipe2.save
 
-beetroot = Ingredient.create(name: "beetroot", season: [6, 7, 8, 9, 10, 11, 12, 1, 2, 3])
-black_olives = Ingredient.create(name: "black olives")
-cumin_seeds = Ingredient.create(name: "cumin seeds")
-coriander_seeds = Ingredient.create(name: "coriander seeds")
-nigella_seeds = Ingredient.create(name: "nigella seeds")
-red_wine_vinegar = Ingredient.create(name: "red wine vinager")
-orange = Ingredient.create(name: "orange", season: [1, 2, 3])
-feta = Ingredient.create(name: "feta")
+
 
 beetroot_recipe = Recipe.new(name:"Whole baked beetroot, roasted beet leaves, whipped feta, crisp olives", servings: 4, cooking_time: 85, author:"Anna Jones", description: "This is as suited to the oven as it is to the barbecue. The simple foil-covered method for roasting works every time", instructions: "Heat the oven to 180C/160C fan/390F/gas 4. If the beetroots still have their leafy tops, cut them off close to the top of the beet, leaving yourself enough to grip.
 
@@ -184,15 +221,6 @@ Quantity.create(measurement: 50, ingredient_id: greek_yoghurt.id, recipe: beetro
 beetroot_recipe.photo.attach(io: file5, filename: 'beetroot_image.jpg', content_type: 'image/jpg')
 beetroot_recipe.save
 
-
-broad_beans = Ingredient.create(name: "broad beans", season: [5, 6, 7, 8, 9])
-carrots = Ingredient.create(name: "carrots", season: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12])
-coppa = Ingredient.create(name: "coppa")
-harissa_paste = Ingredient.create(name: "harrisa paste")
-wholegrain_mustard = Ingredient.create(name: "wholegrain mustard")
-white_wine_vinegar = Ingredient.create(name: "white wine vinagar")
-egg = Ingredient.create(name: "egg")
-
 broadbean_recipe = Recipe.new(name: "Harissa broad beans, coppa salad", author: "Nigel Slater", description: "I am hardly the most patient of cooks, but I can always find a few minutes to skin a broad bean. Once cooked, they pop from their papery skins easily enough and the difference is astonishing. A skinned broad bean is altogether fresher and greener tasting. I suggest you start with just 1 tsp of harissa paste for the dressing, adding more if you like a little more heat. A little sugar mellows the result.", instructions: "Peel the garlic and mash it to a paste using a pestle and mortar. Stir in the harissa paste, mustard and vinegar then mix in the egg yolk and the sugar. You should have a glossy, paste-like dressing. The flavour at this point will be quite strong. It will soften as you fold in the other ingredients.
 
 Cook the broad beans in boiling, lightly salted water for 4-8 minutes, depending on their size. (They should be quite small at this time of year.) Drain them and, if you wish, pop them from their papery skins by holding them between your finger and thumb. It doesn’t take long once you get into the swing of it. Peel the carrots, unless they are very young, then cut into thin discs and put them into a mixing bowl with the broad beans.
@@ -211,13 +239,6 @@ Quantity.create(measurement: 1, ingredient_id: sugar.id, recipe: broadbean_recip
 
 broadbean_recipe.photo.attach(io: file6, filename: 'broadbean_image.jpg', content_type: 'image/jpg')
 broadbean_recipe.save
-
-brown_lentils = Ingredient.create(name: "small brown lentils")
-cracked_wheat = Ingredient.create(name: "cracked wheat")
-spring_onions = Ingredient.create(name: "spring onions")
-sprouted_mung_beans = Ingredient.create(name: "sprouted mung beans")
-lemon_juice = Ingredient.create(name: "lemon juice")
-micro_herbs = Ingredient.create(name: "micro herbs")
 
 asparagus_recipe2 = Recipe.new(name: "Grilled asparagus, lentils and wheat", author: "Nigel Slater", servings: 4, description: "Most of the cracked wheat sold here, also known as bulgur or pourgouri, has already been broken, cooked and dried and doesn’t need the 20 minutes of boiling that some packets suggest. Instead, cover the grains by a centimetre or so of just-boiled water from the kettle, cover and leave for 15 minutes. Job done. Tenderly running a fork through the swollen grains will give a lighter, more open texture. I use young sprouting herbs in this salad, mostly coriander and beetroot, but any “micro-salad” – such as radish sprouts – would add a similar freshness.", instructions: "Boil the lentils in deep, unsalted water for 20 minutes until tender, but still with a nutty bite to them, then drain and set aside.
 
@@ -245,6 +266,38 @@ Quantity.create(measurement: 25, ingredient_id: micro_herbs.id, recipe: asparagu
 
 asparagus_recipe2.photo.attach(io: file7, filename: 'asparagus2_image.jpg', content_type: 'image/jpg')
 asparagus_recipe2.save
+
+tomato_recipe = Recipe.new(cooking_time: 180, name: "Slow roasted tomatoes", author: "Deb Perelman", servings: 4, description: "I love tomatoes so much that I even occasionally take part in the blasphemy that is “sun-dried tomatoes,” most of which are about as dried out in the sun as I am this week–unfortunately not the case for either of us. But lets talk about what sun-dried tomatoes aspired to be before their dreams were co-opted by food packagers and evil-minded chemists: tomatoes roasted slowly at a low temperature.", instructions: "Preheat oven to 225°F. Halve each cherry or grape tomato crosswise, or Roma tomato lengthwise and arrange on a parchment-lined baking sheet along with the cloves of garlic. Drizzle with olive oil, just enough to make the tomatoes glisten. Sprinkle herbs on, if you are using them, and salt and pepper, though go easily on these because the finished product will be so flavorful you’ll need very little to help it along.
+Bake the tomatoes in the oven for about 3 hours. You want the tomatoes to be shriveled and dry, but with a little juice left inside–this could take more or less time depending on the size of your tomatoes.
+
+Either use them right away or let them cool, cover them with some extra olive oil and keep them in the fridge for the best summer condiment, ever. And for snacking.")
+
+tomato_recipe.photo.attach(io: file8, filename: 'tomato_image.jpg', content_type: 'image/jpg')
+tomato_recipe.save
+
+Quantity.create(measurement: 500, ingredient_id: tomato.id, recipe_id: tomato_recipe.id, unit: "g")
+Quantity.create(measurement: 1, ingredient_id: oil.id, recipe_id: tomato_recipe.id, unit: "drizzle")
+Quantity.create(measurement: 4, ingredient_id: garlic.id, recipe_id: tomato_recipe.id, unit: "cloves")
+
+rhubarb_recipe = Recipe.new(cooking_time: 30, name: "Rhubarb & custard French toast", author: "Esther Clark", servings: 2, description: "Top French toast with zesty rhubarb and custard for a deliciously indulgent breakfast or brunch", instructions: "Simmer the rhubarb with the vanilla pod, caster sugar and the zest and juice of the orange for 8-10 mins, or until the rhubarb is soft but holds its shape. Set aside.
+
+Beat the egg with the milk in a shallow dish, add the bread and leave to soak for 1 min, turning once.
+
+Fry in the butter over a medium heat for 4 mins, then flip and cook for 4 mins more, until golden on both sides. Top with the rhubarb and warm custard.")
+
+rhubarb_recipe.photo.attach(io: file9, filename: 'rhubarb_image.jpg', content_type: 'image/jpg')
+rhubarb_recipe.save
+
+Quantity.create(measurement: 200, ingredient_id: rhubarb.id, recipe_id: rhubarb_recipe.id, unit: "g")
+Quantity.create(measurement: 1, ingredient_id: vanilla_pod.id, recipe_id: rhubarb_recipe.id, unit: "split")
+Quantity.create(measurement: 3, ingredient_id: caster_sugar.id, recipe_id: rhubarb_recipe.id, unit: "tbsp")
+Quantity.create(measurement: 1, ingredient_id: orange.id, recipe_id: rhubarb_recipe.id, unit: "zest")
+Quantity.create(measurement: 1, ingredient_id: egg.id, recipe_id: rhubarb_recipe.id, unit: "large")
+Quantity.create(measurement: 300, ingredient_id: milk.id, recipe_id: rhubarb_recipe.id, unit: "ml")
+Quantity.create(measurement: 4, ingredient_id: white_bread.id, recipe_id: rhubarb_recipe.id, unit: "thick slices")
+Quantity.create(measurement: 2, ingredient_id: butter.id, recipe_id: rhubarb_recipe.id, unit: "tbsp")
+Quantity.create(measurement: 100, ingredient_id: custard.id, recipe_id: rhubarb_recipe.id, unit: "ml warm")
+
 
 
 # fennel_seeds = Ingredient.create(name: "fennel seeds")
