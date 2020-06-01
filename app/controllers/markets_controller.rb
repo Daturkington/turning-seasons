@@ -5,7 +5,7 @@ class MarketsController < ApplicationController
     @markers = @markets.map do |market|
       {
         lat: market.latitude,
-        lng: market.longitude
+        lng: market.longitude,
       }
     end
   end
