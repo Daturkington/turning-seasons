@@ -69,7 +69,7 @@
           <div>
           <button class="button-icon" data-toggle="modal" data-target="#recipe_<%= @recipe.id %>">
             <i class="fa fa-plus-circle"></i>
-            <p>Add to shopping list</p>
+            <p class="button-text">Add to shopping list</p>
           </button>
           <%= render 'shopping_list_items/shopping_list_item_form', recipe: @recipe %>
         </div>
@@ -78,5 +78,21 @@
     </div>
 
   </div>
-  <%= link_to 'review', new_recipe_review_path(@recipe) %>
+  <button type="button" class="btn btn-confirm" data-toggle="modal" data-target="#exampleModalCenter">
+    Review recipe
+  </button>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <%= render 'reviews/review_form' %>
+      </div>
+    </div>
+  </div>
 </div>
