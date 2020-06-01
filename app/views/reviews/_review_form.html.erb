@@ -1,0 +1,5 @@
+<%= simple_form_for [@recipe, Review.new] do |f| %>
+  <%= f.collection_radio_buttons :rating, [[5], [4], [3], [2], [1]], :first, :last %>
+  <%= f.input :content %>
+  <%= f.button :submit, 'Confirm', class: "btn btn-confirm" %>
+<% end %>
