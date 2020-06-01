@@ -9,6 +9,8 @@ require "open-uri"
 Quantity.destroy_all
 Ingredient.destroy_all
 Recipe.destroy_all
+Favourite.destroy_all
+Review.destroy_all
 
 file1 = URI.open('https://www.bbcgoodfood.com/sites/default/files/styles/recipe/public/recipe/recipe-image/2016/06/sicilian-style-artichoke-hearts-with-burrata.jpg?itok=1LF46CyS')
 file2 = URI.open('https://i.guim.co.uk/img/media/61939a658cec630bd704d57c70f00b108abc4479/151_12_1672_1286/master/1672.jpg?width=1920&quality=85&auto=format&fit=max&s=34532389f604301513b6142f62c4b8dd')

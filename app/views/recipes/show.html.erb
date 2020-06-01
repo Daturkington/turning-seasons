@@ -54,6 +54,18 @@
       <div class="recipe-instructions">
         <%= @recipe.instructions %>
       </div>
+
+      <div id="review">
+        <% if @recipe.reviews.blank? %>
+          Be the first to leave a review for <%= @recipe.name %>
+        <% else %>
+          <% @recipe.reviews.each do |review| %>
+            <p id="review-<%= review.id %>"><%= review.content %></p>
+            <%= link_to "Update", edit_recipe_review_path(@recipe, review) %>
+            <%= link_to "Delete", recipe_review_path(@recipe, review), method: :delete, data: { confirm: "Are you sure?" }, remote: true %>
+          <% end %>
+        <% end %>
+      </div>
     </div>
 
     <div class="shopping-list-ingredients">
