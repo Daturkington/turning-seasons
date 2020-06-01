@@ -87,7 +87,7 @@ ActiveRecord::Schema.define(version: 2020_06_01_084907) do
   create_table "reviews", force: :cascade do |t|
     t.text "content"
     t.float "rating"
-    t.bigint "user_id"
+    t.bigint "user_id", null: false
     t.bigint "recipe_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -133,6 +133,7 @@ ActiveRecord::Schema.define(version: 2020_06_01_084907) do
   add_foreign_key "quantities", "ingredients"
   add_foreign_key "quantities", "recipes"
   add_foreign_key "reviews", "recipes"
+  add_foreign_key "reviews", "users"
   add_foreign_key "shopping_list_items", "recipes"
   add_foreign_key "shopping_list_items", "shopping_lists"
   add_foreign_key "shopping_lists", "users"
