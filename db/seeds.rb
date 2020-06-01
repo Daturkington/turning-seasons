@@ -9,6 +9,9 @@ require "open-uri"
 Quantity.destroy_all
 Ingredient.destroy_all
 Recipe.destroy_all
+Market.destroy_all
+
+#image seed
 
 file1 = URI.open('https://www.bbcgoodfood.com/sites/default/files/styles/recipe/public/recipe/recipe-image/2016/06/sicilian-style-artichoke-hearts-with-burrata.jpg?itok=1LF46CyS')
 file2 = URI.open('https://i.guim.co.uk/img/media/61939a658cec630bd704d57c70f00b108abc4479/151_12_1672_1286/master/1672.jpg?width=1920&quality=85&auto=format&fit=max&s=34532389f604301513b6142f62c4b8dd')
@@ -19,6 +22,8 @@ file6 = URI.open('https://i.guim.co.uk/img/media/43a71b25c31eebbc2cae3bfe5aa037a
 file7 = URI.open('https://i.guim.co.uk/img/media/4a5a61a3d7247d13301b7b0a8a2dd883be1ba54c/0_2138_4912_2944/master/4912.jpg?width=620&quality=45&auto=format&fit=max&dpr=2&s=6762a630fa66755de5b4679aefd41d7f')
 file8 = URI.open('https://i2.wp.com/c4.staticflickr.com/9/8399/29396469571_996085ba30_z.jpg?resize=640%2C427&ssl=1')
 file9 = URI.open('https://www.bbcgoodfood.com/sites/default/files/styles/recipe/public/recipe/recipe-image/2019/12/rhubarb-custard-french-toast.jpg?itok=q5DbbAk_')
+
+#ingredient Seed
 
 anchovies = Ingredient.create(name: "anchovies")
 artichoke = Ingredient.create(name: "artichoke", season: [6, 7, 8, 9, 10, 11])
@@ -85,19 +90,20 @@ white_wine_vinegar = Ingredient.create(name: "white wine vinagar")
 wholegrain_mustard = Ingredient.create(name: "wholegrain mustard")
 wine = Ingredient.create(name: "white wine")
 
+#market seed
+
+borough_market = Market.create(name: "Borough Market", address: "8 Southwark Street, London, SE1 1TL")
+victoria_park_market = Market.create(name: "Victoria Park Market", address: "56-57 Gore Rd, London E9 7HN")
+greenwhich_market = Market.create(name: "Greenwich Market", address: "5B Greenwich Market, Greenwich Peninsula, London SE10 9HZ")
+southbank_centre_food_market = Market.create(name: "Southbank Centre Food Market", address: "Southbank Centre, Belvedere Rd, Bishop's, London SE1 8XX")
+broadway_market = Market.create(name: "Broadway Market", address: "Broadway Market, Hackney, London E8 4PH")
+brixton_village_market = Market.create(name: "Brixton Village Market", address: "74 Brixton Village, Coldharbour Ln, Brixton, London SW9 8PS")
+portobello_road_market = Market.create(name: "Portobello Road Market", address: "306 Portobello Rd, London W10 5TA")
+old_spitalfields_market = Market.create(name: "Old Spitalfields Market", address: "16 Commercial St, Spitalfields, London E1 6EW")
+camden_market = Market.create(name: "Camden Market", address: "200B chalk farm road, Camden Lock Pl, Camden Town, London NW1 8AF")
 
 
-# Ingredient.create(name: "")
-# Ingredient.create(name: "")
-# Ingredient.create(name: "")
-# Ingredient.create(name: "")
-
-# tomato_recipe = Recipe.new(name: "", author: "", servings: , description: "", instructions: "")
-# tomato_recipe = Recipe.new(name: "", author: "", servings: , description: "", instructions: "")
-# tomato_recipe = Recipe.new(name: "", author: "", servings: , description: "", instructions: "")
-# tomato_recipe = Recipe.new(name: "", author: "", servings: , description: "", instructions: "")
-# tomato_recipe = Recipe.new(name: "", author: "", servings: , description: "", instructions: "")
-
+#recipe & quantity seed
 
 artichoke_recipe = Recipe.new(name:"Artichoke and burrata salad", author:"Tom Hunt", servings: 2, description: "Next time you make a recipe that calls for just the artichoke hearts, don’t discard the leaves – they can be frozen for later use or turned into a distinctive stock. Or, if you’d like to upcycle them into something a little more elaborate, this dish does just that. Burrata and artichokes are a match made in heaven, and the pesto seals the deal.", instructions: "Heat a thick-based frying pan on a medium heat with a good glug of extra-virgin olive oil. Add the artichoke leaves and the whole garlic clove, and season with sea salt. Fry gently for a few minutes, then add a slosh of white wine and cover.
 
@@ -297,23 +303,3 @@ Quantity.create(measurement: 300, ingredient_id: milk.id, recipe_id: rhubarb_rec
 Quantity.create(measurement: 4, ingredient_id: white_bread.id, recipe_id: rhubarb_recipe.id, unit: "thick slices")
 Quantity.create(measurement: 2, ingredient_id: butter.id, recipe_id: rhubarb_recipe.id, unit: "tbsp")
 Quantity.create(measurement: 100, ingredient_id: custard.id, recipe_id: rhubarb_recipe.id, unit: "ml warm")
-
-
-
-# fennel_seeds = Ingredient.create(name: "fennel seeds")
-# blue_cheese = Ingredient.create(name: "blue cheese")
-
-# carrot_recipe1 = Recipe.new(name: "Warm pearl barley & roasted carrot salad with dill vinaigrette", author: "Georgina Fuggle", servings: 4, description: "This salad combines sweet carrots with the liquorice bite of a slightly acidic dressing and creamy blue cheese - a simple lunch or side dish", instructions: "Heat oven to 180C/160C fan/gas 4. Put the sliced carrots in a large roasting tin with the shallots, garlic and fennel seeds. Drizzle over the oil, toss everything together and season. Roast for 35-40 mins until everything has caramelised and the carrots are tender.
-
-# Meanwhile, boil the pearl barley in a large pan of salted water until al dente, about 30 mins. Make the dressing by whisking all the ingredients together with some seasoning. Remove the carrots from the oven.
-
-# Strain the pearl barley and toss through the dressing, carrots, dill, parsley and half the cheese. Finish with a few of the fennel tops and the remaining cheese. Serve warm or cold with a slice or two of warm buttered soda bread, if you like.")
-
-# Quantity.create(measurement: 1, ingredient_id: carrot, recipe: , unit:)
-# Quantity.create(measurement:, ingredient_id:, recipe: , unit:)
-# Quantity.create(measurement:, ingredient_id:, recipe: , unit:)
-# Quantity.create(measurement:, ingredient_id:, recipe: , unit:)
-# Quantity.create(measurement:, ingredient_id:, recipe: , unit:)
-# Quantity.create(measurement:, ingredient_id:, recipe: , unit:)
-
-
