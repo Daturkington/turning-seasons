@@ -342,7 +342,7 @@ Review.create(rating: 2, content: "Not keen but I don't like beetroot...", user:
 Review.create(rating: 5, content: "So so good! Definitely recommend", user: tom, recipe_id: beetroot_recipe.id)
 
 Review.create(rating: 4, content: "Love this curry. Would definitely recommend!", user: jonny, recipe_id: aubergine_recipe2.id)
-Review.create(rating: 3, content: "Anna Jones is the best for seasonal recipe_ids.", user: femi, recipe_id: aubergine_recipe2.id)
+Review.create(rating: 3, content: "Anna Jones is the best for seasonal recipes.", user: femi, recipe_id: aubergine_recipe2.id)
 Review.create(rating: 5, content: "Love this!", user: alice, recipe_id: aubergine_recipe2.id)
 
 Review.create(rating: 4, content: "Fab side dish", user: edina, recipe_id: aubergine_recipe.id)
