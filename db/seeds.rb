@@ -9,6 +9,8 @@ require "open-uri"
 Quantity.destroy_all
 Ingredient.destroy_all
 Recipe.destroy_all
+Favourite.destroy_all
+Review.destroy_all
 Market.destroy_all
 
 #image seed
