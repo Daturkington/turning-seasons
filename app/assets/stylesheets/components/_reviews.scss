@@ -1,0 +1,72 @@
+.review {
+  border: 1px solid black;
+  border-radius: 8px;
+  margin-top: 20px;
+  margin-right: 70px;
+  margin-bottom: 40px;
+  background-color: white;
+  position: relative;
+  padding: 20px 20px 70px 20px;
+  margin-bottom: 40px;
+}
+
+.review-individual {
+  background-color: white;
+  border-radius: 8px;
+  position: relative;
+  &:hover {
+    background-color: rgba(249, 244, 235, 1);
+    transition:0.3s;
+  }
+}
+
+.review-list {
+  list-style-type: none;
+  padding: 5px;
+  margin:5px;
+}
+
+.rating {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom:5px;
+}
+
+.review-links {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  padding:5px;
+}
+
+.update-delete {
+  padding: 5px;
+}
+
+.new-review {
+  position: absolute;
+  right: 25px;
+  bottom: 20px;
+}
+
+.checked {
+  color: goldenrod;
+}
+
+.unchecked {
+  color: goldenrod;
+}
+
+.btn-form {
+  border: solid 1px black;
+  border-radius: 20px;
+  color: black;
+  transition:0.3s;
+  &:hover {
+    opacity:1;
+    transition:0.3s;
+    color: $highlight;
+    border: solid 1px $highlight;
+  } 
+}
