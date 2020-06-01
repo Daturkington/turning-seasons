@@ -10,7 +10,7 @@
         <ul class="unordered-list-shopping">
           <% current_user.shopping_list.shopping_list_items.each do |list| %>
               <div class="card-product-shopping flex-row">
-                <%#= cl_image_tag list.recipe.photo.key %>
+                <%= cl_image_tag list.recipe.photo.key %>
 
                 <div class="card-product-info">
                   <li><%= list.recipe.name %></li>
