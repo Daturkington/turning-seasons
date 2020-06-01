@@ -25,6 +25,7 @@
   height:50px;
   font-size:16px;
   font-weight: bold;
+  border-bottom: solid 2px #D3D1CE;
 }
 
 .card-product-info-description {
@@ -42,7 +43,8 @@
   margin-top: 8px;
   margin-bottom: 0px;
   font-family: $body-font;
-  padding:10px;
+  padding: 10px;
+  width: 100%;
 }
 
 .unordered-list {
@@ -50,3 +52,12 @@
   padding:0px;
   list-style-type:none;
 }
+.unordered-list-ingredients {
+  display: inline;
+}
+
+
+
+
+
+

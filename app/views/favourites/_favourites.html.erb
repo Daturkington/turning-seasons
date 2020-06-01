@@ -4,14 +4,17 @@
     <ul class="unordered-list">
       <% current_user.favourites.each do |favourite| %>
           <div class="card-product flex-row">
-            <%#= cl_image_tag favourite.recipe.photo.key %>
+            <%= cl_image_tag favourite.recipe.photo.key %>
             <div class="card-product-info">
               <div class="card-product-titles">
                 <li><%= favourite.recipe.name %></li>
                 <li><%= favourite.recipe.author %></li>
               </div>
               <div class="card-product-info-description">
-                <li><%= favourite.recipe.description %></li>
+                <ul class="unordered-list-ingredients"><% favourite.recipe.ingredients.each do |ing| %>
+                    <li> <%= ing.name %></li>
+                  <% end %>
+                </ul>
               </div>
             </div>
           </div>
