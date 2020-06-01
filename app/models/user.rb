@@ -6,6 +6,7 @@ class User < ApplicationRecord
 
   has_many :shopping_lists
   has_many :favourites
+  has_many :reviews
 
   def shopping_list
     ShoppingList.where(user: self).where(completed: false).first
