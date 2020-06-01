@@ -1,5 +1,6 @@
 <%= simple_form_for [@recipe, @review] do |f| %>
   <%= f.input :rating, collection: [5, 4, 3, 2, 1] %>
   <%= f.input :content %>
+
   <%= f.button :submit, 'Confirm', class: "btn btn-confirm" %>
 <% end %>

@@ -11,4 +11,5 @@ Rails.application.routes.draw do
   resources :shopping_lists
   resources :users, only: [:show]
   resources :favourites
+  resources :markets, only: [:index]
 end
