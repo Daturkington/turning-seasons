@@ -12,6 +12,8 @@ Recipe.destroy_all
 Favourite.destroy_all
 Review.destroy_all
 Market.destroy_all
+User.destroy_all
+Review.destroy_all
 
 #image seed
 
@@ -305,3 +307,53 @@ Quantity.create(measurement: 300, ingredient_id: milk.id, recipe_id: rhubarb_rec
 Quantity.create(measurement: 4, ingredient_id: white_bread.id, recipe_id: rhubarb_recipe.id, unit: "thick slices")
 Quantity.create(measurement: 2, ingredient_id: butter.id, recipe_id: rhubarb_recipe.id, unit: "tbsp")
 Quantity.create(measurement: 100, ingredient_id: custard.id, recipe_id: rhubarb_recipe.id, unit: "ml warm")
+
+
+# users seed
+emma = User.create(email: "emma@gmail.com", password: "123456", username: "emma_b", address: "186 Deptford High Street, London")
+fred = User.create(email: "fred@gmail.com", password: "123456", username: "fred", address: "9 colebert house, colebert ave, London")
+tom = User.create(email: "tom@gmail.com", password: "123456", username: "tom90", address: "23 peckham high street, London")
+claire = User.create(email: "claire@gmail.com", password: "123456", username: "claire_brown", address: "186 bethnal green road, London")
+anna = User.create(email: "anna@gmail.com", password: "123456", username: "anna_m", address: "117 new cross road, London")
+alice = User.create(email: "alice@gmail.com", password: "123456", username: "alice_1", address: "1 stanstead road, e11 2et, London")
+femi = User.create(email: "femi@gmail.com", password: "123456", username: "femi_b", address: "186 clapham high street, London")
+jonny = User.create(email: "jonny@gmail.com", password: "123456", username: "jonny82", address: "16 mare Street, London")
+edina = User.create(email: "edina@gmail.com", password: "123456", username: "edina_w", address: "186 chesham road, London, se20 7rp")
+
+Review.create(rating: 4, content: "Really easy and quck and so tasty!", user: emma, recipe_id: asparagus_recipe2.id)
+Review.create(rating: 5, content: "Great way to use up aspargus from the alloment", user: fred, recipe_id: asparagus_recipe2.id)
+Review.create(rating: 5, content: "You can never go wrong with Nigel Slater", user: jonny, recipe_id: asparagus_recipe2.id)
+Review.create(rating: 4, content: "A winner all round", user: alice, recipe_id: asparagus_recipe2.id)
+
+Review.create(rating: 4, content: "Yummy! The kids loved it", user: edina, recipe_id: rhubarb_recipe.id)
+Review.create(rating: 5, content: "Winner", user: jonny, recipe_id: rhubarb_recipe.id)
+Review.create(rating: 5, content: "So so good! Definitely recommend", user: anna, recipe_id: rhubarb_recipe.id)
+
+Review.create(rating: 4, content: "Would definitely recommend!", user: emma, recipe_id: tomato_recipe.id)
+Review.create(rating: 3, content: "Tastes good but takes along time.", user: fred, recipe_id: tomato_recipe.id)
+Review.create(rating: 5, content: "Love this", user: jonny, recipe_id: tomato_recipe.id)
+
+Review.create(rating: 4, content: "Never thought broadbeans could taste so good", user: edina, recipe_id: broadbean_recipe.id)
+Review.create(rating: 5, content: "Simple but amazing", user: jonny, recipe_id: broadbean_recipe.id)
+Review.create(rating: 5, content: "So so good! Definitely recommend", user: alice, recipe_id: broadbean_recipe.id)
+
+Review.create(rating: 4, content: "Yummy! Even the kids loved it and that's saying something", user: edina, recipe_id: beetroot_recipe.id)
+Review.create(rating: 2, content: "Not keen but I don't like beetroot...", user: jonny, recipe_id: beetroot_recipe.id)
+Review.create(rating: 5, content: "So so good! Definitely recommend", user: tom, recipe_id: beetroot_recipe.id)
+
+Review.create(rating: 4, content: "Love this curry. Would definitely recommend!", user: jonny, recipe_id: aubergine_recipe2.id)
+Review.create(rating: 3, content: "Anna Jones is the best for seasonal recipe_ids.", user: femi, recipe_id: aubergine_recipe2.id)
+Review.create(rating: 5, content: "Love this!", user: alice, recipe_id: aubergine_recipe2.id)
+
+Review.create(rating: 4, content: "Fab side dish", user: edina, recipe_id: aubergine_recipe.id)
+Review.create(rating: 4, content: "Simple but amazing", user: jonny, recipe_id: aubergine_recipe.id)
+Review.create(rating: 5, content: "So so good! Definitely recommend", user: alice, recipe_id: aubergine_recipe.id)
+
+Review.create(rating: 4, content: "Yummy! Even the kids loved it and that's saying something", user: edina, recipe_id: asparagus_recipe.id)
+Review.create(rating: 2, content: "Not keen but I don't like asparagus...", user: jonny, recipe_id: asparagus_recipe.id)
+Review.create(rating: 5, content: "So so good! Definitely recommend", user: tom, recipe_id: asparagus_recipe.id)
+
+Review.create(rating: 4, content: "Love burrata! Would definitely recommend!", user: jonny, recipe_id: artichoke_recipe.id)
+Review.create(rating: 3, content: "Great way to use up artichoke leaves.", user: femi, recipe_id: artichoke_recipe.id)
+Review.create(rating: 5, content: "Love this!", user: alice, recipe_id: artichoke_recipe.id)
+
