@@ -1,11 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>
-      <%= meta_title %>
+    <title> <%= meta_title %> </title>
       <%= csrf_meta_tags %>
       <%= csp_meta_tag %>
-    </title>
       <%= favicon_link_tag %>
 
     <meta name="description" content="<%= meta_description %>">
@@ -33,7 +31,10 @@
   </head>
 
   <body>
-    <%= render 'shared/navbar' %>
+    <%#= render 'shared/navbar' %>
+    <%= link_to root_path, class: "logo" do %>
+      <%= image_tag('logo.png', height: 36, width: 36) %>
+    <% end %>
     <%= yield %>
   </body>
 </html>
