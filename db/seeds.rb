@@ -26,9 +26,16 @@ file6 = URI.open('https://i.guim.co.uk/img/media/43a71b25c31eebbc2cae3bfe5aa037a
 file7 = URI.open('https://i.guim.co.uk/img/media/4a5a61a3d7247d13301b7b0a8a2dd883be1ba54c/0_2138_4912_2944/master/4912.jpg?width=620&quality=45&auto=format&fit=max&dpr=2&s=6762a630fa66755de5b4679aefd41d7f')
 file8 = URI.open('https://i2.wp.com/c4.staticflickr.com/9/8399/29396469571_996085ba30_z.jpg?resize=640%2C427&ssl=1')
 file9 = URI.open('https://www.bbcgoodfood.com/sites/default/files/styles/recipe/public/recipe/recipe-image/2019/12/rhubarb-custard-french-toast.jpg?itok=q5DbbAk_')
+file10 = URI.open('https://www.deliciousmagazine.co.uk/wp-content/uploads/2018/09/491845-1-eng-GB_new-potato-salad-768x849.jpg')
+file11 = URI.open('https://www.bbcgoodfood.com/sites/default/files/styles/recipe/public/recipe/recipe-image/2016/04/elderflower-gooseberry-vodka.jpg?itok=oDMHhmyx')
+file12 = URI.open('https://www.thespruceeats.com/thmb/nRQr73C9_TUp-9flDfPmczhn1wI=/960x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Oven-RoastedPattyPanSquashWithShallotsandHerbs-5bf49735c9e77c0051ef2e5a.jpg')
+file13 = URI.open('https://www.bbcgoodfood.com/sites/default/files/styles/recipe/public/recipe_images/halloumi-with-tomatoes-pomegranate-molasses_0.jpg?itok=39hGHZCE')
+file14 = URI.open('https://www.bbcgoodfood.com/sites/default/files/styles/recipe/public/recipe_images/tomato-kachumber.jpg?itok=jnoFhWwj')
+file15 = URI.open('https://www.bbcgoodfood.com/sites/default/files/styles/recipe/public/recipe_images/spanishsalad.jpg?itok=V8cnM5xX')
 
 #ingredient Seed
 
+almond = Ingredient.create(name:"almond")
 anchovies = Ingredient.create(name: "anchovies")
 artichoke = Ingredient.create(name: "artichoke", season: [6, 7, 8, 9, 10, 11])
 asparagus = Ingredient.create(name: "asparagus", season: [4, 5, 6])
@@ -41,58 +48,80 @@ burrata = Ingredient.create(name: "burrata")
 butter = Ingredient.create(name: "butter")
 carrots = Ingredient.create(name: "carrots", season: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12])
 caster_sugar = Ingredient.create(name: "caster sugar")
+cayenne_pepper = Ingredient.create(name: "cayenne pepper")
+chilli = Ingredient.create(name:"chilli")
+chives = Ingredient.create(name: "chives")
+chorizo = Ingredient.create(name: "chorizo")
 coconut_milk = Ingredient.create(name: "coconut milk")
 coconut_oil = Ingredient.create(name: "coconut oil")
 coppa = Ingredient.create(name: "coppa")
+coriander_leaves = Ingredient.create(name: "coriander leaves")
 coriander_seeds = Ingredient.create(name: "coriander seeds")
 cracked_wheat = Ingredient.create(name: "cracked wheat")
 cumin_seeds = Ingredient.create(name: "cumin seeds")
 custard = Ingredient.create(name: "custard")
+dijon_mustard = Ingredient.create(name: "dijon mustard")
 dried_chillies = Ingredient.create(name: "dried red chillies")
+elderflower = Ingredient.create(name: "Elderflower")
 egg = Ingredient.create(name: "egg")
 eggs = Ingredient.create(name: "eggs")
 feta = Ingredient.create(name: "feta")
 flatbread = Ingredient.create(name: "flatbread")
 garlic = Ingredient.create(name: "garlic")
+ginger = Ingredient.create(name: "ginger")
+gooseberries = Ingredient.create(name: "gooseberries", season: [6, 7])
 greek_yoghurt = Ingredient.create(name: "greek yoghurt")
 ground_coriander = Ingredient.create(name: "ground coriander")
-ginger = Ingredient.create(name: "ginger")
+halloumi = Ingredient.create(name: "jalloumi")
 harissa_paste = Ingredient.create(name: "harrisa paste")
 hazelnuts = Ingredient.create(name: "hazelnuts")
+iberico_ham = Ingredient.create(name:"iberico ham")
 lemongrass = Ingredient.create(name: "lemongrass")
 lemon_juice = Ingredient.create(name: "lemon juice")
+lemon_peel = Ingredient.create(name: "lemon peel")
 lime_leaves = Ingredient.create(name: "makrut lime leave")
 limes = Ingredient.create(name: "limes")
+manchego = Ingredient.create(name:"manchego")
 micro_herbs = Ingredient.create(name: "micro herbs")
 milk = Ingredient.create(name: "milk")
-mint = Ingredient.create(name: "springs of mint")
+mint = Ingredient.create(name: "mint leaves")
+new_potatoes = Ingredient.create(name: "new potatoes", season: [4, 5, 6, 7])
 nigella_seeds = Ingredient.create(name: "nigella seeds")
-oil = Ingredient.create(name: "extra-virgin olive oil")
+onion = Ingredient.create(name: "onion")
+oil = Ingredient.create(name: "olive oil")
 orange = Ingredient.create(name: "orange", season: [1, 2, 3])
 parsley = Ingredient.create(name: "parsley")
 pepper = Ingredient.create(name: "black pepper")
 pesto = Ingredient.create(name: "pesto")
 pistachios = Ingredient.create(name: "pistachios")
+pomegranate_mollases = Ingredient.create(name: "pomegranate mollases")
+pomegranate_seeds = Ingredient.create(name: "pomegranate seeds")
 rhubarb = Ingredient.create(name:"rhubarb", season: [1, 2, 3, 4, 5, 6, 7])
 red_chilli = Ingredient.create(name: "red chillies", season: [1, 2, 3, 12])
+red_onion = Ingredient.create(name:"red onion")
 red_wine_vinegar = Ingredient.create(name: "red wine vinager")
 salt = Ingredient.create(name: "sea salt")
 sesame = Ingredient.create(name: "sesame seeds")
 shallots = Ingredient.create(name: "shallots")
+sherry_vinegar = Ingredient.create(name:"sherry vinegar")
 spring_onions = Ingredient.create(name: "spring onions")
 sprouted_mung_beans = Ingredient.create(name: "sprouted mung beans")
 sugar = Ingredient.create(name: "caster sugar")
 sumac = Ingredient.create(name: "sumac")
+summer_squash = Ingredient.create(name: "summer squash", season: [6, 7, 8, 9, 10])
 tamarind_paste = Ingredient.create(name: "tamarind paste")
 thai_basil = Ingredient.create(name: "thai basil")
+thyme = Ingredient.create(name: "thyme")
 tomato = Ingredient.create(name: "tomato", season: [6, 7, 8, 9])
 vanilla_pod = Ingredient.create(name: "vanilla pod")
 vegetable_stock = Ingredient.create(name: "vegetable stock")
 vine_tomatoes = Ingredient.create(name: "vine tomatoes", season: [6, 7, 8, 9, 10])
+vodka = Ingredient.create(name:"vodka")
 white_bread = Ingredient.create(name: "white bread")
 white_wine_vinegar = Ingredient.create(name: "white wine vinagar")
 wholegrain_mustard = Ingredient.create(name: "wholegrain mustard")
 wine = Ingredient.create(name: "white wine")
+za_atar = Ingredient.create(name:"za'atar")
 
 #market seed
 
@@ -308,6 +337,116 @@ Quantity.create(measurement: 4, ingredient_id: white_bread.id, recipe_id: rhubar
 Quantity.create(measurement: 2, ingredient_id: butter.id, recipe_id: rhubarb_recipe.id, unit: "tbsp")
 Quantity.create(measurement: 100, ingredient_id: custard.id, recipe_id: rhubarb_recipe.id, unit: "ml warm")
 
+new_potatoes_recipe = Recipe.new(cooking_time: 30, name:"New potato, artichoke, broad bean and chorizo salad", author:"Thomas Armstrong", description:"A filling salad recipe with the rich flavour of chorizo and a mustardy kick in the salad dressing. It makes the most of seasonal new potatoes, too. Wonderful!", instructions:"Boil the potatoes in salted water for 15-20 minutes until tender. Drain, then when cool enough to handle, halve any larger ones and put in a bowl.
+Meanwhile, heat a pan over a low-medium heat, then slice and fry the chorizo until it’s crisp and has released its oils. Scoop out with a slotted spoon and add to the potatoes. Drop the broad beans into boiling water, cook for 1-2 minutes, then drain and refresh under cold water. Slip them out of their outer skins (discard the skins) and add to the potatoes and chorizo.
+Drain and slice the artichoke hearts, then add to the bowl. Whisk the mustard with the vinegar and season with salt, pepper and a pinch of sugar. Whisk in the oil until the dressing is thick and glossy. Pour half of it over the salad, then toss. Snip the chives, add to the salad and serve with extra dressing on the side.")
+
+new_potatoes_recipe.photo.attach(io: file10, filename:'new_potato_image.jpg', content_type: 'image/jpg')
+new_potatoes_recipe.save
+
+Quantity.create(measurement: 500, ingredient_id: new_potatoes.id, recipe_id: new_potatoes_recipe.id, unit: "g")
+Quantity.create(measurement: 125, ingredient_id: chorizo.id, recipe_id: new_potatoes_recipe.id, unit: "g")
+Quantity.create(measurement: 300, ingredient_id: broad_beans.id, recipe_id: new_potatoes_recipe.id, unit: "g")
+Quantity.create(measurement: 200, ingredient_id: artichoke.id, recipe_id: new_potatoes_recipe.id, unit: "g")
+Quantity.create(measurement: 2, ingredient_id: dijon_mustard.id, recipe_id: new_potatoes_recipe.id, unit: "tsp")
+Quantity.create(measurement: 2, ingredient_id: white_wine_vinegar.id, recipe_id: new_potatoes_recipe.id, unit: "tsp")
+Quantity.create(measurement: 1, ingredient_id: sugar.id, recipe_id: new_potatoes_recipe.id, unit: "pinch")
+Quantity.create(measurement: 2, ingredient_id: oil.id, recipe_id: new_potatoes_recipe.id, unit: "tbsp")
+Quantity.create(measurement: 25, ingredient_id: chives.id, recipe_id: new_potatoes_recipe.id, unit: "g")
+
+gooseberry_recipe = Recipe.new(cooking_time: 60, name:"Elderflower & gooseberry vodka", author:"Mary Hopcroft", description:"Add a shot of this fruity, fragrant infused vodka to a cocktail or serve simply with lemonade or tonic water", instructions:"Divide the gooseberries between two 1-litre jars and very lightly bruise with the handle of a wooden spoon. Add the flowers, top with the lemon peel and pour over the vodka. Submerge the elderflowers with a circle of baking parchment and seal with a lid. Leave to infuse for at least 48 hrs or up to 1 week.
+
+Once infused, line a sieve with kitchen paper and set over a large bowl. Pour in the vodka, then discard the strained berries and flowers.
+
+Tip the sugar into a pan with 350ml water and gently heat until the sugar has dissolved. Turn up the heat, bring to a simmer and cook until syrupy and reduced by half – about 10 mins. Cool to room temperature, then add 100ml to the elderflower liquor. Stir well and taste, adding more until you are happy with the sweetness.
+
+Decant the vodka into bottles and store in a cool, dark place. It will keep for years, but the flavour will diminish after a year.")
+
+gooseberry_recipe.photo.attach(io: file11, filename:'gooseberry_image.jpg', content_type:'image/jpg')
+gooseberry_recipe.save
+
+Quantity.create(measurement: 300, ingredient_id:gooseberries.id, recipe_id: gooseberry_recipe.id, unit: "g")
+Quantity.create(measurement: 20, ingredient_id: elderflower.id, recipe_id: gooseberry_recipe.id, unit: "heads")
+Quantity.create(measurement: 5, ingredient_id: lemon_peel.id, recipe_id: gooseberry_recipe.id, unit: "strips")
+Quantity.create(measurement: 700, ingredient_id: vodka.id, recipe_id: gooseberry_recipe.id, unit: "ml")
+Quantity.create(measurement: 350, ingredient_id: caster_sugar.id, recipe_id: gooseberry_recipe.id, unit: "g")
+
+summer_squash_recipe = Recipe.new(cooking_time: 20, name:"Oven Roasted Summer Squash", author:"Jen Hoy", description:"Patty pan squash could more accurately be called 'flying saucer' squash because of its appearance—and, in fact, it sometimes is. Some say these little squashes look like Scottish tams. The patty pan is small, round and flat, with edges that resemble an alien spacecraft. It might be yellow, white, or green.", instructions:"Gather the ingredients.
+
+Oven Roasted Squash
+
+Preheat oven to 400 F.
+
+Toss the squash, shallot, thyme, olive oil and salt together in a bowl.
+
+mix veggies
+
+Spread the mixture out onto a sheet pan. Bake 15 to 25 minutes or until the squash is tender. Monitor it periodically by testing it with a fork.
+
+cook in oven
+
+Serve hot or at room temperature.")
+
+summer_squash_recipe.photo.attach(io: file12, filename: 'summer_squash_image.jpg', content_type:'image/jpg')
+summer_squash_recipe.save
+
+Quantity.create(measurement: 225, ingredient_id: summer_squash.id, recipe_id: summer_squash_recipe.id, unit: "g")
+Quantity.create(measurement: 1, ingredient_id: shallots.id, recipe_id: summer_squash_recipe.id, unit: "medium")
+Quantity.create(measurement: 1, ingredient_id: thyme.id, recipe_id: summer_squash_recipe.id, unit: "tsp")
+Quantity.create(measurement: 1, ingredient_id: vodka.id, recipe_id: summer_squash_recipe.id, unit: "tbsp")
+Quantity.create(measurement: 1, ingredient_id: salt.id, recipe_id: summer_squash_recipe.id, unit: "pinch")
+
+tomato_recipe2 = Recipe.new(cooking_time: 15, name:"Halloumi with tomato & pomegranate mollases", author:"Joe Mathews", description:"Salty halloumi cheese, sweet pomegranate molasses and fresh mint make a delicious combination in this quick Lebanese meze dish", instructions:"Pour the olive oil into a medium bowl, add the za’atar and stir to combine. Add the halloumi and toss in the mixture until well coated.
+
+Heat a large griddle pan. Place the halloumi in the pan and cook for 1-2 mins, then turn over and cook for a further 1-2 mins until golden brown on both sides. After turning the halloumi, add the cherry tomatoes and move them around the pan quickly so they cook all over.
+
+Transfer the halloumi and tomatoes to a plate, then drizzle over the pomegranate molasses and serve with the mint leaves and pomegranate seeds scattered over.")
+
+tomato_recipe2.photo.attach(io: file13, filename: 'tomato_recipe2_image.jpg', content_type: 'image/jpg')
+tomato_recipe2.save
+
+Quantity.create(measurement: 2, ingredient_id: oil.id, recipe_id: tomato_recipe2.id, unit: "tbsp")
+Quantity.create(measurement: 1, ingredient_id: za_atar.id, recipe_id: tomato_recipe2.id, unit: "tsp")
+Quantity.create(measurement: 225, ingredient_id: halloumi.id, recipe_id: tomato_recipe2.id, unit: "g")
+Quantity.create(measurement: 5, ingredient_id: vine_tomatoes.id, recipe_id: tomato_recipe2.id, unit: "whole, ripened")
+Quantity.create(measurement: 1, ingredient_id: pomegranate_mollases.id, recipe_id: tomato_recipe2.id, unit: "tbsp")
+Quantity.create(measurement: 1, ingredient_id: mint.id, recipe_id: tomato_recipe2.id, unit: "handful")
+Quantity.create(measurement: 2, ingredient_id: pomegranate_seeds.id, recipe_id: tomato_recipe2.id, unit: "tsp")
+
+tomato_recipe3 = Recipe.new(cooking_time: 15, name:"Tomato Kachumber", author:"Barney Desmazery", description:"This Indian chopped salad makes a fresh and flavourful addition to a sharing or buffet spread with tangy red onion, cumin and coriander", instructions:"Mix all the ingredients together in a bowl until well coated, and cover until needed. Scatter over mint and chilli, if you like, before serving.")
+tomato_recipe3.photo.attach(io: file14, filename: 'tomato_recipe3_image.jpg', content_type: "image/jpg")
+tomato_recipe3.save
+
+Quantity.create(measurement: 4, ingredient_id: vine_tomatoes.id, recipe_id: tomato_recipe3.id, unit: "chopped")
+Quantity.create(measurement: 1, ingredient_id: onion.id, recipe_id: tomato_recipe3.id, unit: "small")
+Quantity.create(measurement: 1, ingredient_id: lemon_juice.id, recipe_id: tomato_recipe3.id, unit: "squeezed")
+Quantity.create(measurement: 1, ingredient_id: cayenne_pepper.id, recipe_id: tomato_recipe3.id, unit: "pinch")
+Quantity.create(measurement: 1, ingredient_id: cumin_seeds.id, recipe_id: tomato_recipe3.id, unit: "tsp")
+Quantity.create(measurement: 1, ingredient_id: coriander_leaves.id, recipe_id: tomato_recipe3.id, unit: "handful")
+Quantity.create(measurement: 1, ingredient_id: mint.id, recipe_id: tomato_recipe3.id, unit: "handful")
+Quantity.create(measurement: 1, ingredient_id: chilli.id, recipe_id: tomato_recipe3.id, unit: "tsp")
+
+tomato_recipe4 = Recipe.new(cooking_time: 25, servings: 4, name:"Spanish tomato salad", author:"Bradley Petty-Fitzmaurice", description:"Combine Serrano ham, manchego cheese and different varieties of tomato, drizzle with an almond parsley dressing, for a light summer side or tapas dish", instructions:"Slice the tomatoes and arrange on a large platter with the onion. Sprinkle with a good pinch of salt and ½ tsp of the sugar. Leave to stand for 10 mins or up to 30 mins while you make the dressing.
+
+Tip the parsley, vinegar, olive oil, remaining sugar, garlic, half the almonds and a good pinch of salt into the small bowl of a food processor. Blitz to a pesto consistency, adding a dribble of water if you need to loosen it a little.
+
+Weave the slices of ham between the tomatoes and onion, creating a little height on the plate. Drizzle over the dressing, scatter with the remaining almonds and shavings of manchego. Drizzle over a little extra oil and serve.")
+
+tomato_recipe4.photo.attach(io: file15, filename: 'tomato_recipe4_image.jpg', content_type:'image/jpg')
+tomato_recipe4.save
+
+Quantity.create(measurement: 1, ingredient_id: vine_tomatoes.id, recipe_id: tomato_recipe4.id, unit: "kg of mixed")
+Quantity.create(measurement: 1, ingredient_id: red_onion.id, recipe_id: tomato_recipe4.id, unit: "thinly sliced")
+Quantity.create(measurement: 11, ingredient_id: caster_sugar.id, recipe_id: tomato_recipe4.id, unit: "tsp")
+Quantity.create(measurement: 1, ingredient_id: parsley.id, recipe_id: tomato_recipe4.id, unit: "small bunch")
+Quantity.create(measurement: 2, ingredient_id: sherry_vinegar.id, recipe_id: tomato_recipe4.id, unit: "tbsp")
+Quantity.create(measurement: 4, ingredient_id: oil.id, recipe_id: tomato_recipe4.id, unit: "tbsp")
+Quantity.create(measurement: 1, ingredient_id: garlic.id, recipe_id: tomato_recipe4.id, unit: "clove")
+Quantity.create(measurement: 50, ingredient_id: almond.id, recipe_id: tomato_recipe4.id, unit: "g")
+Quantity.create(measurement: 6, ingredient_id: iberico_ham.id, recipe_id: tomato_recipe4.id, unit: "slices")
+Quantity.create(measurement: 75, ingredient_id: manchego.id, recipe_id: tomato_recipe4.id, unit: "g")
+
+
 
 # users seed
 emma = User.create(email: "emma@gmail.com", password: "123456", username: "emma_b", address: "186 Deptford High Street, London")
@@ -319,6 +458,8 @@ alice = User.create(email: "alice@gmail.com", password: "123456", username: "ali
 femi = User.create(email: "femi@gmail.com", password: "123456", username: "femi_b", address: "186 clapham high street, London")
 jonny = User.create(email: "jonny@gmail.com", password: "123456", username: "jonny82", address: "16 mare Street, London")
 edina = User.create(email: "edina@gmail.com", password: "123456", username: "edina_w", address: "186 chesham road, London, se20 7rp")
+
+#reviews seed
 
 Review.create(rating: 4, content: "Really easy and quck and so tasty!", user: emma, recipe_id: asparagus_recipe2.id)
 Review.create(rating: 5, content: "Great way to use up aspargus from the alloment", user: fred, recipe_id: asparagus_recipe2.id)
@@ -358,4 +499,19 @@ Review.create(rating: 5, content: "So so good! Definitely recommend", user: tom,
 Review.create(rating: 4, content: "Love burrata! Would definitely recommend!", user: jonny, recipe_id: artichoke_recipe.id)
 Review.create(rating: 3, content: "Great way to use up artichoke leaves.", user: femi, recipe_id: artichoke_recipe.id)
 Review.create(rating: 5, content: "Love this!", user: alice, recipe_id: artichoke_recipe.id)
+
+Review.create(rating: 5, content: "This recipe is LIFE!", user: anna, recipe_id: tomato_recipe4.id)
+Review.create(rating: 1, content: "Too many tomatoes. not a fan of parsley and the onions really ruin it for me. Would be good with just the ham on its on.", user: emma, recipe_id: tomato_recipe4.id)
+Review.create(rating: 5, content: "Another amazing recipe! Love this!", user: alice, recipe_id: tomato_recipe4.id)
+
+
+
+
+
+
+
+
+
+
+
 
