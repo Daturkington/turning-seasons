@@ -1,4 +1,5 @@
 <div class="container favourites">
+  <h2 class="favourites-title">Your Favourite Recipes</h2>
   <% if current_user.favourites.present? %>
     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
 
@@ -6,11 +7,18 @@
         <% favourites = current_user.favourites %>
         <div class="carousel-item active">
           <%= cl_image_tag favourites.first.recipe.photo.key, class: "carousel-image" %>
-        </div>
-        <% favourites.drop(1).each do |favourite| %>
-          <div class="carousel-item">
-            <%= cl_image_tag favourite.recipe.photo.key, class: "carousel-image" %>
+          <div class="carousel-caption d-none d-md-block">
+            <h5><%= link_to favourites.first.recipe.name, recipe_path(favourites.first.recipe.id) %></h5>
           </div>
+        </div>
+
+          <% favourites.drop(1).each do |favourite| %>
+        <div class="carousel-item">
+          <%= cl_image_tag favourite.recipe.photo.key, class: "carousel-image" %>
+          <div class="carousel-caption d-none d-md-block">
+            <h5><%= link_to favourite.recipe.name, recipe_path(favourite.recipe.id) %></h5>
+          </div>
+        </div>
         <% end %>
       </div>
 
