@@ -27,9 +27,6 @@
 }
 
 .rating {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
   margin-bottom:5px;
 }
 
@@ -38,10 +35,13 @@
   bottom: 5px;
   right: 5px;
   padding:5px;
+  display: flex;
+  flex-direction: row;
 }
 
 .update-delete {
   padding: 5px;
+  margin:5px;
 }
 
 .new-review {
@@ -69,4 +69,11 @@
     color: $highlight;
     border: solid 1px $highlight;
   } 
+}
+
+.average-rating {
+  position: absolute;
+  top: 25px;
+  right: 40px;
+  font-size: 20px;
 }
