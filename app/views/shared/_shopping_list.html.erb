@@ -34,43 +34,44 @@
 </div>
 <h3>Shopping List</h3>
 <div class="shopping-list">
-
   <% if user_signed_in? %>
-  <% if current_user.shopping_list.present? %>
-    <ul>
-      <% current_user.shopping_list.shopping_list_items.map{|item| item.quantities}.flatten.group_by{|quantity| quantity.ingredient.name}.each do |key, value|  %>
-        <li><%= value.map{|r| r.measurement}.sum  %> <%= value.first.unit %> <%= key %></li>
-      <% end %>
-    </ul>
+    <% if current_user.shopping_list.present? %>
+      <ul>
+        <% current_user.shopping_list.shopping_list_items.map{|item| item.quantities}.flatten.group_by{|quantity| quantity.ingredient.name}.each do |key, value|  %>
+          <li><%= value.map{|r| r.measurement}.sum  %> <%= value.first.unit %> <%= key %></li>
+        <% end %>
+      </ul>
 
-    <% else %>
-      <i class="far fa-frown-open"></i>
-      <p class='empty'>Your shopping list is empty</p>
+      <% else %>
+        <i class="far fa-frown-open"></i>
+        <p class='empty'>Your shopping list is empty</p>
     <% end %>
   <% end %>
 </div>
 
 
 <div class="buttons-list d-flex justify-content-end">
-  <% if current_user.shopping_list.present? %>
-    <div class="button-icon-small">
-      <%= link_to user_path(current_user) do %>
-        <i class="fas fa-pencil-alt"></i>
-        <p class="button-text">Edit list</p>
-      <% end %>
-    </div>
-    <div class="button-icon-small">
-      <%= link_to recipes_path do %>
-        <i class="far fa-paper-plane"></i>
-        <p class="button-text">Send list</p>
-      <% end %>
-    </div>
-    <div class="button-icon-small">
-      <%= link_to shopping_list_path(current_user.shopping_list), method: :put do %>
-        <i class="far fa-check-circle"></i>
-        <p class="button-text">Completed</p>
-      <% end %>
-    </div>
+  <% if user_signed_in? %>
+    <% if current_user.shopping_list.present? %>
+      <div class="button-icon-small">
+        <%= link_to user_path(current_user) do %>
+          <i class="fas fa-pencil-alt"></i>
+          <p class="button-text">Edit list</p>
+        <% end %>
+      </div>
+      <div class="button-icon-small">
+        <%= link_to recipes_path do %>
+          <i class="far fa-paper-plane"></i>
+          <p class="button-text">Send list</p>
+        <% end %>
+      </div>
+      <div class="button-icon-small">
+        <%= link_to shopping_list_path(current_user.shopping_list), method: :put do %>
+          <i class="far fa-check-circle"></i>
+          <p class="button-text">Completed</p>
+        <% end %>
+      </div>
+    <% end %>
   <% end %>
 </div>
 
