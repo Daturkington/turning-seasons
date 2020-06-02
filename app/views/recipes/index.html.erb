@@ -52,9 +52,11 @@
                   <% end %>
                 </div>
               <% else %>
-                 <div class="heart-icon-red">
-                   <i class="fab fa-gratipay"></i>
-                 </div>
+                <div class="heart-icon-red">
+                  <%= link_to favourite_path(Favourite.find_by(user: current_user, recipe: recipe)), method: :delete do %>
+                    <i class="fab fa-gratipay"></i>
+                  <% end %>
+                </div>
               <% end %>
             <% end %>
           </div>

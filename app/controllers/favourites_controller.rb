@@ -7,13 +7,13 @@ class FavouritesController < ApplicationController
   end
 
   def new
-    @favourites = Favourite.new
+    @favourite = Favourite.new
   end
 
   def create
-    @favourites = Favourite.new(recipe_id: @recipe.id)
-    @favourites.user = current_user
-    if @favourites.save
+    @favourite = Favourite.new(recipe_id: @recipe.id)
+    @favourite.user = current_user
+    if @favourite.save
       redirect_to recipes_path
      else
       render :new
@@ -21,9 +21,9 @@ class FavouritesController < ApplicationController
   end
 
   def destroy
-    @favourites = Favourite.find(params[:id])
-    @favourites.destroy
-    redirect_to user_path(current_user)
+    @favourite = Favourite.find(params[:id])
+    @favourite.destroy
+    redirect_to recipes_path
   end
 
   private
