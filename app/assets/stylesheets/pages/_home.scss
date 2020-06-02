@@ -1,4 +1,15 @@
 // Specific CSS for your home-page
+body {
+  position: relative;
+}
+
+.logo {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+
 .headings-landing {
   z-index: 1000;
   position: relative;

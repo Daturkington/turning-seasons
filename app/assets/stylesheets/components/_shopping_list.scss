@@ -1,11 +1,53 @@
-.shopping-list-ingredients {
-  margin-top: 60px;
-  width: 20%;
+.side-nav {
   text-align: right;
+
+  height: 30vh;
+}
+
+.recipe_link {
+  font-family: $headers-font;
+  font-size: 40px;
+  font-weight: 400;
+  transition: 0.3s;
+  &:hover {
+    color: $background;
+  }
+}
+
+.profile_link {
+  font-family: $headers-font;
+  font-size: 30px;
+  font-weight: 400;
+  transition: 0.3s;
+  &:hover {
+    color: $background;
+  }
+}
+
+.log-link {
+  font-family: $headers-font;
+  font-size: 18px;
+  font-weight: 400;
+  transition: 0.3s;
+  &:hover {
+    color: $background;
+  }
+}
+
+.shopping-list-ingredients {
+  padding: 20px;
+  background: $highlight;
+  width: 20%;
+  height: 100vh;
+  text-align: right;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
   h3 {
     font-family: $body-font;
-    font-size: 18px;
+    font-size: 26px;
     font-weight: 600;
+    color: $background;
   }
   ul {
     list-style-type: none;
@@ -13,7 +55,8 @@
 }
 
 .shopping-list {
-  min-height: 400px;
+  max-height: 50vh;
+  overflow: scroll;
 }
 
 .empty {
