@@ -1,21 +1,19 @@
 
 @import "components/reviews";
 
-.recipe-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 80%;
-}
-
 .body-show {
   margin-top: 60px;
   width: 80%;
 }
 
+.recipe-content {
+  margin: auto;
+  text-align: center;
+
+}
+
 .review-button {
   margin-top: 40px;
-  margin-bottom: 40px;
 }
 
 .recipe-description {
@@ -60,6 +58,7 @@
   margin: auto;
   padding-top: 40px;
   text-align: center;
+  margin-bottom: 40px;
   p {
     font-family: $body-font;
     font-size: 22px;

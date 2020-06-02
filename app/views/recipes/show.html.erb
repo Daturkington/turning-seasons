@@ -36,35 +36,42 @@
       </div>
     </div>
 
-      <div class="recipe-content">
+    <div class="recipe-content">
 
-        <div class="image-ingredients">
+      <div class="image-ingredients">
 
-          <div class="ingredients">
-            <h3>Ingredients</h3>
-            <ul>
-              <% @recipe.quantities.each do |quantity| %>
-                <li><%= quantity.measurement %> <%= quantity.unit %> <%= quantity.ingredient.name %></li>
-              <% end %>
-            </ul>
-            <div class="buttons d-flex justify-content-center">
-              <div>
-                <button class="button-icon" data-toggle="modal" data-target="#recipe_<%= @recipe.id %>">
-                  <i class="fa fa-plus-circle"></i>
-                  <p class="button-text">Add to shopping list</p>
-                </button>
-                <%= render 'shopping_list_items/shopping_list_item_form', recipe: @recipe %>
-              </div>
+        <div class="ingredients">
+          <h3>Ingredients</h3>
+          <ul>
+            <% @recipe.quantities.each do |quantity| %>
+              <li><%= quantity.measurement %> <%= quantity.unit %> <%= quantity.ingredient.name %></li>
+            <% end %>
+          </ul>
+          <div class="buttons d-flex justify-content-center">
+            <div>
+              <button class="button-icon" data-toggle="modal" data-target="#recipe_<%= @recipe.id %>">
+                <i class="fa fa-plus-circle"></i>
+                <p class="button-text">Add to shopping list</p>
+              </button>
+              <%= render 'shopping_list_items/shopping_list_item_form', recipe: @recipe %>
             </div>
           </div>
+        </div>
 
-          <div class="recipe-image">
-          <% if @recipe.photo.attached? %>
-              <%= cl_image_tag @recipe.photo.key, class: 'cloud-image-show' %>
-              <% else %>
-              <%= image_tag('cake.png') %>
-            <% end %>
-          </div>
+        <div class="recipe-image">
+        <% if @recipe.photo.attached? %>
+            <%= cl_image_tag @recipe.photo.key, class: 'cloud-image-show' %>
+            <% else %>
+            <%= image_tag('cake.png') %>
+          <% end %>
+        </div>
+
+      </div>
+
+
+      <div class="recipe-description">
+        <p><%= @recipe.description %></p>
+      </div>
 
       <div class="recipe-instructions">
         <%= @recipe.instructions %>
@@ -115,45 +122,14 @@
               <% end %>
             </div>
           <% end %>
-          <%= link_to "New Review", new_recipe_review_path(@recipe), class: "btn btn-form new-review" %>
+
+          <button type="button" class="btn btn-confirm review-button" data-toggle="modal" data-target="#exampleModalCenter">
+            Review recipe
+          </button>
+
         <% end %>
       </div>
     </div>
-
-    <div class="shopping-list-ingredients">
-      <%= render 'shared/shopping_list' %>
-      <div class="ingredients">
-        <h3>Ingredients</h3>
-        <ul>
-          <% @recipe.quantities.each do |quantity| %>
-            <li><%= quantity.measurement %> <%= quantity.unit %> <%= quantity.ingredient.name %></li>
-          <% end %>
-        </ul>
-        <div class="buttons d-flex justify-content-end">
-          <div>
-          <button class="button-icon" data-toggle="modal" data-target="#recipe_<%= @recipe.id %>">
-            <i class="fa fa-plus-circle"></i>
-            <p class="button-text">Add to shopping list</p>
-          </button>
-          <%= render 'shopping_list_items/shopping_list_item_form', recipe: @recipe %>
-        </div>
-
-        <button type="button" class="btn btn-confirm review-button" data-toggle="modal" data-target="#exampleModalCenter">
-          Review recipe
-        </button>
-
-        <div id="review">
-          <% if @recipe.reviews.blank? %>
-            Be the first to leave a review for <%= @recipe.name %>
-          <% else %>
-            <% @recipe.reviews.each do |review| %>
-              <p id="review-<%= review.id %>"><%= review.content %></p>
-              <%= link_to "Update", edit_recipe_review_path(@recipe, review) %>
-              <%= link_to "Delete", recipe_review_path(@recipe, review), method: :delete, data: { confirm: "Are you sure?" }, remote: true %>
-            <% end %>
-          <% end %>
-        </div>
-      </div>
 
   </div>
 
