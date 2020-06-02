@@ -1,18 +1,22 @@
-.body-show {
-  margin-top: 60px;
+
+@import "components/reviews";
+
+.recipe-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   width: 80%;
 }
 
-.recipe-content {
-  margin: auto;
-  text-align: center;
+.body-show {
+  margin-top: 60px;
+  width: 80%;
 }
 
 .review-button {
   margin-top: 40px;
   margin-bottom: 40px;
 }
-
 
 .recipe-description {
   text-align: center;

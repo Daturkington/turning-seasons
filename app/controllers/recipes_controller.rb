@@ -26,6 +26,10 @@ class RecipesController < ApplicationController
   end
 
   def show
+    @review = Review.new
+    @reviews = @recipe.reviews
+    @average = @reviews.average(:rating).to_f
+    @rating_average = (@average * 2.0).round / 2.0
   end
 
   private

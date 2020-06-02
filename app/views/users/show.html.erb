@@ -10,8 +10,7 @@
         <ul class="unordered-list-shopping">
           <% current_user.shopping_list.shopping_list_items.each do |list| %>
               <div class="card-product-shopping flex-row">
-                <%= cl_image_tag list.recipe.photo.key %>
-
+                <%#= cl_image_tag list.recipe.photo.key %>
                 <div class="card-product-info">
                   <li><%= list.recipe.name %></li>
                   <li><%= list.recipe.author %></li>
@@ -81,4 +80,17 @@
        data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
     </div>
   </div>
+
+<!--   <div class="map-details-container">
+    <div class="map-details-container-header">
+      <h2>Find your nearest market</h2>
+      <p>Current location: <%#= current_user.address %> </p>
+    </div>
+    <div id="map"
+       style="width: 460px; height: 340px;"
+       data-markers="<%#= @markers.to_json %>"
+       data-mapbox-api-key="<%#= ENV['MAPBOX_API_KEY'] %>">
+    </div>
+  </div> -->
+
 </div>

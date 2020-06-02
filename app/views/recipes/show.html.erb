@@ -66,15 +66,76 @@
             <% end %>
           </div>
 
+      <div class="recipe-instructions">
+        <%= @recipe.instructions %>
+      </div>
+
+      <div class="review">
+        <h2>Reviews:</h2>
+        <div class="average-rating">
+          <% if @rating_average - @rating_average.floor == 0 %>
+            <% @rating_average.to_i.times do %>
+              <i class="fas fa-star checked"></i>
+            <% end %>
+            <% (5-@rating_average.to_i).times do %>
+              <i class="far fa-star unchecked"></i>
+            <% end %>
+          <% else %>
+            <% (@rating_average-0.5).to_i.times do %>
+              <i class="fas fa-star checked"></i>
+            <% end %>
+            <i class="fas fa-star-half-alt checked"></i>
+            <% (4.5-@rating_average).to_i.times do %>
+              <i class="far fa-star unchecked"></i>
+            <% end %>
+          <% end %>
         </div>
+        <% if @recipe.reviews.blank? %>
+          <p>Be the first to leave a <strong><%= link_to "review", new_recipe_review_path %></strong> for <%= @recipe.name %></p>
+        <% else %>
+          <% @recipe.reviews.each do |review| %>
+            <div class="review-individual">
+              <ul class="review-list">
+                <li class="rating">
+                  <% review.rating.to_i.times do %>
+                    <i class="fas fa-star checked"></i>
+                  <% end %>
+                  <% (5-review.rating.to_i).times do %>
+                    <i class="far fa-star unchecked"></i>
+                  <% end %>
+                </li>
+                <li><%= review.user.username %></li>
+                <li><%= review.content %></li>
+              </ul>
+              <% if current_user == review.user %>
+                <div class="review-links">
+                  <%= link_to "Update", edit_recipe_review_path(@recipe, review), class: "btn btn-form update-delete" %>
+                  <%= button_to "Delete", recipe_review_path(@recipe, review), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-form update-delete" %>
+                </div>
+              <% end %>
+            </div>
+          <% end %>
+          <%= link_to "New Review", new_recipe_review_path(@recipe), class: "btn btn-form new-review" %>
+        <% end %>
+      </div>
+    </div>
 
-
-        <div class="recipe-description">
-          <p><%= @recipe.description %></p>
-        </div>
-
-        <div class="recipe-instructions">
-          <%= @recipe.instructions %>
+    <div class="shopping-list-ingredients">
+      <%= render 'shared/shopping_list' %>
+      <div class="ingredients">
+        <h3>Ingredients</h3>
+        <ul>
+          <% @recipe.quantities.each do |quantity| %>
+            <li><%= quantity.measurement %> <%= quantity.unit %> <%= quantity.ingredient.name %></li>
+          <% end %>
+        </ul>
+        <div class="buttons d-flex justify-content-end">
+          <div>
+          <button class="button-icon" data-toggle="modal" data-target="#recipe_<%= @recipe.id %>">
+            <i class="fa fa-plus-circle"></i>
+            <p class="button-text">Add to shopping list</p>
+          </button>
+          <%= render 'shopping_list_items/shopping_list_item_form', recipe: @recipe %>
         </div>
 
         <button type="button" class="btn btn-confirm review-button" data-toggle="modal" data-target="#exampleModalCenter">
@@ -99,10 +160,6 @@
   <div class="shopping-list-ingredients">
     <%= render 'shared/shopping_list' %>
   </div>
-
-
-
-
 </div>
 
 <!-- Modal -->
@@ -113,7 +170,8 @@
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
-        <%= render 'reviews/review_form' %>
+        <%= render 'reviews/review_form', review: @review %>
+
       </div>
     </div>
   </div>
