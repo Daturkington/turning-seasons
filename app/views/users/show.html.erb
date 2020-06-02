@@ -60,17 +60,18 @@
 
   </div>
 
-  <div class="profile-lower-container align-self-start">
+  <div class="profile-lower-container align-self-center">
     <div class="favourites-container">
+     <h2 class="favourites-title">Your Favourite Recipes:</h2>
       <%= render "favourites/favourites" %>
-    </div>
-
-    <div class="profile-completed-shopping-lists">
-      <%= render "shopping_lists/completed_shopping_lists" %>
     </div>
   </div>
 
+
   <div class="map-details-container">
+    <div class="profile-completed-shopping-lists">
+      <%= render "shopping_lists/completed_shopping_lists" %>
+    </div>
     <div class="map-details-container-header">
       <h2>Find your nearest market</h2>
       <p>Current location: <%= current_user.address %> </p>
