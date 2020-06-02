@@ -1,6 +1,6 @@
 class ReviewsController < ApplicationController
-  before_action :set_user, only: [:new, :create]
-  before_action :set_recipe, only: [:new, :create]
+  before_action :set_user, only: [:new, :create, :update]
+  before_action :set_recipe, only: [:new, :create, :update, :edit]
 
   def new
     @review = Review.new
@@ -17,6 +17,22 @@ class ReviewsController < ApplicationController
     end
   end
 
+  def edit
+    @review = Review.find(params[:id])
+  end
+
+  def update
+    @review = Review.find(params[:id])
+    @review.update(review_params)
+    redirect_to recipe_path(@recipe)
+  end
+
+  def destroy
+    @review = Review.find(params[:id])
+    @review.destroy
+    redirect_to recipe_path(@review.recipe)
+  end
+
   private
 
   def set_user
@@ -28,6 +44,6 @@ class ReviewsController < ApplicationController
   end
 
   def review_params
-    params.require(:review).permit(:content, :rating)
+    params.require(:review).permit(:content, :rating, :recipe)
   end
 end
