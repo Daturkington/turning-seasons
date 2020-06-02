@@ -1,6 +1,7 @@
 .buttons {
   height: 30px;
   margin-top: 24px;
+  padding-top: 8px;
   text-align: center;
   margin: auto;
   margin-bottom: 16px;
@@ -15,6 +16,7 @@
         }
       }
   }
+
   .button-text {
     font-size: 12px;
     opacity: 0;
@@ -41,5 +43,43 @@
 .button-icon-small {
   width: 50px;
   text-align: right;
+}
+
+.buttons-list {
+  height: 20vh;
+  margin-top: 24px;
+  padding-top: 8px;
+  text-align: center;
+  margin: auto;
+  margin-bottom: 16px;
+  font-size: 21px;
+  button {
+    background-color: transparent;
+    border: 0;
+    &:hover {
+      color: $background;
+      p {
+        opacity: 1;
+        }
+      }
+  }
+
+  .button-text {
+    font-size: 12px;
+    opacity: 0;
+    color: $background;
+    transition: 0.3s;
+    margin-bottom: 0;
+  }
+  a {
+    margin: 0 6px;
+    transition: 0.3s;
+  &:hover {
+    color: $background;
+    p {
+      opacity: 1;
+      }
+    }
+  }
 }
 
