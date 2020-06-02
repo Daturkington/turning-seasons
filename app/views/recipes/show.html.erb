@@ -98,7 +98,7 @@
           <% end %>
         </div>
         <% if @recipe.reviews.blank? %>
-          <p>Be the first to leave a <strong><%= link_to "review", new_recipe_review_path %></strong> for <%= @recipe.name %></p>
+          <p>Be the first to leave a <strong><%= link_to "review", new_recipe_review_path(@recipe) %></strong> for <%= @recipe.name %></p>
         <% else %>
           <% @recipe.reviews.each do |review| %>
             <div class="review-individual">

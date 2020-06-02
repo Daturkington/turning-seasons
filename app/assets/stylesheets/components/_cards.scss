@@ -116,7 +116,10 @@
   position: absolute;
   top: 2px;
   left: 2px;
-  margin: 0 6px;
+  a {
+    margin: 0 6px;
+    color: $highlight;
+  }
 }
 
 // Smallest device
