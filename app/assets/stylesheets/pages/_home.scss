@@ -24,7 +24,7 @@
   z-index: 1000;
   position: relative;
   margin: auto;
-  margin-top: 16px;
+  margin-top: 24px;
   justify-content: center;
   h2 {
     width: 800px;
@@ -47,22 +47,45 @@
 
 }
 
-.enter {
+.enter1 {
+  display: none;
   position: absolute;
   z-index: 1000;
-  background-color: $background;
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
   align-items: center;
   text-align: center;
   transition: 0.6s;
-
+  color: black;
+  font-family: $headers-font;
+  font-size: 89px;
+  letter-spacing: 6px;
+  font-weight: 600;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -90%);
+  transition: 0.4s;
   &:hover {
-    background-color: $highlight;
-    transition: 0.6s;
+    color: $highlight;
+  }
+}
+
+.enter2 {
+  display: none;
+  position: absolute;
+  z-index: 1000;
+  align-items: center;
+  text-align: center;
+  transition: 0.6s;
+  color: black;
+  font-family: $serif-font;
+  font-size: 63px;
+  letter-spacing: 6px;
+  margin-top: -2px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -45%);
+  transition: 0.6s;
+  &:hover {
+    color: $highlight;
   }
 }
 
@@ -70,6 +93,22 @@
   margin: -20px auto 40px auto;
   text-align: center;
   position: relative;
+  transition: 0.6s;
+  &:hover {
+    .landing-image {
+      width: 63%;
+      transition: 0.6s;
+      opacity: 0.9;
+    }
+    .enter1 {
+    display: block;
+    transition: 0.6s;
+    }
+    .enter2 {
+    display: block;
+    transition: 0.6s;
+    }
+  }
 }
 
 .landing-image {
