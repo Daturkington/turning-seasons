@@ -74,6 +74,13 @@
   width: 100px;
 }
 
+.selected {
+  color: $highlight;
+  a {
+    color: $highlight;
+  }
+}
+
 .button-icon-small {
   width: 50px;
   text-align: right;

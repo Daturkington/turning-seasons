@@ -11,7 +11,7 @@ class ReviewsController < ApplicationController
     @review.user = @user
     @review.recipe = @recipe
     if @review.save
-      redirect_to recipe_path(@recipe)
+      redirect_to recipe_path(@recipe, anchor: "review-#{@review.id}")
     else
       render :new
     end

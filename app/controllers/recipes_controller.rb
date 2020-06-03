@@ -4,9 +4,9 @@ class RecipesController < ApplicationController
 
   def index
     @ingredients = Ingredient.all
+    @favourite = Favourite.new
     if params[:ingredient]
       ingredient = Ingredient.find(params[:ingredient])
-      @ingredien
       @recipes = []
       Recipe.all.each do |recipe|
         if recipe.ingredients.include?(ingredient)
@@ -26,6 +26,7 @@ class RecipesController < ApplicationController
   end
 
   def show
+    @favourite = Favourite.new
     @review = Review.new
     @reviews = @recipe.reviews
     @average = @reviews.average(:rating).to_f

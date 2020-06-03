@@ -25,7 +25,7 @@
       <div class="cards grid" data-masonry='{ "itemSelector": ".grid-item", "columnWidth": 366 }'>
         <div class="grid-sizer"></div>
         <% @recipes.each_with_index do |recipe, index| %>
-          <div class="card-category grid-item<%#= index.odd? ? 'card-odd' : '' %>">
+          <div id="recipe-<%= recipe.id %>" class="card-category grid-item">
             <%= link_to recipe_path(recipe) do %>
               <div class="card-image">
                 <% if recipe.photo.attached? %>
@@ -48,13 +48,13 @@
             <% if user_signed_in? %>
               <% if current_user.favourites.find{|fav| fav.recipe_id == recipe.id}.nil? %>
                 <div class="heart-index-icon">
-                  <%= link_to favourites_path(current_user.favourites, recipe_id: recipe.id), method: :create do %>
+                  <%= link_to recipe_favourites_path(recipe), method: :post, remote: true do %>
                     <i class="fab fa-gratipay"></i>
                   <% end %>
                 </div>
               <% else %>
                 <div class="heart-icon-red">
-                  <%= link_to favourite_path(Favourite.find_by(user: current_user, recipe: recipe)), method: :delete do %>
+                  <%= link_to recipe_favourite_path(recipe, Favourite.find_by(user: current_user, recipe: recipe)), remote: true, method: :delete do %>
                     <i class="fab fa-gratipay"></i>
                   <% end %>
                 </div>
