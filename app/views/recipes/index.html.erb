@@ -14,10 +14,10 @@
           <div class="dropdown-menu" id="ingredient-dropdown">
             <% @ingredients.each do |ingredient| %>
               <% if ingredient.in_season? %>
-                <%= link_to "#{ingredient.name}, ", recipes_path(ingredient: ingredient) %>
+                <%= link_to ingredient.name, recipes_path(ingredient: ingredient), class: "btn-search" %>
               <% end %>
             <% end %>
-            <%= link_to "all.", recipes_path %>
+            <%= link_to "all recipes", recipes_path, class: "btn-search" %>
           </div>
         </div>
 
