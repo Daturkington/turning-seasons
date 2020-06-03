@@ -42,8 +42,11 @@
 
 
   <div class="landing-image-container">
-    <%= image_tag "veg.jpg", alt: "seasonal produce", class: "landing-image" %>
-    <%= link_to "Look at our recipes", recipes_path(@recipes), class: "button-icon enter" %>
+    <%= link_to recipes_path(@recipes) do %>
+      <%= image_tag "veg.jpg", alt: "seasonal produce", class: "landing-image" %>
+      <%= link_to "Get", recipes_path(@recipes), class: "enter1" %>
+      <%= link_to "started", recipes_path(@recipes), class: "enter2" %>
+    <% end %>
   </div>
 </div>
 
