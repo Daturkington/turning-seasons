@@ -26,6 +26,17 @@
   }
 }
 
+.markets_link {
+  font-family: $headers-font;
+  font-size: 21px;
+  font-weight: 400;
+  transition: 0.3s;
+  letter-spacing: 4px;
+  &:hover {
+    color: $background;
+  }
+}
+
 .log-link {
   font-family: $headers-font;
   font-size: 18px;
