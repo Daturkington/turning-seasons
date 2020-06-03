@@ -36,7 +36,7 @@ class ShoppingListItemsController < ApplicationController
     if request.referrer.blank?
       redirect_to recipes_path
     elsif Rails.application.routes.recognize_path(request.referrer)[:action] == "show"
-      redirect_to recipe_path(@recipe)
+      redirect_to recipe_path(@recipe, anchor: "recipe-#{@recipe.id}")
     elsif Rails.application.routes.recognize_path(request.referrer)[:action] == "index"
       redirect_to recipes_path(anchor: "recipe-#{@recipe.id}")
     end
