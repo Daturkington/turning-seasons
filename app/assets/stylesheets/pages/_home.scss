@@ -1,6 +1,16 @@
 // Specific CSS for your home-page
-body {
-  position: relative;
+.side-nav-home {
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  position: absolute;
+  right: 0;
+  top: 0;
+  text-align: right;
+  padding: 16px;
+  height: 30vh;
+  li {
+    list-style-type: none;
+  }
 }
 
 .logo {
@@ -13,8 +23,8 @@ body {
 .headings-landing {
   z-index: 1000;
   position: relative;
-  text-align: center;
   margin: auto;
+  margin-top: 24px;
   justify-content: center;
   h2 {
     width: 800px;
@@ -37,33 +47,71 @@ body {
 
 }
 
-.enter {
+.enter1 {
+  display: none;
   position: absolute;
   z-index: 1000;
-  top: 56%;
-  background-color: $background;
-  width: 74px;
-  height: 74px;
-  border-radius: 50%;
-  display: flex;
-  text-align: center;
   align-items: center;
+  text-align: center;
+  transition: 0.6s;
+  color: black;
+  font-family: $headers-font;
+  font-size: 89px;
+  letter-spacing: 6px;
+  font-weight: 600;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -90%);
+  transition: 0.4s;
+  &:hover {
+    color: $highlight;
+  }
+}
+
+.enter2 {
+  display: none;
+  position: absolute;
+  z-index: 1000;
+  align-items: center;
+  text-align: center;
+  transition: 0.6s;
+  color: black;
+  font-family: $serif-font;
+  font-size: 63px;
+  letter-spacing: 6px;
+  margin-top: -2px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -45%);
   transition: 0.6s;
   &:hover {
-    background-color: $highlight;
+    color: $highlight;
+  }
+}
+
+.landing-image-container {
+  margin: -20px auto 40px auto;
+  text-align: center;
+  position: relative;
+  transition: 0.6s;
+  &:hover {
+    .landing-image {
+      width: 63%;
+      transition: 0.6s;
+      opacity: 0.9;
+    }
+    .enter1 {
+    display: block;
     transition: 0.6s;
+    }
+    .enter2 {
+    display: block;
+    transition: 0.6s;
+    }
   }
 }
 
 .landing-image {
-  margin: auto;
-  top: 228px;
-  position: absolute;
-  margin-bottom: 100px;
-  opacity: 0.5;
+    width: 62%;
 }
 
-h5 > a {
-  color: white;
-  text-align: left;
-}

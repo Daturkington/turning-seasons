@@ -1,5 +1,41 @@
-<div id="map"
-     style="width: 300px; height: 300px;"
-     data-markers="<%= @markers.to_json %>"
-     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"> </div>
+<div class="side-nav-home">
+  <ul>
+    <li>
+      <%= link_to "Recipes", recipes_path, class: "recipe_link" %>
+    </li>
+    <li>
+      <% if user_signed_in? %>
+        <%= link_to "Profile", user_path(current_user), class: "profile_link" %>
+      <% end %>
+    </li>
+    <% if user_signed_in? %>
+      <li class="nav-item">
+        <div class="nav-item">
+          <%= link_to "Logout", destroy_user_session_path, class: "log-link", method: :delete %>
+        </div>
+      </li>
+    <% else %>
+      <li>
+        <%= link_to "Sign Up", new_user_registration_path, class: "log-link" %>
+      </li>
+      <li>
+        <div class="nav-item">
+          <%= link_to "Login", new_user_session_path, class: "log-link" %>
+        </div>
+      </li>
+    <% end %>
+  </ul>
+</div>
+
+<div class="market-content-box container">
+  <div class="map-container">
+    <div id="map"
+         style="width: 900px; height: 500px;"
+         data-markers="<%= @markers.to_json %>"
+         data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+    </div>
+  </div>
+  <h1> Your nearest markets</h1>
+  <p><%= current_user.address %></p>
+</div>
 
