@@ -64,11 +64,27 @@
         <% end %>
       </div>
   </div>
-
   <div class="shopping-list-ingredients">
     <%= render 'shared/shopping_list' %>
   </div>
+</div>
 
+  <div class="modal fade" id="test" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <div class="row justify-content-center">
+          <row class="col-lg-12">
+            <p class="modal-text">Your shopping list has been sent to: <br> <strong><%= current_user.email %></strong> <br> <br> Would you like to see markets near you?</p>
+              <%= link_to 'To the markets!', markets_path, class: "btn btn-confirm" %>
+          </row>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
 <script>

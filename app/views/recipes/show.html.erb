@@ -54,10 +54,29 @@
 
       <div class="ingredients">
 
-        <h3>Ingredients</h3>
-        <ul>
-          <% @recipe.quantities.each do |quantity| %>
-            <li><%= quantity.measurement %> <%= quantity.unit %> <%= quantity.ingredient.name %></li>
+        <div id="recipe-<%= @recipe.id %>" class="ingredients">
+          <h3>Ingredients</h3>
+          <ul>
+            <% @recipe.quantities.each do |quantity| %>
+              <li><%= quantity.measurement %> <%= quantity.unit %> <%= quantity.ingredient.name %></li>
+            <% end %>
+          </ul>
+          <div class="buttons d-flex justify-content-center">
+            <div>
+              <button class="button-icon" data-toggle="modal" data-target="#recipe_<%= @recipe.id %>">
+                <i class="fa fa-plus-circle"></i>
+                <p class="button-text">Add to shopping list</p>
+              </button>
+              <%= render 'shopping_list_items/shopping_list_item_form', recipe: @recipe %>
+            </div>
+          </div>
+        </div>
+
+        <div class="recipe-image">
+        <% if @recipe.photo.attached? %>
+            <%= cl_image_tag @recipe.photo.key, class: 'cloud-image-show' %>
+            <% else %>
+            <%= image_tag('cake.png') %>
           <% end %>
         </ul>
         <div class="buttons d-flex justify-content-end">
