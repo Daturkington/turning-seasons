@@ -1,20 +1,38 @@
 .review {
-  border: 1px solid black;
-  border-radius: 8px;
-  margin-top: 20px;
-  margin-right: 70px;
-  margin-bottom: 40px;
-  background-color: white;
+  padding: 5px;
   position: relative;
   padding: 20px 20px 20px 20px;
-  margin-bottom: 40px;
-  margin: auto;
-  width: 60%;
+  margin: 40px 150px 40px 450px;
+  max-height: 600px;
+  overflow: scroll;
+  h2 {
+    font-family: $headers-font;
+    font-weight: 600;
+    font-size: 24px;
+    letter-spacing: 4px;
+    margin-bottom: 24px;
+  }
+}
+
+.review-name {
+  text-align: center;
+  font-family: $headers-font;
+  font-size: 14px;
+  letter-spacing: 3px;
+  font-weight: 600;
+}
+
+.review-content {
+  text-align: center;
+  font-family: $serif-font;
+  font-size: 12px;
+  letter-spacing: 3px;
+
 }
 
 .review-individual {
   background-color: white;
-  border-radius: 8px;
+  border-radius: 4px;
   position: relative;
   &:hover {
     background-color: rgba(249, 244, 235, 1);
@@ -44,6 +62,7 @@
 .update-delete {
   padding: 5px;
   margin:5px;
+  font-size: 12px;
 }
 
 .new-review {
@@ -74,8 +93,10 @@
 }
 
 .average-rating {
-  position: absolute;
-  top: 25px;
-  right: 40px;
+  // position: absolute;
+  // top: 21px;
+  // right: 30px;
   font-size: 20px;
+  margin-bottom: 24px;
+  margin-top: 20px;
 }
