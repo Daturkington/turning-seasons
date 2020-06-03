@@ -6,7 +6,7 @@
     </div>
 
     <div class="current-recipes-container">
-      <h2>Recipes in you shopping list</h2>
+      <h2>Recipes in your shopping list</h2>
       <% if current_user.shopping_list.present? %>
           <% current_user.shopping_list.shopping_list_items.each do |list| %>
               <div class="card-product-shopping">
