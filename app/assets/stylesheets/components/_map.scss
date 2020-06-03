@@ -2,11 +2,15 @@
   margin: 30px;
   border-radius: 8px;
   border: solid 2px #ede2d0;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+
 }
 
 .mapboxgl-popup {
   max-width: 50px;
   max-height: 70px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+
 }
 
 .mapboxgl-popup-content {
