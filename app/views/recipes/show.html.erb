@@ -54,7 +54,7 @@
 
       <div class="image-ingredients">
 
-        <div class="ingredients">
+        <div id="recipe-<%= @recipe.id %>" class="ingredients">
           <h3>Ingredients</h3>
           <ul>
             <% @recipe.quantities.each do |quantity| %>
