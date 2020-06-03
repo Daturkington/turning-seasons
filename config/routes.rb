@@ -5,11 +5,12 @@ Rails.application.routes.draw do
   resources :recipes, only: [:index, :show] do
     resources :shopping_list_items, except: [:destroy]
     resources :reviews, only: [:new, :create, :update, :destroy, :edit]
+    resources :favourites, only: [:create, :destroy]
   end
   # resources :reviews, only: [:update, :destroy]
   resources :shopping_list_items, only: [:destroy]
   resources :shopping_lists
   resources :users, only: [:show]
-  resources :favourites
+  resources :favourites, only: [:index]
   resources :markets, only: [:index]
 end
