@@ -7,20 +7,19 @@
 }
 
 .recipe-content {
+  min-height: 900px;
   margin: auto;
   text-align: center;
-
+  position: relative;
 }
 
 .review-button {
-  margin-top: 40px;
+  margin: 0;
 }
 
 .recipe-description {
   text-align: center;
-  width: 80%;
-  margin-top: 48px;
-  margin: auto;
+  margin: 40px 40px 0 340px;
   p {
     font-family: $body-font;
     font-size: 24px;
@@ -29,20 +28,26 @@
 }
 
 .recipe-image {
-  margin: 48px 0;
+  margin: -880px 0 0 0;
   width: 85%;
-  position: relative;
 }
 
 .ingredients {
-  position: absolute;
   background: rgba(250,249,245, 0.3);
-  padding: 16px;
-  padding-bottom: 30px;
+  padding: 36px 20px;
   z-index: 1000;
-  text-align: center;
-  margin-top: 16px;
-  margin-left: 16px;
+  position: sticky;
+  width: 300px;
+  height: 900px;
+  top: 0;
+  h3 {
+    font-family: $headers-font;
+    font-weight: 600;
+    font-size: 24px;
+    letter-spacing: 4px;
+    margin-bottom: 24px;
+    text-align: right;
+  }
   ul {
     padding: 0;
   }
@@ -54,14 +59,13 @@
 }
 
 .recipe-instructions {
-  width: 65%;
-  margin: auto;
+  margin: 0px 60px 0 360px;
   padding-top: 40px;
   text-align: center;
   margin-bottom: 40px;
   p {
     font-family: $body-font;
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 400;
   }
 }

@@ -27,12 +27,12 @@
         </button>
         <%= render 'shopping_list_items/shopping_list_item_form', recipe: @recipe %>
       </div>
-      
+
       <div>
         <% if user_signed_in? %>
           <% if current_user.favourites.find{|fav| fav.recipe_id == @recipe.id}.nil? %>
             <div class="button-icon">
-            
+
               <%= link_to recipe_favourites_path(@recipe), method: :post, remote: true do %>
                 <i class="fab fa-gratipay"></i>
                 <p class="button-text">Save to favourites</p>
@@ -52,7 +52,7 @@
 
     <div class="recipe-content">
 
-      <div class="image-ingredients">
+      <div class="ingredients">
 
         <div id="recipe-<%= @recipe.id %>" class="ingredients">
           <h3>Ingredients</h3>
@@ -78,21 +78,42 @@
             <% else %>
             <%= image_tag('cake.png') %>
           <% end %>
+        </ul>
+        <div class="buttons d-flex justify-content-end">
+          <div>
+            <button class="button-icon" data-toggle="modal" data-target="#recipe_<%= @recipe.id %>">
+              <i class="fa fa-plus-circle"></i>
+              <p class="button-text">Add to shopping list</p>
+            </button>
+            <%= render 'shopping_list_items/shopping_list_item_form', recipe: @recipe %>
+          </div>
         </div>
-
       </div>
 
+      <div class="recipe-image">
+      <% if @recipe.photo.attached? %>
+          <%= cl_image_tag @recipe.photo.key, class: 'cloud-image-show' %>
+          <% else %>
+          <%= image_tag('cake.png') %>
+        <% end %>
+      </div>
 
       <div class="recipe-description">
         <p><%= @recipe.description %></p>
       </div>
 
       <div class="recipe-instructions">
-        <%= @recipe.instructions %>
+        <p><%= @recipe.instructions %></p>
+
       </div>
 
+
+
       <div class="review">
-        <h2>Reviews:</h2>
+        <button type="button" class="btn btn-confirm review-button" data-toggle="modal" data-target="#exampleModalCenter">
+          Review recipe
+        </button>
+        <!-- <h2>Reviews</h2> -->
         <div class="average-rating">
           <% if @rating_average - @rating_average.floor == 0 %>
             <% @rating_average.to_i.times do %>
@@ -114,7 +135,7 @@
         <% if @recipe.reviews.blank? %>
           <p>Be the first to leave a <strong><%= link_to "review", new_recipe_review_path(@recipe) %></strong> for <%= @recipe.name %></p>
         <% else %>
-          <% @recipe.reviews.each do |review| %>
+          <% @recipe.reviews.reverse_each do |review| %>
             <div class="review-individual">
               <ul class="review-list">
                 <li class="rating">
@@ -125,8 +146,8 @@
                     <i class="far fa-star unchecked"></i>
                   <% end %>
                 </li>
-                <li><%= review.user.username %></li>
-                <li><%= review.content %></li>
+                <li class="review-name"><%= review.user.username %></li>
+                <li class="review-content"><%= review.content %></li>
               </ul>
               <% if current_user == review.user %>
                 <div class="review-links">
@@ -136,10 +157,6 @@
               <% end %>
             </div>
           <% end %>
-
-          <button type="button" class="btn btn-confirm review-button" data-toggle="modal" data-target="#exampleModalCenter">
-            Review recipe
-          </button>
 
         <% end %>
       </div>
