@@ -20,12 +20,12 @@
 }
 
 #ingredient-dropdown {
-    margin-top: -16px;
     background-color: transparent;
     border: 0;
   a {
-    font-family: $serif-font;
-    font-size: 30px;
+    text-align: center;
+    font-family: $body-font;
+    font-size: 18px;
     transition: 0.3s;
     &:hover {
       color: $highlight;
