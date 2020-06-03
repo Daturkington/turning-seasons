@@ -1,68 +1,44 @@
-<h1 id="profile-welcome">Welcome <%= current_user.username %>!</h1>
-
-<div class="profile-content-box container">
-
-  <div class="user-profile-shopping-list">
+<div class="d-flex">
+  <div class="body-show">
+    <div class="headings text-center">
+      <h1 class="recipe-name">Welcome</h1>
+      <h2 class="recipe-author"><%= current_user.username %></h2>
+    </div>
 
     <div class="current-recipes-container">
-      <h2 class="text-align-center">Recipes in you Shopping List:</h2>
+      <h2>Recipes in you shopping list</h2>
       <% if current_user.shopping_list.present? %>
-        <ul class="unordered-list-shopping">
           <% current_user.shopping_list.shopping_list_items.each do |list| %>
-              <div class="card-product-shopping flex-row">
+              <div class="card-product-shopping">
                 <%= cl_image_tag list.recipe.photo.key %>
                 <div class="card-product-info">
-                  <li><%= list.recipe.name %></li>
-                  <li><%= list.recipe.author %></li>
+                  <p class="card-product-name"><%= list.recipe.name %></p>
+                  <p class="card-product-author"><%= list.recipe.author %></p>
                 </div>
                 <div>
                   <%= link_to 'Delete', shopping_list_item_path(list), method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-ghost" %>
                 </div>
               </div>
           <% end %>
-        </ul>
       <% else %>
         <i class="far fa-frown-open"></i>
         <p class="empty">Your shopping list is empty <br> Add some <strong><%= link_to "Recipes", recipes_path %></strong>!</p>
       <% end %>
     </div>
 
-    <div class="profile-shopping-list">
-      <h2>Current Shopping List:</h2>
-      <ul class="shopping-list-points">
-        <% if current_user.shopping_list.present? %>
-          <ul>
-            <% current_user.shopping_list.shopping_list_items.map{|item| item.quantities}.flatten.group_by{|quantity| quantity.ingredient.name}.each do |key, value|  %>
-              <li><%= value.map{|r| r.measurement}.sum  %> <%= value.first.unit %> <%= key %></li>
-            <% end %>
-          </ul>
-          <div class="buttons d-flex justify-content-end">
-            <div class="button-icon-small">
-              <%= link_to recipes_path do %>
-                <i class="far fa-paper-plane"></i>
-                <p class="button-text">Send list</p>
-              <% end %>
-            </div>
-            <div class="button-icon-small">
-              <%= link_to shopping_list_path(current_user.shopping_list), method: :put do %>
-                <i class="far fa-check-circle"></i>
-                <p class="button-text">Shopping completed</p>
-              <% end %>
-            </div>
-          </div>
-        <% else %>
-        <i class="far fa-frown-open"></i>
-        <p class='empty'>Your shopping list is empty</p>
-        <% end %>
-      </ul>
-    </div>
-
-  </div>
-
-  <div class="profile-lower-container align-self-center">
     <div class="favourites-container">
       <%= render "favourites/favourites" %>
     </div>
   </div>
 
+  <div class="shopping-list-ingredients">
+    <%= render 'shared/shopping_list' %>
+  </div>
 </div>
+
+
+
+
+
+
+

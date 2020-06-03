@@ -1,55 +1,24 @@
 @import "components/favourites";
 @import "components/completed_shopping_lists";
 
-#profile-welcome {
-  text-align: center;
-  font-family: $headers-font;
-}
-
-.profile-content-box {
-  display: flex;
-  justify-content: space-around;
-  flex-direction: column;
-}
-
-.user-profile-shopping-list {
-  display:flex;
-  flex-direction:row;
-}
-
-.profile-shopping-list {
-  text-align: center;
-  margin:25px;
-  width: 35%;
-}
 
 .current-recipes-container {
-  text-align: center;
-  margin:25px;
-  width: 65%;
+  h2 {
+    font-family: $headers-font;
+    font-weight: 600;
+    font-size: 24px;
+    letter-spacing: 4px;
+    margin-bottom: 24px;
+  }
+  margin:80px auto;
+  width: 55%;
+  max-height: 600px;
+  overflow: scroll;
 }
 
 .favourites-container {
-  margin: 25px;
-  width: 65%;
-}
-
-.shopping-list-points {
-  list-style: none;
-  margin-top: 20px;
-  padding-left: 0px;
-  text-align: left;
-  padding: 20px;
-  border-radius: 8px;
-  background-color: white;
-  overflow: scroll;
-  min-height: 300px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-}
-
-.profile-lower-container {
-  display: inline-flex;
-  flex-direction: row;
+  margin: 80px 0;
+  width: 100%;
 }
 
 .profile-completed-shopping-lists {
@@ -62,43 +31,47 @@
   text-align:center;
 }
 
-.unordered-list-shopping {
-  padding: 0 15px;
-  margin-top: 20px;
-  list-style-type: none;
-  max-height: 150px;
-}
-
 .card-product-shopping {
-  height: 120px;
+  height: 124px;
   background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
   display: flex;
   align-items: center;
-  margin-bottom: 20px;
-  border-radius: 8px;
-  margin-top: 20px;
-  position: relative;
-  justify-content: center;
+  margin-bottom: 16px;
+  border-radius: 2px;
+  overflow: scroll;
   img {
     height: 100%;
-    width: 120px;
+    width: 25%;
     object-fit: cover;
-    border-radius: 8px 0 0 8px;
-    position: absolute;
-    left:0;
+    border-radius: 2px 0 0 2px;
   }
 }
 
+.card-product-name {
+  text-align: center;
+  font-family: $headers-font;
+  font-size: 18px;
+  letter-spacing: 3px;
+  margin: 0;
+  padding: 0 16px;
+}
+
+.card-product-author {
+  text-align: center;
+  font-family: $serif-font;
+  font-size: 16px;
+  letter-spacing: 4px;
+  margin: 0;
+
+}
+
 .btn-ghost {
-  border:solid 1px $highlight;
+  border: solid 1px $highlight;
   opacity:0.6;
   border-radius: 20px;
   color: $highlight;
-  margin-left:15px;
-  position: absolute;
-  right:15px;
-  top:45px;
+  margin-right: 16px;
   &:hover {
   opacity:1;
   transition:0.3s;
