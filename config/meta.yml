@@ -1,5 +1,5 @@
 meta_product_name: "Turning Seasons"
 meta_title: "Turning Seasons - An easy way to eat seasonally"
 meta_description: "Finding out whats in season, and the best recipes to cook with."
-meta_image: "landingpage.jpg" # should exist in `app/assets/images/`
+meta_image: "landingpage_og.jpg" # should exist in `app/assets/images/`
 # twitter_account: "@product_twitter_account"   # required for Twitter Cards
