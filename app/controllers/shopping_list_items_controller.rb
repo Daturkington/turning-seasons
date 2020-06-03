@@ -15,11 +15,8 @@ class ShoppingListItemsController < ApplicationController
 
       @shoppinglistitem = ShoppingListItem.new(recipe: @recipe)
       @shoppinglistitem.shopping_list = shopping_list
-      if @shoppinglistitem.save
-        redirect_back fallback_location: recipes_path
-      else
-        render :new
-      end
+      @shoppinglistitem.save
+      redirect_to_source
     end
   end
 
@@ -34,4 +31,15 @@ class ShoppingListItemsController < ApplicationController
   def set_recipe
     @recipe = Recipe.find(params[:recipe_id])
   end
+  
+  def redirect_to_source
+    if request.referrer.blank?
+      redirect_to recipes_path
+    elsif Rails.application.routes.recognize_path(request.referrer)[:action] == "show"
+      redirect_to recipe_path(@recipe)
+    elsif Rails.application.routes.recognize_path(request.referrer)[:action] == "index"
+      redirect_to recipes_path(anchor: "recipe-#{@recipe.id}")
+    end
+  end
+
 end
