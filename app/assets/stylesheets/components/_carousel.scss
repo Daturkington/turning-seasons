@@ -12,7 +12,7 @@
 }
 
 .container.favourites {
-  width:900px;
+  width: 100%;
   padding: 0px;
 }
 
@@ -28,6 +28,11 @@
   z-index: 1000;
   text-align: center;
   margin-top: 16px;
+  font-family: $headers-font;
+  font-weight: 600;
+  font-size: 24px;
+  letter-spacing: 4px;
+  margin-bottom: 24px;
 }
 
 .carousel-caption > h5 {
