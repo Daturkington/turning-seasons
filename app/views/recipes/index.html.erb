@@ -77,8 +77,10 @@
         </button>
         <div class="row justify-content-center">
           <row class="col-lg-12">
-            <p class="modal-text">Your shopping list has been sent to: <br> <strong><%= current_user.email %></strong> <br> <br> Would you like to see markets near you?</p>
+            <% if current_user.present? %>
+              <p class="modal-text">Your shopping list has been sent to: <br> <strong><%= current_user.email %></strong> <br> <br> Would you like to see markets near you?</p>
               <%= link_to 'To the markets!', markets_path, class: "btn btn-confirm" %>
+            <% end %>
           </row>
         </div>
       </div>
