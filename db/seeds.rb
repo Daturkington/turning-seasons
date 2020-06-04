@@ -127,13 +127,13 @@ za_atar = Ingredient.create(name:"za'atar")
 
 borough_market = Market.create(name: "Borough Market", address: "8 Southwark Street, London, SE1 1TL")
 victoria_park_market = Market.create(name: "Victoria Park Market", address: "56-57 Gore Rd, London E9 7HN")
-greenwhich_market = Market.create(name: "Greenwich Market", address: "5B Greenwich Market, Greenwich Peninsula, London SE10 9HZ")
-southbank_centre_food_market = Market.create(name: "Southbank Centre Food Market", address: "Southbank Centre, Belvedere Rd, Bishop's, London SE1 8XX")
+greenwhich_market = Market.create(name: "Greenwich Market", address: "5 Greenwich Market, Greenwich Peninsula, London, SE10 9HZ")
+southbank_centre_food_market = Market.create(name: "Southbank Centre Food Market", address: "Southbank Centre, London, SE1 8XX")
 broadway_market = Market.create(name: "Broadway Market", address: "Broadway Market, Hackney, London E8 4PH")
-brixton_village_market = Market.create(name: "Brixton Village Market", address: "74 Brixton Village, Coldharbour Ln, Brixton, London SW9 8PS")
+brixton_village_market = Market.create(name: "Brixton Village Market", address: "74 Brixton Village, Brixton, London SW9 8PS")
 portobello_road_market = Market.create(name: "Portobello Road Market", address: "306 Portobello Rd, London W10 5TA")
 old_spitalfields_market = Market.create(name: "Old Spitalfields Market", address: "16 Commercial St, Spitalfields, London E1 6EW")
-camden_market = Market.create(name: "Camden Market", address: "200B chalk farm road, Camden Lock Pl, Camden Town, London NW1 8AF")
+camden_market = Market.create(name: "Camden Market", address: "200 chalk farm road, Camden Lock, Camden Town, London NW1 8AF")
 
 
 #recipe & quantity seed

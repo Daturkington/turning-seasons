@@ -13,6 +13,7 @@
   border: 1px solid rgb(82, 69, 69);
   border-radius: 3px;
   padding: 5px;
+  height: 100%;
 }
 
 // .card-odd {
@@ -21,29 +22,38 @@
 
 .card-description {
   margin: 5px;
+  display: flex;
 
   h2 {
+    margin-top: 10px;
     font-family: $headers-font;
     font-size: 18px;
     text-align: left;
     letter-spacing: 4px;
     font-weight: 600;
     line-height: 1;
+    text-align: center;
+    flex: 1;
+    height: 100%;
   }
+
   h3 {
     font-family: $serif-font;
     font-size: 1rem;
     text-align: left;
     letter-spacing: 4px;
-    // margin-top: -14px;
+    position: absolute;
+    bottom: 3px;
+    left: 15px;
   }
 }
 
 
 .card-image {
   img {
-    width: 100%;
-    border-radius: 3px;
+    width:  352px;
+    height: 300px;
+    object-fit: cover;
   }
 }
 

@@ -1,6 +1,6 @@
 class MarketsController < ApplicationController
   def index
-    @markets = Market.geocoded
+    @markets = Market.near(current_user.address, 3).geocoded
     @markers = @markets.map do |market|
       {
         lat: market.latitude,
