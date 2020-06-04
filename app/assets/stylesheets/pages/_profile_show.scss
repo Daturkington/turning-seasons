@@ -22,7 +22,7 @@
 }
 
 .profile-completed-shopping-lists {
- width: 35%;
+ width: 100%;
  margin:25px;
  text-align: left;
 }
@@ -37,6 +37,21 @@
   box-shadow: 0 0 8px rgba(0,0,0,0.1);
   display: flex;
   align-items: center;
+  margin-bottom: 16px;
+  border-radius: 2px;
+  overflow: scroll;
+  img {
+    height: 100%;
+    width: 25%;
+    object-fit: cover;
+    border-radius: 2px 0 0 2px;
+  }
+}
+
+.recipe-card {
+  height: 124px;
+  background: white;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
   margin-bottom: 16px;
   border-radius: 2px;
   overflow: scroll;
@@ -77,4 +92,8 @@
   transition:0.3s;
   color: $highlight;
   }
+}
+
+.tabs {
+  margin-top: 40px;
 }
