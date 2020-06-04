@@ -84,17 +84,20 @@
 }
 
 .btn-ghost {
+  width: 72px;
+  text-align: center;
   border: solid 1px $highlight;
   opacity:1;
   border-radius: 20px;
   color: $highlight;
   margin-right: 16px;
+  margin-bottom: 8px;
   &:hover {
-  opacity:1;
-  transition:0.3s;
-  color: $highlight;
-  background-color: $highlight;
-  color:white;
+    opacity:1;
+    transition:0.3s;
+    color: $highlight;
+    background-color: $highlight;
+    color:white;
   }
 }
 

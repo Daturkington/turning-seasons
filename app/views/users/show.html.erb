@@ -30,6 +30,7 @@
                         <p class="card-product-author"><%= list.recipe.author %></p>
                       </div>
                       <div>
+                        <%= link_to 'View', recipe_path(list.recipe), class: "btn btn-ghost" %>
                         <%= link_to 'Delete', shopping_list_item_path(list), method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-ghost" %>
                       </div>
                     </div>
