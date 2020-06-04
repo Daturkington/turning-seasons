@@ -1,0 +1,72 @@
+<div class="side-nav-home">
+  <ul>
+    <li>
+      <%= link_to "Recipes", recipes_path, class: "profile_link_home" %>
+    </li>
+
+
+    <li>
+      <% if user_signed_in? %>
+        <%= link_to "Profile", user_path(current_user), class: "profile_link_home" %>
+      <% end %>
+    </li>
+
+    <li>
+      <% if user_signed_in? %>
+      <%= link_to "Markets", markets_path, class: "markets_link_home" %>
+      <% end %>
+    </li>
+
+    <% if user_signed_in? %>
+      <li class="nav-item">
+        <div class="nav-item">
+          <%= link_to "Logout", destroy_user_session_path, class: "log-link-home", method: :delete %>
+        </div>
+      </li>
+    <% else %>
+      <li>
+        <%= link_to "Sign Up", new_user_registration_path, class: "log-link-home" %>
+      </li>
+      <li>
+        <div class="nav-item">
+          <%= link_to "Login", new_user_session_path, class: "log-link-home" %>
+        </div>
+      </li>
+    <% end %>
+
+  </ul>
+</div>
+<div class="headings-landing text-center">
+  <h1 class="recipe-name">Turning Seasons</h1>
+  <h2 class="recipe-author">An easy way to eat seasonally</h2>
+</div>
+<div class="creators">
+  <h3>Brought to you by</h3>
+  <div class="d-flex justify-content-around">
+    <div class="profile-card">
+      <%= link_to cl_image_tag('footer_image2_sx4jfd', width: 120, height: 120, class: "profile-pic"), "https://github.com/abottenberg", target: :blank %>
+      <h4>Alex Bottenberg</h4>
+    </div>
+    <div class="profile-card">
+      <%= link_to cl_image_tag('footer_image1_egdure', width: 120, height: 120, class: "profile-pic"), "https://github.com/Daturkington", target: :blank %>
+      <h4>Daniel Turkington</h4>
+    </div>
+    <div class="profile-card">
+      <%= link_to cl_image_tag('footer_image3_ali9z2', width: 120, height: 120, class: "profile-pic"), "https://github.com/naomikelly13", target: :blank %>
+      <h4>Naomi Kelly</h4>
+    </div>
+  </div>
+</div>
+<div class="about">
+  <p><strong>Turning Seasons</strong> aims to promote an understanding of food seasons and make it easy for you to cook locally sourced, seasonal produce. Unlike other recipe apps and websites, we only show recipes who's main ingredients are currently in season. There are many benefits to eating with the seasons,</p>
+  <ul>
+    <li>To <strong>reduce</strong> the energy and CO2 emissions needed to grow and transport the food we eat</li>
+    <li>To <strong>support</strong> the local economy</li>
+    <li>To <strong>reconnect</strong> with nature's cycles and the passing of time</li>
+    <li>And because seasonal food is <strong>fresher</strong>, <strong>tastier</strong> and more <strong>nutritious!</strong></li>
+  </ul>
+</div>
+<h3 class="thanks">Thank you for using <strong>Turning Seasons</strong>!</h3>
+
+
+
