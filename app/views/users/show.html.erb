@@ -15,7 +15,6 @@
         <li class="nav-item">
           <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Past shopping lists</a>
         </li>
-
       </ul>
       <div class="tab-content" id="myTabContent">
         <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
@@ -40,14 +39,14 @@
             <% end %>
           </div>
         </div>
+       <% unless current_user.completed_shopping_lists.empty? %>
         <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
           <div class="profile-completed-shopping-lists">
             <%= render "shopping_lists/completed_shopping_lists" %>
           </div>
         </div>
-
+      <% end %>
       </div>
-
     </div>
 
     <div class="favourites-container">
