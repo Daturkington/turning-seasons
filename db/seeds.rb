@@ -8,8 +8,8 @@ require "open-uri"
 #   Character.create(name: 'Luke', movie: movies.first)
 Quantity.destroy_all
 Ingredient.destroy_all
-Recipe.destroy_all
 Favourite.destroy_all
+Recipe.destroy_all
 Review.destroy_all
 Market.destroy_all
 User.destroy_all
@@ -139,9 +139,9 @@ camden_market = Market.create(name: "Camden Market", address: "200 chalk farm ro
 #recipe & quantity seed
 
 artichoke_recipe = Recipe.new(name:"Artichoke and burrata salad", author:"Tom Hunt", servings: 2, description: "Next time you make a recipe that calls for just the artichoke hearts, don’t discard the leaves – they can be frozen for later use or turned into a distinctive stock. Or, if you’d like to upcycle them into something a little more elaborate, this dish does just that. Burrata and artichokes are a match made in heaven, and the pesto seals the deal.", instructions: "Heat a thick-based frying pan on a medium heat with a good glug of extra-virgin olive oil. Add the artichoke leaves and the whole garlic clove, and season with sea salt. Fry gently for a few minutes, then add a slosh of white wine and cover.
-
+\n
 Leave to steam for five minutes, or until the leaves become tender; add more wine, if need be. Remove the lid and cook to evaporate any remaining wine. Douse the artichoke leaves with a little more olive oil and fry gently until caramelised.
-
+\n
 Serve as they are as a side vegetable, or turn into a centrepiece by serving on a platter with pieces of torn burrata, mint and crisp bread, and drizzled with pesto. Eat the leaves just as you would a boiled globe artichoke, pulling the flesh off with your teeth." )
 
 Quantity.create(measurement: 1, ingredient: artichoke, recipe: artichoke_recipe)
@@ -158,18 +158,17 @@ artichoke_recipe.save
 
 
 asparagus_recipe = Recipe.new(name:"Asparagus with fried egg and salsa macha", author:"Thomasina Miers", servings: 2, cooking_time: 25, description: "Salsa macha is a Mexican sauce I am in love with. Garlic is poached gently in oil, followed by peanuts, dried red chillies and sesame seeds. The resulting (highly addictive) oil is drizzled over the hundreds of different seafood tostadas; a dish found up and down the coastline of Baja California.
-
+\n
 But I think it adds excitement to almost anything it touches, and goodness knows we need a bit of that while we’re all still cooped up at home. This is my hazelnut version, which I think is glorious with asparagus.", instructions: "Start with the salsa macha. Heat half the oil in a small pan over a very low heat, add the garlic cloves and simmer in the oil until golden – about five minutes. Remove with a slotted spoon into a bowl.
-
+\n
 Now fry the chillies until gently darkened in colour but not burnt – one to two minutes. Transfer to the bowl, and repeat with the hazelnuts, toasting until they, too, are a pale gold. Remove the nuts, roughly chopping half of them for the garnish, and put the rest in the bowl. Toast the sesame seeds in a dry frying pan.
-
-Advertisement
+\n
 Blitz the sesame seeds and chillies in an upright blender for one minute. Now add the whole hazelnuts, the garlic, sugar and anchovies (if you are using them) and pulse a few times. Add just enough oil to blitz to a rough paste. Add the rest of the oil, including the cooking oil, pulse once more, and taste, adding enough salt so that it tastes rounded and delicious.
-
+\n
 When you are ready to eat, heat two serving plates. Steam the asparagus for five minutes, then transfer to a griddle and cook over a very high heat until it is beautifully charred and tender.
-
+\n
 Meanwhile, melt the butter in the same frying pan you used to toast the sesame seeds, heating until it starts to turn deep brown. Transfer to a small bowl and pour in roughly the same amount of the salsa macha (be sure to stir before you add it). Keep this mixture warm.
-
+\n
 Wipe the pan, then fry the eggs in a little more butter until crisp around the edges. Serve the eggs on top of the grilled asparagus, pour over the sauce, then scatter with the parsley and chopped nuts. You will need lovely bread to mop up the sauce.")
 
 Quantity.create(measurement: 300, ingredient_id: asparagus.id, recipe: asparagus_recipe, unit: "g")
@@ -191,11 +190,11 @@ asparagus_recipe.save
 
 
 aubergine_recipe = Recipe.new(name:"Aubergine wedges with lime and pistachio crumb", author:"Anna Jones", servings: 4, cooking_time: 30, description: "Aubergine doesn’t get much attention in my kitchen; my husband, John, doesn’t like it (though I think this is because he has eaten so many badly cooked aubergines – not by me, of course). But a couple of weeks ago, I found myself pining for aubergine like it was a long-lost friend. I cooked up some fat wedges until they were dark and golden on the outside, topped them with a lime and pistachio crumb, and ate a happy solo lunch with flatbreads and salted yoghurt. I also tried it paired with tamarind in this sweet-and-sour curry, spooned on to sticky jasmine rice. My aubergine craving was quelled and, of course, John licked his plate clean.", instructions: "Cut the aubergines lengthways into six to eight wedges (see picture), depending on their size. In a large, nonstick frying pan, heat the oil and fry the aubergines in batches, turning carefully. Once each batch is golden all over, set aside on a roasting tray and keep warm in the oven while you fry the rest.
-
+\n
 Toast the pistachios, then chop and mix with the lime zest and a pinch of salt.
-
+\n
 Mix the lime yoghurt ingredients in a small bowl.
-
+\n
 Serve the aubergine wedges topped with the lime yoghurt and scattered with the chopped pistachios.")
 
 Quantity.create(measurement: 3, ingredient_id: aubergines.id, recipe: aubergine_recipe)
@@ -210,9 +209,9 @@ aubergine_recipe.photo.attach(io: file3, filename: 'aubergine_image.jpg', conten
 aubergine_recipe.save
 
 aubergine_recipe2 = Recipe.new(name:"Aubergine curry with basil and tamarind", author:"Anna Jones", servings: 4, cooking_time: 70, description: "Use Thai basil if you can get it (although normal basil will do). If you can’t get lime leaves, add a good squeeze of lime into your curry at the end.", instructions: "Put a large pan over a medium heat, add a little oil, then fry the aubergine in batches until golden. Set aside.
-
+\n
 In the same pan, add a little more oil, if needed, followed by the shallots and ginger. Cook on a medium heat for around 10 minutes, until the shallots are soft and sweet. Add the garlic, lemongrass, lime leaves, chilli and ground coriander, and cook for a further five minutes. Add the chopped tomatoes, aubergine, tamarind, coconut milk and stock, then simmer for 25‑30 minutes, until the aubergines have almost collapsed and the sauce is thick, adding a little more water or stock if needed.
-
+\n
 Serve immediately with sticky rice, lots of Thai basil and fresh chilli.")
 
 Quantity.create(measurement: 1, ingredient_id: coconut_oil.id, recipe: aubergine_recipe2)
@@ -235,15 +234,15 @@ aubergine_recipe2.save
 
 
 beetroot_recipe = Recipe.new(name:"Whole baked beetroot, roasted beet leaves, whipped feta, crisp olives", servings: 4, cooking_time: 85, author:"Anna Jones", description: "This is as suited to the oven as it is to the barbecue. The simple foil-covered method for roasting works every time", instructions: "Heat the oven to 180C/160C fan/390F/gas 4. If the beetroots still have their leafy tops, cut them off close to the top of the beet, leaving yourself enough to grip.
-
+\n
 Wash and scrub the beetroots, wrap in foil parcels and put in the hot oven or on the embers of the barbecue. Cook until they are soft all the way through – how long this takes will depend on their size: anywhere between 50-80 minutes. Check every 20 minutes or so: if they are starting to look dry or are scorching on the bottoms, dribble a tablespoon of water over them before rewrapping tightly. They are done when a knife slides easily to the centre.
-
+\n
 Remove from the oven and leave to cool a little before peeling. To peel, hold one in a paper towel and use the edges of the paper to rub the skin away. This should happen easily; if it doesn’t, the beets likely need to cook for a little longer. When you have peeled them all, cut into chunks and slices.
-
+\n
 Wash the beetroot leaves and toss with the olives, a little oil, salt and pepper, and roast for 10 minutes. Meanwhile, in a small frying pan, toast the spices until they smell fragrant. Toss the beets and leaves with the spices, oil, vinegar and orange zest, with more salt and pepper if needed.
-
+\n
 In a food processor, whip the feta with the yoghurt until it is creamy (there may be a few small bits of feta left in, but that’s OK).
-
+\n
 Serve the warm beetroot on top of the cold, whipped feta with the bright purple juice from the beetroots spooned over the top.")
 
 Quantity.create(measurement: 500, ingredient_id: beetroot.id, recipe: beetroot_recipe, unit: "g")
@@ -261,9 +260,9 @@ beetroot_recipe.photo.attach(io: file5, filename: 'beetroot_image.jpg', content_
 beetroot_recipe.save
 
 broadbean_recipe = Recipe.new(name: "Harissa broad beans, coppa salad", author: "Nigel Slater", description: "I am hardly the most patient of cooks, but I can always find a few minutes to skin a broad bean. Once cooked, they pop from their papery skins easily enough and the difference is astonishing. A skinned broad bean is altogether fresher and greener tasting. I suggest you start with just 1 tsp of harissa paste for the dressing, adding more if you like a little more heat. A little sugar mellows the result.", instructions: "Peel the garlic and mash it to a paste using a pestle and mortar. Stir in the harissa paste, mustard and vinegar then mix in the egg yolk and the sugar. You should have a glossy, paste-like dressing. The flavour at this point will be quite strong. It will soften as you fold in the other ingredients.
-
+\n
 Cook the broad beans in boiling, lightly salted water for 4-8 minutes, depending on their size. (They should be quite small at this time of year.) Drain them and, if you wish, pop them from their papery skins by holding them between your finger and thumb. It doesn’t take long once you get into the swing of it. Peel the carrots, unless they are very young, then cut into thin discs and put them into a mixing bowl with the broad beans.
-
+\n
 Scrape the dressing into the broad beans and carrots and fold gently to mix. Serve with the slices of coppa.")
 
 Quantity.create(measurement: 300, ingredient_id: broad_beans.id, recipe: broadbean_recipe, unit: "g")
@@ -280,17 +279,17 @@ broadbean_recipe.photo.attach(io: file6, filename: 'broadbean_image.jpg', conten
 broadbean_recipe.save
 
 asparagus_recipe2 = Recipe.new(name: "Grilled asparagus, lentils and wheat", author: "Nigel Slater", servings: 4, description: "Most of the cracked wheat sold here, also known as bulgur or pourgouri, has already been broken, cooked and dried and doesn’t need the 20 minutes of boiling that some packets suggest. Instead, cover the grains by a centimetre or so of just-boiled water from the kettle, cover and leave for 15 minutes. Job done. Tenderly running a fork through the swollen grains will give a lighter, more open texture. I use young sprouting herbs in this salad, mostly coriander and beetroot, but any “micro-salad” – such as radish sprouts – would add a similar freshness.", instructions: "Boil the lentils in deep, unsalted water for 20 minutes until tender, but still with a nutty bite to them, then drain and set aside.
-
+\n
 Put the kettle on. Tip the cracked wheat into a mixing bowl then, when the kettle has boiled, pour enough boiling water over the grains to cover by a centimetre or so. Cover the bowl with a lid and leave for 15 minutes.
-
+\n
 Get a griddle pan hot. Trim the ends from the asparagus. Toss the spears in a little olive oil, just enough to make them shine, then place on the griddle and cook at a moderate heat for 3 or 4 minutes. Turn the spears over – it’s simplest using kitchen tongs – once the undersides are browning patchily and continue cooking for a further 3 or 4 minutes until the spears are just tender enough to bend a little. Remove the asparagus from the griddle and cut into short pieces, 3 or 4cm in length.
-
+\n
 Put the parsley into a mixing bowl. Trim and finely slice the spring onions into rings and add them to the parsley. Rinse the mung beans in cold water, drain thoroughly and fold through the parsley and spring onions.
-
+\n
 Check that the cracked wheat has absorbed all the water. Loosen the mass of grains by teasing them with the tines of a fork. Add the drained lentils, asparagus and wheat to the parsley and spring onions.
-
+\n
 Mix together the lemon juice and olive oil, then season with salt and a little pepper. You want a really bright-tasting, citrus-sharp dressing. Pour over the salad and turn briefly with a fork to combine.
-
+\n
 Add the young herbs to the salad then pile on to a serving dish.")
 
 Quantity.create(measurement: 100, ingredient_id: brown_lentils.id, recipe: asparagus_recipe2, unit: "g")
@@ -307,8 +306,9 @@ asparagus_recipe2.photo.attach(io: file7, filename: 'asparagus2_image.jpg', cont
 asparagus_recipe2.save
 
 tomato_recipe = Recipe.new(cooking_time: 180, name: "Slow roasted tomatoes", author: "Deb Perelman", servings: 4, description: "I love tomatoes so much that I even occasionally take part in the blasphemy that is “sun-dried tomatoes,” most of which are about as dried out in the sun as I am this week–unfortunately not the case for either of us. But lets talk about what sun-dried tomatoes aspired to be before their dreams were co-opted by food packagers and evil-minded chemists: tomatoes roasted slowly at a low temperature.", instructions: "Preheat oven to 225°F. Halve each cherry or grape tomato crosswise, or Roma tomato lengthwise and arrange on a parchment-lined baking sheet along with the cloves of garlic. Drizzle with olive oil, just enough to make the tomatoes glisten. Sprinkle herbs on, if you are using them, and salt and pepper, though go easily on these because the finished product will be so flavorful you’ll need very little to help it along.
+\n
 Bake the tomatoes in the oven for about 3 hours. You want the tomatoes to be shriveled and dry, but with a little juice left inside–this could take more or less time depending on the size of your tomatoes.
-
+\n
 Either use them right away or let them cool, cover them with some extra olive oil and keep them in the fridge for the best summer condiment, ever. And for snacking.")
 
 tomato_recipe.photo.attach(io: file8, filename: 'tomato_image.jpg', content_type: 'image/jpg')
@@ -319,9 +319,9 @@ Quantity.create(measurement: 1, ingredient_id: oil.id, recipe_id: tomato_recipe.
 Quantity.create(measurement: 4, ingredient_id: garlic.id, recipe_id: tomato_recipe.id, unit: "cloves")
 
 rhubarb_recipe = Recipe.new(cooking_time: 30, name: "Rhubarb & custard French toast", author: "Esther Clark", servings: 2, description: "Top French toast with zesty rhubarb and custard for a deliciously indulgent breakfast or brunch", instructions: "Simmer the rhubarb with the vanilla pod, caster sugar and the zest and juice of the orange for 8-10 mins, or until the rhubarb is soft but holds its shape. Set aside.
-
+\n
 Beat the egg with the milk in a shallow dish, add the bread and leave to soak for 1 min, turning once.
-
+\n
 Fry in the butter over a medium heat for 4 mins, then flip and cook for 4 mins more, until golden on both sides. Top with the rhubarb and warm custard.")
 
 rhubarb_recipe.photo.attach(io: file9, filename: 'rhubarb_image.jpg', content_type: 'image/jpg')
@@ -338,7 +338,9 @@ Quantity.create(measurement: 2, ingredient_id: butter.id, recipe_id: rhubarb_rec
 Quantity.create(measurement: 100, ingredient_id: custard.id, recipe_id: rhubarb_recipe.id, unit: "ml warm")
 
 new_potatoes_recipe = Recipe.new(cooking_time: 30, name:"New potato, artichoke, broad bean and chorizo salad", author:"Thomas Armstrong", description:"A filling salad recipe with the rich flavour of chorizo and a mustardy kick in the salad dressing. It makes the most of seasonal new potatoes, too. Wonderful!", instructions:"Boil the potatoes in salted water for 15-20 minutes until tender. Drain, then when cool enough to handle, halve any larger ones and put in a bowl.
+\n
 Meanwhile, heat a pan over a low-medium heat, then slice and fry the chorizo until it’s crisp and has released its oils. Scoop out with a slotted spoon and add to the potatoes. Drop the broad beans into boiling water, cook for 1-2 minutes, then drain and refresh under cold water. Slip them out of their outer skins (discard the skins) and add to the potatoes and chorizo.
+\n
 Drain and slice the artichoke hearts, then add to the bowl. Whisk the mustard with the vinegar and season with salt, pepper and a pinch of sugar. Whisk in the oil until the dressing is thick and glossy. Pour half of it over the salad, then toss. Snip the chives, add to the salad and serve with extra dressing on the side.")
 
 new_potatoes_recipe.photo.attach(io: file10, filename:'new_potato_image.jpg', content_type: 'image/jpg')
@@ -355,11 +357,11 @@ Quantity.create(measurement: 2, ingredient_id: oil.id, recipe_id: new_potatoes_r
 Quantity.create(measurement: 25, ingredient_id: chives.id, recipe_id: new_potatoes_recipe.id, unit: "g")
 
 gooseberry_recipe = Recipe.new(cooking_time: 60, name:"Elderflower & gooseberry vodka", author:"Mary Hopcroft", description:"Add a shot of this fruity, fragrant infused vodka to a cocktail or serve simply with lemonade or tonic water", instructions:"Divide the gooseberries between two 1-litre jars and very lightly bruise with the handle of a wooden spoon. Add the flowers, top with the lemon peel and pour over the vodka. Submerge the elderflowers with a circle of baking parchment and seal with a lid. Leave to infuse for at least 48 hrs or up to 1 week.
-
+\n
 Once infused, line a sieve with kitchen paper and set over a large bowl. Pour in the vodka, then discard the strained berries and flowers.
-
+\n
 Tip the sugar into a pan with 350ml water and gently heat until the sugar has dissolved. Turn up the heat, bring to a simmer and cook until syrupy and reduced by half – about 10 mins. Cool to room temperature, then add 100ml to the elderflower liquor. Stir well and taste, adding more until you are happy with the sweetness.
-
+\n
 Decant the vodka into bottles and store in a cool, dark place. It will keep for years, but the flavour will diminish after a year.")
 
 gooseberry_recipe.photo.attach(io: file11, filename:'gooseberry_image.jpg', content_type:'image/jpg')
@@ -372,19 +374,17 @@ Quantity.create(measurement: 700, ingredient_id: vodka.id, recipe_id: gooseberry
 Quantity.create(measurement: 350, ingredient_id: caster_sugar.id, recipe_id: gooseberry_recipe.id, unit: "g")
 
 summer_squash_recipe = Recipe.new(cooking_time: 20, name:"Oven Roasted Summer Squash", author:"Jen Hoy", description:"Patty pan squash could more accurately be called 'flying saucer' squash because of its appearance—and, in fact, it sometimes is. Some say these little squashes look like Scottish tams. The patty pan is small, round and flat, with edges that resemble an alien spacecraft. It might be yellow, white, or green.", instructions:"Gather the ingredients.
-
-Oven Roasted Squash
-
+\n
 Preheat oven to 400 F.
-
+\n
 Toss the squash, shallot, thyme, olive oil and salt together in a bowl.
-
+\n
 mix veggies
-
+\n
 Spread the mixture out onto a sheet pan. Bake 15 to 25 minutes or until the squash is tender. Monitor it periodically by testing it with a fork.
-
+\n
 cook in oven
-
+\n
 Serve hot or at room temperature.")
 
 summer_squash_recipe.photo.attach(io: file12, filename: 'summer_squash_image.jpg', content_type:'image/jpg')
@@ -397,9 +397,9 @@ Quantity.create(measurement: 1, ingredient_id: vodka.id, recipe_id: summer_squas
 Quantity.create(measurement: 1, ingredient_id: salt.id, recipe_id: summer_squash_recipe.id, unit: "pinch")
 
 tomato_recipe2 = Recipe.new(cooking_time: 15, name:"Halloumi with tomato & pomegranate mollases", author:"Joe Mathews", description:"Salty halloumi cheese, sweet pomegranate molasses and fresh mint make a delicious combination in this quick Lebanese meze dish", instructions:"Pour the olive oil into a medium bowl, add the za’atar and stir to combine. Add the halloumi and toss in the mixture until well coated.
-
+\n
 Heat a large griddle pan. Place the halloumi in the pan and cook for 1-2 mins, then turn over and cook for a further 1-2 mins until golden brown on both sides. After turning the halloumi, add the cherry tomatoes and move them around the pan quickly so they cook all over.
-
+\n
 Transfer the halloumi and tomatoes to a plate, then drizzle over the pomegranate molasses and serve with the mint leaves and pomegranate seeds scattered over.")
 
 tomato_recipe2.photo.attach(io: file13, filename: 'tomato_recipe2_image.jpg', content_type: 'image/jpg')
@@ -427,9 +427,9 @@ Quantity.create(measurement: 1, ingredient_id: mint.id, recipe_id: tomato_recipe
 Quantity.create(measurement: 1, ingredient_id: chilli.id, recipe_id: tomato_recipe3.id, unit: "tsp")
 
 tomato_recipe4 = Recipe.new(cooking_time: 25, servings: 4, name:"Spanish tomato salad", author:"Bradley Petty-Fitzmaurice", description:"Combine Serrano ham, manchego cheese and different varieties of tomato, drizzle with an almond parsley dressing, for a light summer side or tapas dish", instructions:"Slice the tomatoes and arrange on a large platter with the onion. Sprinkle with a good pinch of salt and ½ tsp of the sugar. Leave to stand for 10 mins or up to 30 mins while you make the dressing.
-
+\n
 Tip the parsley, vinegar, olive oil, remaining sugar, garlic, half the almonds and a good pinch of salt into the small bowl of a food processor. Blitz to a pesto consistency, adding a dribble of water if you need to loosen it a little.
-
+\n
 Weave the slices of ham between the tomatoes and onion, creating a little height on the plate. Drizzle over the dressing, scatter with the remaining almonds and shavings of manchego. Drizzle over a little extra oil and serve.")
 
 tomato_recipe4.photo.attach(io: file15, filename: 'tomato_recipe4_image.jpg', content_type:'image/jpg')
@@ -501,7 +501,7 @@ Review.create(rating: 3, content: "Great way to use up artichoke leaves.", user:
 Review.create(rating: 5, content: "Love this!", user: alice, recipe_id: artichoke_recipe.id)
 
 Review.create(rating: 5, content: "This recipe is LIFE!", user: anna, recipe_id: tomato_recipe4.id)
-Review.create(rating: 1, content: "Too many tomatoes. not a fan of parsley and the onions really ruin it for me. Would be good with just the ham on its on.", user: emma, recipe_id: tomato_recipe4.id)
+Review.create(rating: 1, content: "Too many tomatoes. Not a fan of parsley and the onions really ruin it for me. Would be good with just the ham on its on.", user: emma, recipe_id: tomato_recipe4.id)
 Review.create(rating: 5, content: "Another amazing recipe! Love this!", user: alice, recipe_id: tomato_recipe4.id)
 
 

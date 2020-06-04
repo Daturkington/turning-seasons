@@ -81,7 +81,7 @@
       </div>
 
       <div class="recipe-instructions">
-        <p><%= @recipe.instructions %></p>
+        <p><%= break_the_lines(@recipe.instructions) %></p>
       </div>
 
       <div class="review" id="recipe-<%= @recipe.id %>">
