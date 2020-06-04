@@ -22,9 +22,9 @@
         </div>
 
 
-      <div class="cards grid">
+      <div class="cards">
         <% @recipes.each_with_index do |recipe, index| %>
-          <div id="recipe-<%= recipe.id %>" class="card-category grid-item">
+          <div id="recipe-<%= recipe.id %>" class="card-category">
             <%= link_to recipe_path(recipe) do %>
               <div class="card-image">
                 <% if recipe.photo.attached? %>
@@ -68,7 +68,7 @@
   </div>
 </div>
 
-  <div class="modal fade" id="test" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="test" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-body">
