@@ -1,17 +1,43 @@
-<div class="completed-shopping-lists">
-  <h2 class="past-shopping-lists-title">Past Shopping Lists:</h2>
-  <div class="completed-card flex-row">
+<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner-completed">
     <% unless current_user.completed_shopping_lists.empty? %>
-      <% current_user.completed_shopping_lists.each do |list| %>
-        <div class="completed-shopping-card-item">
-          <h3><%= list.updated_at.strftime("%B") %></h3>
-          <% list.shopping_list_items.each do |items| %>
-            <% items.ingredients.each do |ing| %>
-              <li><%= ing.name %></li>
-            <% end %>
-          <% end %>
+      <% current_user.completed_shopping_lists.each_with_index do |list, index| %>
+        <div class="carousel-item <%= 'active' if index == 0 %>">
+          <div class="d-flex justify-content-around">
+            <div class="completed-shopping-card-item">
+              <h3><%= list.updated_at.strftime("%d") %> <%= list.updated_at.strftime("%b") %> <%= list.updated_at.strftime("%y") %></h3>
+              <ul>
+                <% list.shopping_list_items.map{|item| item.quantities}.flatten.group_by{|quantity| quantity.ingredient.name}.each do |key, value|  %>
+                  <li><%= value.map{|r| r.measurement}.sum  %> <%= value.first.unit %> <%= key %></li>
+                <% end %>
+              </ul>
+            </div>
+            <div class="recipe-cards-carousel">
+              <% list.recipes.each do |rec| %>
+                <div class="recipe-card d-flex">
+                  <%= cl_image_tag rec.photo.key %>
+                  <div class="card-product-info">
+                    <p class="card-product-name"><%= rec.name %></p>
+                    <p class="card-product-author"><%= rec.author %></p>
+                  </div>
+                </div>
+              <% end %>
+            </div>
+          </div>
         </div>
       <% end %>
     <% end %>
   </div>
+  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
 </div>
+
+
+
+
