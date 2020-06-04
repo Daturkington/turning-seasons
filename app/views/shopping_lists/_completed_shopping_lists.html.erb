@@ -1,5 +1,6 @@
 <div id="carouselCompletedShoppingList" class="carousel slide" data-ride="carousel">
   <div class="carousel-inner-completed">
+    <% if current_user.completed_shopping_lists.present? %>
       <% current_user.completed_shopping_lists.each_with_index do |list, index| %>
         <div class="carousel-item <%= 'active' if index == 0 %>">
           <div class="d-flex justify-content-around">
@@ -25,6 +26,9 @@
           </div>
         </div>
       <% end %>
+    <% else %>
+      <p class="empty-user">You don't have any completed shopping lists yet!</p>
+    <% end %>
   </div>
   <a class="carousel-control-prev" href="#carouselCompletedShoppingList" role="button" data-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
