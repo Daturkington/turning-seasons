@@ -3,8 +3,6 @@
   position: relative;
   padding: 20px 20px 20px 20px;
   margin: 40px 150px 40px 450px;
-  max-height: 600px;
-  overflow: scroll;
   h2 {
     font-family: $headers-font;
     font-weight: 600;
@@ -12,6 +10,11 @@
     letter-spacing: 4px;
     margin-bottom: 24px;
   }
+}
+
+.reviews-container {
+  max-height: 400px;
+  overflow: scroll;
 }
 
 .review-name {
@@ -27,7 +30,6 @@
   font-family: $serif-font;
   font-size: 12px;
   letter-spacing: 3px;
-
 }
 
 .review-individual {
@@ -93,9 +95,6 @@
 }
 
 .average-rating {
-  // position: absolute;
-  // top: 21px;
-  // right: 30px;
   font-size: 20px;
   margin-bottom: 24px;
   margin-top: 20px;
