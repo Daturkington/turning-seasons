@@ -9,17 +9,18 @@
 .mapboxgl-popup {
   max-width: 50px;
   max-height: 70px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-
 }
 
 .mapboxgl-popup-content {
   text-align: center;
   font-family: 'Open Sans', sans-serif;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+
 }
 
 .mapboxgl-popup-content h2 {
-  font-size: 14px;
+  font-size: 22px;
 }
 
 .mapboxgl-popup-content p {
