@@ -14,11 +14,11 @@
 .grid-sizer,
 .grid-item {
   width: 366px;
-  /*height: 290px;*/
+  height: 440px;
   float: left;
-  /*background: #D26;*/
+  margin-bottom: 5px;
   border: 2px solid #333;
-  border-color: hsla(0, 0%, 0%, 0.5);
+  border-color: rgba(240, 236, 227, 1);
   border-radius: 5px;
 }
 
