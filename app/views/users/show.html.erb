@@ -2,7 +2,9 @@
   <div class="body-show">
     <div class="headings text-center">
       <h1 class="recipe-name">Welcome</h1>
-      <h2 class="recipe-author"><%= current_user.username.capitalize %></h2>
+      <% if current_user.username.present? %>
+        <h2 class="recipe-author"><%= current_user.username.capitalize %></h2>
+      <% end %>
     </div>
 
     <div class="tabs">
