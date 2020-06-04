@@ -458,6 +458,7 @@ alice = User.create(email: "alice@gmail.com", password: "123456", username: "ali
 femi = User.create(email: "femi@gmail.com", password: "123456", username: "femi_b", address: "186 clapham high street, London")
 jonny = User.create(email: "jonny@gmail.com", password: "123456", username: "jonny82", address: "16 mare Street, London")
 edina = User.create(email: "edina@gmail.com", password: "123456", username: "edina_w", address: "186 chesham road, London, se20 7rp")
+jenny = User.create(email: "jennyk@gmail.com", password: "123456", username: "VeganJenny", address: "126 Duckett Street, London, E1 4SY")
 
 #reviews seed
 
