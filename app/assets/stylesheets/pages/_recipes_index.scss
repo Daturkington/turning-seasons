@@ -36,7 +36,7 @@
 
 #ingredientDropdown {
   padding-left: 0;
-  margin: 50px 0 40px 0;
+  margin: 20px 0 100px 0;
   font-family: $body-font;
   font-size: 24px;
   &:hover {
@@ -61,6 +61,6 @@
 }
 
 #ingredient-dropdown {
-  width: 77%;
+  width: 78%;
   background: linear-gradient(transparent, $background, $background, transparent);
 }

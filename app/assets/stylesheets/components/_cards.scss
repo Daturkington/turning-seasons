@@ -1,7 +1,7 @@
 .cards {
-  // display: grid;
-  // grid-template-columns: 1fr 1fr 1fr;
-  // grid-gap: 16px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
 }
 
 .card-category {
@@ -22,7 +22,6 @@
 
 .card-description {
   margin: 5px;
-  display: flex;
 
   h2 {
     margin-top: 10px;
@@ -40,11 +39,10 @@
   h3 {
     font-family: $serif-font;
     font-size: 1rem;
-    text-align: left;
     letter-spacing: 4px;
-    position: absolute;
     bottom: 3px;
-    left: 15px;
+    text-align: center;
+    margin: 24px;
   }
 }
 
