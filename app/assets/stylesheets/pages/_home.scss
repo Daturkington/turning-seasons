@@ -1,4 +1,8 @@
 // Specific CSS for your home-page
+.container {
+  margin-top:50px;
+}
+
 .side-nav-home {
   position: -webkit-sticky; /* Safari */
   position: sticky;
@@ -10,6 +14,29 @@
   height: 30vh;
   li {
     list-style-type: none;
+  }
+}
+
+.log-link-home {
+  font-family: $body-font;
+  font-size: 18px;
+  text-decoration: none;
+  color: $main-body;
+  padding: 8px;
+  &:hover {
+    color: $highlight;
+  }
+}
+
+.profile_link_home {
+  color:$main-body;
+  font-family: $headers-font;
+  font-size: 30px;
+  font-weight: 400;
+  transition: 0.3s;
+  letter-spacing: 4px;
+  &:hover {
+    color: $highlight;
   }
 }
 

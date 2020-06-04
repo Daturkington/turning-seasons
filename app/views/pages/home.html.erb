@@ -1,33 +1,28 @@
 <div class="side-nav-home">
   <ul>
-    <li>
-      <%= link_to "Recipes", recipes_path, class: "recipe_link" %>
-    </li>
 
     <li>
       <% if user_signed_in? %>
-        <%= link_to "Profile", user_path(current_user), class: "profile_link" %>
+        <%= link_to "Profile", user_path(current_user), class: "profile_link_home" %>
       <% end %>
     </li>
-
 
     <% if user_signed_in? %>
       <li class="nav-item">
         <div class="nav-item">
-          <%= link_to "Logout", destroy_user_session_path, class: "log-link", method: :delete %>
+          <%= link_to "Logout", destroy_user_session_path, class: "log-link-home", method: :delete %>
         </div>
       </li>
     <% else %>
       <li>
-        <%= link_to "Sign Up", new_user_registration_path, class: "log-link" %>
+        <%= link_to "Sign Up", new_user_registration_path, class: "log-link-home" %>
       </li>
       <li>
         <div class="nav-item">
-          <%= link_to "Login", new_user_session_path, class: "log-link" %>
+          <%= link_to "Login", new_user_session_path, class: "log-link-home" %>
         </div>
       </li>
     <% end %>
-
 
   </ul>
 </div>
