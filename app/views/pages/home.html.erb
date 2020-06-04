@@ -1,15 +1,11 @@
 <div class="side-nav-home">
   <ul>
-    <li>
-      <%= link_to "Recipes", recipes_path, class: "recipe_link" %>
-    </li>
 
     <li>
       <% if user_signed_in? %>
         <%= link_to "Profile", user_path(current_user), class: "profile_link" %>
       <% end %>
     </li>
-
 
     <% if user_signed_in? %>
       <li class="nav-item">
@@ -27,7 +23,6 @@
         </div>
       </li>
     <% end %>
-
 
   </ul>
 </div>
