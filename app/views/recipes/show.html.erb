@@ -37,7 +37,7 @@
             <div class="button-icon selected">
               <%= link_to recipe_favourite_path(@recipe, Favourite.find_by(user: current_user, recipe: @recipe)), method: :delete do %>
                 <i class="fab fa-gratipay"></i>
-                <p class="button-text">Delete from favourites</p>
+                <p class="button-text">Unfavourite</p>
               <% end %>
             </div>
           <% end %>
