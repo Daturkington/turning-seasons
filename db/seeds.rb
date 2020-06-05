@@ -35,6 +35,11 @@ file15 = URI.open('https://www.simplyrealhealth.com/wp-content/uploads/2012/09/i
 file16 = URI.open('https://images.immediate.co.uk/production/volatile/sites/2/2020/04/Sticky-soy-aubergines-e6b4132-scaled.jpg?webp=true&quality=45&resize=1240%2C826')
 file17 = URI.open('https://images.immediate.co.uk/production/volatile/sites/2/2019/06/OLI0619-Healthy_VeganKaleCaesar_32425-f8d8401.jpg?webp=true&quality=45&resize=1880%2C799')
 file18 = URI.open('https://images.immediate.co.uk/production/volatile/sites/2/2016/11/Sweet-soy-aubergine-noodles.jpg?webp=true&quality=45&crop=12px%2C1275px%2C2812px%2C1195px&resize=1880%2C799')
+file19 = URI.open('https://i.guim.co.uk/img/media/005d35d8eb22b5c63881241a67de271a40390efe/0_2767_4500_2700/master/4500.jpg?width=1065&quality=85&auto=format&fit=max&s=324bba128c032ef5b48eccb2e835de02')
+file20 = URI.open('https://i.guim.co.uk/img/static/sys-images/Guardian/Pix/pictures/2014/11/18/1416324438588/16d680e4-a1db-4159-a180-1b9e64d797d8-2060x1236.png?width=1065&quality=85&auto=format&fit=max&s=cb32286a23d8e4d6a1f2805f1003a502')
+file21 = URI.open('https://i.guim.co.uk/img/media/610b8521e8e5c916a50b901e385679344fb0c947/0_0_5625_5624/master/5625.jpg?width=1065&quality=85&auto=format&fit=max&s=1ad4937507a74944cf4ca760fd61b367')
+file22 = URI.open('https://i.guim.co.uk/img/media/6ffe11309a55c8abe24bc2d1a3837316a5e7f966/0_1548_4881_2927/master/4881.jpg?width=1225&quality=85&auto=format&fit=max&s=46a4a29dca1d45e9b2f1fca0f466d29d')
+
 
 #ingredient Seed
 
@@ -43,12 +48,15 @@ anchovies = Ingredient.create(name: "anchovies")
 artichoke = Ingredient.create(name: "artichoke", season: [6, 7, 8, 9, 10, 11])
 asparagus = Ingredient.create(name: "asparagus", season: [4, 5, 6])
 aubergines = Ingredient.create(name: "aubergine", season: [5, 6, 7, 8, 9, 10])
+bay_leaves = Ingredient.create(name: "bay leaves")
 beetroot = Ingredient.create(name: "beetroot", season: [6, 7, 8, 9, 10, 11, 12, 1, 2, 3])
 black_olives = Ingredient.create(name: "black olives")
+blueberries = Ingredient.create(name: "blueberries", season: [6, 7, 8, 9])
 broad_beans = Ingredient.create(name: "broad beans", season: [5, 6, 7, 8, 9])
 brown_lentils = Ingredient.create(name: "small brown lentils")
 burrata = Ingredient.create(name: "burrata")
 butter = Ingredient.create(name: "butter")
+caraway_seeds = Ingredient.create(name: "caraway seeds")
 carrots = Ingredient.create(name: "carrots", season: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12])
 caster_sugar = Ingredient.create(name: "caster sugar")
 cayenne_pepper = Ingredient.create(name: "cayenne pepper")
@@ -61,17 +69,21 @@ coppa = Ingredient.create(name: "coppa")
 coriander_leaves = Ingredient.create(name: "coriander leaves")
 coriander_seeds = Ingredient.create(name: "coriander seeds")
 cracked_wheat = Ingredient.create(name: "cracked wheat")
+cream_cheese = Ingredient.create(name: "full fat cream cheese")
 croutons = Ingredient.create(name: "croutons")
 cumin_seeds = Ingredient.create(name: "cumin seeds")
 custard = Ingredient.create(name: "custard")
 dijon_mustard = Ingredient.create(name: "dijon mustard")
+double_cream = Ingredient.create(name: "double cream")
 dried_chillies = Ingredient.create(name: "dried red chillies")
 elderflower = Ingredient.create(name: "Elderflower")
 egg = Ingredient.create(name: "egg")
 eggs = Ingredient.create(name: "eggs")
+fennel_seeds = Ingredient.create(name: "fennel seeds")
 feta = Ingredient.create(name: "feta")
 flatbread = Ingredient.create(name: "flatbread")
 garlic = Ingredient.create(name: "garlic")
+garlic_head = Ingredient.create(name: "head of garlic")
 ginger = Ingredient.create(name: "ginger")
 gooseberries = Ingredient.create(name: "gooseberries", season: [6, 7])
 greek_yoghurt = Ingredient.create(name: "greek yoghurt")
@@ -96,22 +108,28 @@ mint = Ingredient.create(name: "mint leaves")
 new_potatoes = Ingredient.create(name: "new potatoes", season: [4, 5, 6, 7])
 nigella_seeds = Ingredient.create(name: "nigella seeds")
 noodle_egg = Ingredient.create(name: "egg noodles")
+nutmeg = Ingredient.create(name: "nutmeg")
 onion = Ingredient.create(name: "onion")
 oil = Ingredient.create(name: "olive oil")
 orange = Ingredient.create(name: "orange", season: [1, 2, 3])
+orange_juice = Ingredient.create(name: "orange juice")
 paprika = Ingredient.create(name: "paprika")
+parmesan = Ingredient.create(name: "parmesan")
 parsley = Ingredient.create(name: "parsley")
 peanuts = Ingredient.create(name: "peanuts")
 pepper = Ingredient.create(name: "black pepper")
 pesto = Ingredient.create(name: "pesto")
 pistachios = Ingredient.create(name: "pistachios")
+plain_flour = Ingredient.create(name: "plain flour")
 pomegranate_mollases = Ingredient.create(name: "pomegranate mollases")
 pomegranate_seeds = Ingredient.create(name: "pomegranate seeds")
+pork_chops = Ingredient.create(name: "pork chops")
 rhubarb = Ingredient.create(name:"rhubarb", season: [1, 2, 3, 4, 5, 6, 7])
 red_chilli = Ingredient.create(name: "red chillies", season: [1, 2, 3, 12])
 red_onion = Ingredient.create(name:"red onion")
 red_wine_vinegar = Ingredient.create(name: "red wine vinager")
 rice = Ingredient.create(name: "rice")
+rosemary = Ingredient.create(name: "rosemary")
 salt = Ingredient.create(name: "sea salt")
 sambal = Ingredient.create(name: "sambal oelek")
 sesame = Ingredient.create(name: "sesame seeds")
@@ -123,16 +141,20 @@ sprouted_mung_beans = Ingredient.create(name: "sprouted mung beans")
 sugar = Ingredient.create(name: "caster sugar")
 sumac = Ingredient.create(name: "sumac")
 summer_squash = Ingredient.create(name: "summer squash", season: [6, 7, 8, 9, 10])
+sweet_paprika = Ingredient.create(name: "sweet paprika")
 tamarind_paste = Ingredient.create(name: "tamarind paste")
 thai_basil = Ingredient.create(name: "thai basil")
 thyme = Ingredient.create(name: "thyme")
 tomato = Ingredient.create(name: "tomato", season: [6, 7, 8, 9])
+turnip = Ingredient.create(name: "turnip", season: [1, 2, 5, 6, 7, 8, 9, 10, 11, 12])
+vanilla = Ingredient.create(name: "vanilla extract")
 vanilla_pod = Ingredient.create(name: "vanilla pod")
 v_mayo = Ingredient.create(name: "vegan mayonnaise")
 vegetable_stock = Ingredient.create(name: "vegetable stock")
 vinger_rice = Ingredient.create(name: "rice vinegar")
 vine_tomatoes = Ingredient.create(name: "vine tomatoes", season: [6, 7, 8, 9, 10])
 vodka = Ingredient.create(name:"vodka")
+watercress = Ingredient.create(name: "watercress", season: [4, 5, 6, 7, 8, 9, 10, 11])
 white_bread = Ingredient.create(name: "white bread")
 white_wine_vinegar = Ingredient.create(name: "white wine vinagar")
 wholegrain_mustard = Ingredient.create(name: "wholegrain mustard")
@@ -151,6 +173,31 @@ brixton_village_market = Market.create(name: "Brixton Village Market", address: 
 portobello_road_market = Market.create(name: "Portobello Road Market", address: "306 Portobello Rd, London W10 5TA")
 old_spitalfields_market = Market.create(name: "Old Spitalfields Market", address: "16 Commercial St, Spitalfields, London E1 6EW")
 camden_market = Market.create(name: "Camden Market", address: "200 chalk farm road, Camden Lock, Camden Town, London NW1 8AF")
+parliament_hill_market = Market.create(name: "Parliament Hill Farmers’ Market", address: "William Ellis School Off High Gate Rd London NW5 1RN")
+islington_market = Market.create(name: "Islington Farmers, Market", address: "Chapel Market, The Angel, London N1 9PZ")
+blackheath_market = Market.create(name: "Blackheath Farmers Market", address: "Blackheath Station car park, London SE3 9LA")
+marylebone_market = Market.create(name: "Marylebone Farmers' Market", address: "Aybrook St, Marylebone, London W1U 4DF")
+ealing_market = Market.create(name: "Ealing Farmers Market", address: "Leeland Rd, Ealing, London W13 9HH")
+wimbledon_market = Market.create(name: "Wimbledon Farmers’ Market", address: "Wimbledon Park Primary School, Off Havana Rd, Durnsford Rd, London SW19 8EJ")
+alexandra_market = Market.create(name: "Alexandra Palace Farmer's Market", address: "London N8 7FW")
+pimlico_market = Market.create(name: "Pimlico Road Farmers' Market", address: "Pimlico Rd, Belgravia, London SW1W 8UT")
+hamstead_market = Market.create(name: "West Hampstead Farmers' Market", address: "Iverson Rd, West Hampstead, London NW6 1XF")
+growing_market = Market.create(name: "Growing Communities Farmers Market", address: "St Pauls Church, Stoke Newington High St, Hackney Downs, London N16 7UY")
+queens_market = Market.create(name: "Queen's Park Farmers' Market", address: "Salusbury Primary School, Salusbury Rd, Queen's Park, London NW6 6RG")
+ken_market = Market.create(name: "South Kensington Saturday Farmers' Market", address: "Bute St, South Kensington, London SW7 3EX")
+walthamstow_market = Market.create(name: "Walthamstow Farmers Market", address: "Town Square top of High Street, Walthamstow, London E17 7JN")
+oval_market = Market.create(name: "Oval Farmers Market", address: "St Marks Church, Kennington Park Rd, Oval, London SE11 4PW")
+peckham_market = Market.create(name: "Peckham Farmers' Market", address: "St Marks Church, Kennington Park Rd, Oval, London SE11 4PW")
+city_market = Market.create(name: "City & Country Farmers' Markets", address: "1-20 Woodland Cres, Greenwich Peninsula, London SE10 9UP")
+levenshulme_market = Market.create(name: "Levenshulme Market", address: "Stockport Rd, Levenshulme, Manchester M19 3AB")
+ashton_market = Market.create(name: "Ashton Market", address: "Bow St, Ashton-under-Lyne OL6 6BZ")
+vintage_market = Market.create(name: "Vintage Farmers Market at Greenslate 3rd Sunday of the Month", address: "Greenslate road, Wigan WN5 7BG")
+smithfield_market = Market.create(name: "New Smithfield Wholesale Market", address: "Whitworth St E, Openshaw, Manchester M11 2WJ")
+orton_market = Market.create(name: "Orton Farmers’ Market", address: "Market Hall, Orton, Penrith CA10 3RU")
+ripley_market = Market.create(name: "Ripley Farmers’ Market", address: "The Green, Ripley, Woking GU23 6AN")
+otley_market = Market.create(name: "Otley Farmers’ Market", address: "32-34 Market Pl, Otley LS21 3AQ")
+stroud_market = Market.create(name: "Stroud Fresh-n-Local Market", address: "Unit 6, Daniels Industrial Estate, 104 Bath Rd, Stroud GL5 3TJ")
+
 
 
 #recipe & quantity seed
@@ -162,12 +209,12 @@ Leave to steam for five minutes, or until the leaves become tender; add more win
 Serve as they are as a side vegetable, or turn into a centrepiece by serving on a platter with pieces of torn burrata, mint and crisp bread, and drizzled with pesto. Eat the leaves just as you would a boiled globe artichoke, pulling the flesh off with your teeth." )
 
 Quantity.create(measurement: 1, ingredient: artichoke, recipe: artichoke_recipe)
-Quantity.create(measurement: 1, ingredient: oil, recipe: artichoke_recipe)
+Quantity.create(measurement: 1, ingredient: oil, recipe: artichoke_recipe, unit: "tbsp")
 Quantity.create(measurement: 1, ingredient: garlic, recipe: artichoke_recipe, unit: "clove")
 Quantity.create(measurement: 1, ingredient: salt, recipe: artichoke_recipe, unit: "pinch of")
 Quantity.create(measurement: 1, ingredient: pepper, recipe: artichoke_recipe, unit: "pinch of")
 Quantity.create(measurement: 1, ingredient: flatbread, recipe: artichoke_recipe)
-Quantity.create(measurement: 1, ingredient: pesto, recipe: artichoke_recipe)
+Quantity.create(measurement: 1, ingredient: pesto, recipe: artichoke_recipe, unit: "tbsp")
 Quantity.create(measurement: 2, ingredient: mint, recipe: artichoke_recipe, unit: "sprigs")
 
 artichoke_recipe.photo.attach(io: file1, filename: 'artichoke_image.jpg', content_type: 'image/jpg')
@@ -316,7 +363,7 @@ Quantity.create(measurement: 6, ingredient_id: parsley.id, recipe: asparagus_rec
 Quantity.create(measurement: 2, ingredient_id: spring_onions.id, recipe: asparagus_recipe2)
 Quantity.create(measurement: 50, ingredient_id: sprouted_mung_beans.id, recipe: asparagus_recipe2, unit: "g")
 Quantity.create(measurement: 80, ingredient_id: lemon_juice.id, recipe: asparagus_recipe2, unit: "ml")
-Quantity.create(measurement: 50, ingredient_id: oil.id, recipe: asparagus_recipe2, unit: "ml")
+Quantity.create(measurement: 4, ingredient_id: oil.id, recipe: asparagus_recipe2, unit: "tbsp")
 Quantity.create(measurement: 25, ingredient_id: micro_herbs.id, recipe: asparagus_recipe2, unit: "g")
 
 asparagus_recipe2.photo.attach(io: file7, filename: 'asparagus2_image.jpg', content_type: 'image/jpg')
@@ -332,7 +379,7 @@ tomato_recipe.photo.attach(io: file8, filename: 'tomato_image.jpg', content_type
 tomato_recipe.save
 
 Quantity.create(measurement: 500, ingredient_id: tomato.id, recipe_id: tomato_recipe.id, unit: "g")
-Quantity.create(measurement: 1, ingredient_id: oil.id, recipe_id: tomato_recipe.id, unit: "drizzle")
+Quantity.create(measurement: 1, ingredient_id: oil.id, recipe_id: tomato_recipe.id, unit: "tbsp")
 Quantity.create(measurement: 4, ingredient_id: garlic.id, recipe_id: tomato_recipe.id, unit: "cloves")
 
 rhubarb_recipe = Recipe.new(cooking_time: 30, name: "Rhubarb & custard French toast", author: "Esther Clark", servings: 2, description: "Top French toast with zesty rhubarb and custard for a deliciously indulgent breakfast or brunch", instructions: "Simmer the rhubarb with the vanilla pod, caster sugar and the zest and juice of the orange for 8-10 mins, or until the rhubarb is soft but holds its shape. Set aside.
@@ -533,6 +580,88 @@ Quantity.create(measurement: 1, ingredient_id: garlic.id, recipe_id: aubergine_r
 Quantity.create(measurement: 1, ingredient_id: ginger.id, recipe_id: aubergine_recipe5.id, unit: "gwalnut sized piece, finely grated")
 Quantity.create(measurement: 2, ingredient_id: vinger_rice.id, recipe_id: aubergine_recipe5.id, unit: "tbsp")
 
+watercress_recipe = Recipe.new(name: "Tagliatelle, watercress and hazelnuts", author: "Florence Knight", servings: 6, description: "Homemade pasta ribbons with a deliciously toasty hazelnut and watercress sauce”, instructions: “Add the flour, eggs and yolks to a bowl and combine with your hands to form a rough dough. Turn the mixture on to a clean surface. Knead the dough with the heel of your hand for 10 minutes until it become smooth and elastic wetting your hands if necessary. It should spring back if you push into the dough with your finger. Flatten the dough with your hands into a rectangle and wrap with clingfilm allowing the dough to rest for an hour in the fridge.
+\n
+Meanwhile, put the cooled hazelnuts, parmesan and salt into a food processor and pulse a few times to a coarse crumb. Add the watercress and garlic, and pulse again a further few times. Use a spoon to scrape down the sides of the machine and gradually pour over the oil until you have your desired texture. Grind over a little fresh black pepper and nutmeg, and adjust the seasoning to taste. Spoon the pesto into a container, cover the surface with a little oil and refrigerate until needed.
+\n
+Divide the rested dough in four, making sure each piece is covered to prevent them from drying. On a lightly floured surface flatten the first piece of dough with a rolling pin to about 1cm thickness so it will fit through the widest setting on your pasta machine.
+\n
+Put the dough through twice then drop the setting down a grade. Take both ends of the dough and fold them into the centre, turn the dough so you are putting the widest part through the machine, then turn it back vertically and repeat the process, dropping down the grades each time.
+\n
+Once the pasta is to your liking, roll the sheets up and cut into ¾cm strips with a sharp knife. Untangle the strips and twirl into little nests. Dust them liberally with flour to stop from sticking. Repeat this process with the remaining dough.
+\n
+Bring a large pot of salted water to the boil. Add the pasta in batches and simmer for 2-3 minutes until they are al dente.
+\n
+Meanwhile, put a ladleful of pasta water into a large pan with a couple of spoonfuls of the pesto. Combine the mixture over a high heat to boil a little. Remove the pasta with tongs and coat them in the hot green sauce.
+")
+watercress_recipe.photo.attach(io: file19, filename: 'watercress_image.jpg', content_type: 'image/jpg')
+watercress_recipe.save
+
+Quantity.create(measurement: 75, unit: "g", ingredient_id: hazelnuts.id, recipe_id: watercress_recipe.id)
+Quantity.create(measurement: 50, unit: "g", ingredient_id: parmesan.id, recipe_id: watercress_recipe.id)
+Quantity.create(measurement: 1, unit: "tsp", ingredient_id: salt.id, recipe_id: watercress_recipe.id)
+Quantity.create(measurement: 90, unit: "g", ingredient_id: watercress.id, recipe_id: watercress_recipe.id)
+Quantity.create(measurement: 1, unit: "small clove", ingredient_id: garlic.id, recipe_id: watercress_recipe.id)
+Quantity.create(measurement: 10, unit: "tbsp", ingredient_id: oil.id, recipe_id: watercress_recipe.id)
+Quantity.create(measurement: 1, unit: "pinch", ingredient_id: pepper.id, recipe_id: watercress_recipe.id)
+Quantity.create(measurement: 1, unit: "pinch", ingredient_id: nutmeg.id, recipe_id: watercress_recipe.id)
+
+turnip_recipe = Recipe.new(name: "Roast turnip, potato and garlic with harissa and orange", author: "Yotam Ottolenghi", servings: 4, description: "The natural mellow bitterness of turnips is a wonderful base on which sweet, fruity and spicy flavours can shine. Serve with couscous for a light supper.”, instructions: “Heat the oven to 200C/390F/gas mark 6. Bring a large pan of salted water to a boil, add the turnips, potatoes and garlic, and boil for six minutes. Drain, refresh under cold water and pat dry.
+\n
+Put the par-bolied veg in a large roasting tray and mix through the paprika, caraway, harissa, orange skin, oil and three-quarters of a teaspoon of salt. Roast for 40 minutes, turning every 15 minutes or so, until the vegetables are cooked through and have taken on some colour. Remove and set aside for 10 minutes, to cool slightly.
+\n
+While the vegetables are roasting, make the dressing. Put the citrus juices in a small bowl with the fennel seeds and a quarter-teaspoon of salt, then slowly whisk in the oil until combined.
+\n
+To serve, spread half the vegetables on a large platter and layer half the watercress on top. Repeat with the remaining vegetables and watercress, drizzle the dressing over the top and serve warm.")
+
+turnip_recipe.photo.attach(io: file20, filename: 'turnip_image.jpg', content_type: 'image/jpg')
+turnip_recipe.save
+
+Quantity.create(measurement: 5, ingredient_id: turnip.id, recipe_id: turnip_recipe.id)
+Quantity.create(measurement: 500, unit: "g", ingredient_id: new_potatoes.id, recipe_id: turnip_recipe.id)
+Quantity.create(measurement: 1, ingredient_id: garlic_head.id, recipe_id: turnip_recipe.id)
+Quantity.create(measurement: 1, unit: "tsp", ingredient_id: caraway_seeds.id, recipe_id: turnip_recipe.id)
+Quantity.create(measurement: 2, unit: "tsp", ingredient_id: harissa_paste.id, recipe_id: turnip_recipe.id)
+Quantity.create(measurement: 1, unit: "shaved skin", ingredient_id: orange.id, recipe_id: turnip_recipe.id)
+Quantity.create(measurement: 5, unit: "tbsp", ingredient_id: oil.id, recipe_id: turnip_recipe.id)
+Quantity.create(measurement: 1, unit: "tsp", ingredient_id: salt.id, recipe_id: turnip_recipe.id)
+Quantity.create(measurement: 100, unit: "g", ingredient_id: watercress.id, recipe_id: turnip_recipe.id)
+Quantity.create(measurement: 2, unit: "tbsp", ingredient_id: orange_juice.id, recipe_id: turnip_recipe.id)
+Quantity.create(measurement: 2, unit: "tsp", ingredient_id: fennel_seeds.id, recipe_id: turnip_recipe.id)
+
+turnip_recipe2 = Recipe.new(name: "Pork chops with roast turnips, summer garlic and caramelised lemon", author: "Thomisina Miers", servings: 4, cooking_time: 55, description: "It was the chef Rowley Leigh who alerted me to how good turnips are, with their sweet and delicate flavour. Here, they are complemented by the season’s young garlic, which makes a wonderful partner for pork chops. Pair the turnips with garlic, lemon and olive oil-braised chickpeas for a vegetarian alternative.”, instructions: “Heat the oven to 200C (180C fan)/390F/ gas 6, and take the chops out of the fridge to come up to room temperature.
+\n
+Put the turnips, halved garlic heads, lemon wedges and onion in a baking tray, and toss with five tablespoons of olive oil and plenty of salt and pepper. Scatter over half the herbs, then put in the oven for 30-35 minutes, shaking the tray occasionally.
+\n
+Meanwhile, prepare the chops. Put the garlic clove and remaining herbs in a mortar with several generous pinches of salt, and bash with a pestle until you have crushed everything into a paste. Stir in the rest of the oil, then scoop out and rub all over the chops.
+\n
+Once the turnips have been in the oven for 10 minutes, put the chops on a baking tray and roast on the shelf above the turnips for 20 minutes, until golden. Remove the chops from the oven, cover with foil and leave to rest for 10 minutes.
+\n
+The turnips should now be golden, caramelised and cooked through, and the garlic soft. Remove from the oven, and serve alongside the chops, giving each plate half a head of garlic and a few slices of caramelised lemon and some onion. This is delicious served with garlic- and lemon-braised greens.")
+
+turnip_recipe2.photo.attach(io: file21, filename: 'turnip_image2.jpg', content_type: 'image/jpg')
+turnip_recipe2.save
+
+blueberry_recipe = Recipe.new(name: "Baked blueberry cheesecake", author: "Nigel Slater", servings: 6, description: "A baked cheesecake, less fudgy than the norm and without the usual biscuit base. The cake is soft and giving and its lightness is contrasted by the dark, toffee notes of the browned crust. As it emerges from the oven, the centre of the cake should possess a slight wobble. The texture will thicken as it cools. You might like some cream with this, whipped or in a jug to pour over each slice at the table, or possibly another handful of berries.", instructions: "Set the oven at 180C/gas mark 4. Line the base of a 20cm springform cake tin with baking parchment. Place a pizza stone or baking sheet in the oven to heat up.
+\n
+Put the cream cheese and caster sugar into the bowl of food mixer and beat for a few seconds until soft and creamy. Grate the lemon zest into the cheese, then add a drop or 2 of vanilla extract.
+\n
+Break the eggs into a small bowl and beat lightly with a fork or small whisk to combine the yolks and whites. Introduce the eggs to the cream cheese beating at slow speed, then pour in the double cream. At this point the mixture may look too much like liquid but worry not.
+\n
+Stir in the flour, making sure it is thoroughly combined then pour into the lined cake tin. Scatter in the blueberries, some of which will slide down into the depths, others will stay afloat. Slide carefully into the oven, place on top of the hot stone or baking sheet and bake for 45 minutes, until the cake has risen a little, its surface soft yet lightly firm and patchily golden brown.
+\n
+Remove the cheesecake from the oven and leave to cool before slicing.")
+
+blueberry_recipe.photo.attach(io: file22, filename: 'blueberry_image.jpg', content_type: 'image/jpg')
+blueberry_recipe.save
+
+Quantity.create(measurement: 450, unit: "g", ingredient_id: cream_cheese.id, recipe_id: blueberry_recipe.id)
+Quantity.create(measurement: 200, unit: "g", ingredient_id: sugar.id, recipe_id: blueberry_recipe.id)
+Quantity.create(measurement: 1, ingredient_id: lemon.id, recipe_id: blueberry_recipe.id)
+Quantity.create(measurement: 2, unit: "drop", ingredient_id: vanilla.id, recipe_id: blueberry_recipe.id)
+Quantity.create(measurement: 5, ingredient_id: eggs.id, recipe_id: blueberry_recipe.id)
+Quantity.create(measurement: 280, unit: "ml", ingredient_id: double_cream.id, recipe_id: blueberry_recipe.id)
+Quantity.create(measurement: 100, unit: "g", ingredient_id: blueberries.id, recipe_id: blueberry_recipe.id)
 
 # users seed
 emma = User.create(email: "emma@gmail.com", password: "123456", username: "emma_b", address: "186 Deptford High Street, London")
