@@ -20,18 +20,21 @@ Review.destroy_all
 file1 = URI.open('https://www.bbcgoodfood.com/sites/default/files/styles/recipe/public/recipe/recipe-image/2016/06/sicilian-style-artichoke-hearts-with-burrata.jpg?itok=1LF46CyS')
 file2 = URI.open('https://i.guim.co.uk/img/media/61939a658cec630bd704d57c70f00b108abc4479/151_12_1672_1286/master/1672.jpg?width=1920&quality=85&auto=format&fit=max&s=34532389f604301513b6142f62c4b8dd')
 file3 = URI.open('https://i.guim.co.uk/img/media/2dcacb8daca810000e60fedac6a4dfd8d9fe3b60/0_3_2667_2666/master/2667.jpg?width=620&quality=45&auto=format&fit=max&dpr=2&s=53d7d7e19ae89a4eb53c3eef529291e1')
-file4 = URI.open('https://www.bbcgoodfood.com/sites/default/files/styles/recipe/public/recipe_images/recipe-image-legacy-id--1048_11.jpg?itok=-ZzIDbB6')
+file4 = URI.open('https://cdn77-s3.lazycatkitchen.com/wp-content/uploads/2019/05/vegan-aubergine-curry-800x1200.jpg')
 file5 = URI.open('https://i.guim.co.uk/img/media/55e61a76e102d82860e7d787e49475bc315ad00a/243_460_8409_5045/master/8409.jpg?width=1300&quality=45&auto=format&fit=max&dpr=2&s=ca0c411e761e1e733ffbd49d981ef550')
 file6 = URI.open('https://i.guim.co.uk/img/media/43a71b25c31eebbc2cae3bfe5aa037a84aaa0214/0_3304_4912_2948/master/4912.jpg?width=620&quality=45&auto=format&fit=max&dpr=2&s=003b249a9a0b9ae994827b43f2492b05')
 file7 = URI.open('https://i.guim.co.uk/img/media/4a5a61a3d7247d13301b7b0a8a2dd883be1ba54c/0_2138_4912_2944/master/4912.jpg?width=620&quality=45&auto=format&fit=max&dpr=2&s=6762a630fa66755de5b4679aefd41d7f')
 file8 = URI.open('https://i2.wp.com/c4.staticflickr.com/9/8399/29396469571_996085ba30_z.jpg?resize=640%2C427&ssl=1')
-file9 = URI.open('https://www.bbcgoodfood.com/sites/default/files/styles/recipe/public/recipe/recipe-image/2019/12/rhubarb-custard-french-toast.jpg?itok=q5DbbAk_')
+file9 = URI.open('https://img.taste.com.au/MAdtOyRb/taste/2016/11/french-toast-with-baked-rhubarb-6670-1.jpeg')
 file10 = URI.open('https://www.deliciousmagazine.co.uk/wp-content/uploads/2018/09/491845-1-eng-GB_new-potato-salad-768x849.jpg')
 file11 = URI.open('https://www.bbcgoodfood.com/sites/default/files/styles/recipe/public/recipe/recipe-image/2016/04/elderflower-gooseberry-vodka.jpg?itok=oDMHhmyx')
 file12 = URI.open('https://www.thespruceeats.com/thmb/nRQr73C9_TUp-9flDfPmczhn1wI=/960x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Oven-RoastedPattyPanSquashWithShallotsandHerbs-5bf49735c9e77c0051ef2e5a.jpg')
-file13 = URI.open('https://www.bbcgoodfood.com/sites/default/files/styles/recipe/public/recipe_images/halloumi-with-tomatoes-pomegranate-molasses_0.jpg?itok=39hGHZCE')
-file14 = URI.open('https://www.bbcgoodfood.com/sites/default/files/styles/recipe/public/recipe_images/tomato-kachumber.jpg?itok=jnoFhWwj')
-file15 = URI.open('https://www.bbcgoodfood.com/sites/default/files/styles/recipe/public/recipe_images/spanishsalad.jpg?itok=V8cnM5xX')
+file13 = URI.open('https://purewows3.imgix.net/images/articles/2018_05/tomato-salad-grilled-halloumi-and-herbs-recipe.jpg?auto=format,compress&cs=strip')
+file14 = URI.open('https://www.archanaskitchen.com/images/archanaskitchen/1-Author/Jyothi_Rajesh/Kachumber_Salad__Cucumber_Salad.jpg')
+file15 = URI.open('https://www.simplyrealhealth.com/wp-content/uploads/2012/09/img_0930-e1404770670789.jpg')
+file16 = URI.open('https://images.immediate.co.uk/production/volatile/sites/2/2020/04/Sticky-soy-aubergines-e6b4132-scaled.jpg?webp=true&quality=45&resize=1240%2C826')
+file17 = URI.open('https://images.immediate.co.uk/production/volatile/sites/2/2019/06/OLI0619-Healthy_VeganKaleCaesar_32425-f8d8401.jpg?webp=true&quality=45&resize=1880%2C799')
+file18 = URI.open('https://images.immediate.co.uk/production/volatile/sites/2/2016/11/Sweet-soy-aubergine-noodles.jpg?webp=true&quality=45&crop=12px%2C1275px%2C2812px%2C1195px&resize=1880%2C799')
 
 #ingredient Seed
 
@@ -58,6 +61,7 @@ coppa = Ingredient.create(name: "coppa")
 coriander_leaves = Ingredient.create(name: "coriander leaves")
 coriander_seeds = Ingredient.create(name: "coriander seeds")
 cracked_wheat = Ingredient.create(name: "cracked wheat")
+croutons = Ingredient.create(name: "croutons")
 cumin_seeds = Ingredient.create(name: "cumin seeds")
 custard = Ingredient.create(name: "custard")
 dijon_mustard = Ingredient.create(name: "dijon mustard")
@@ -76,21 +80,28 @@ halloumi = Ingredient.create(name: "jalloumi")
 harissa_paste = Ingredient.create(name: "harrisa paste")
 hazelnuts = Ingredient.create(name: "hazelnuts")
 iberico_ham = Ingredient.create(name:"iberico ham")
+kale = Ingredient.create(name: "kale")
+kecap_manis = Ingredient.create(name: "kecap manis")
+lemon = Ingredient.create(name: "lemon")
 lemongrass = Ingredient.create(name: "lemongrass")
 lemon_juice = Ingredient.create(name: "lemon juice")
 lemon_peel = Ingredient.create(name: "lemon peel")
 lime_leaves = Ingredient.create(name: "makrut lime leave")
 limes = Ingredient.create(name: "limes")
 manchego = Ingredient.create(name:"manchego")
+maple_syrup = Ingredient.create(name: "maple syrup")
 micro_herbs = Ingredient.create(name: "micro herbs")
 milk = Ingredient.create(name: "milk")
 mint = Ingredient.create(name: "mint leaves")
 new_potatoes = Ingredient.create(name: "new potatoes", season: [4, 5, 6, 7])
 nigella_seeds = Ingredient.create(name: "nigella seeds")
+noodle_egg = Ingredient.create(name: "egg noodles")
 onion = Ingredient.create(name: "onion")
 oil = Ingredient.create(name: "olive oil")
 orange = Ingredient.create(name: "orange", season: [1, 2, 3])
+paprika = Ingredient.create(name: "paprika")
 parsley = Ingredient.create(name: "parsley")
+peanuts = Ingredient.create(name: "peanuts")
 pepper = Ingredient.create(name: "black pepper")
 pesto = Ingredient.create(name: "pesto")
 pistachios = Ingredient.create(name: "pistachios")
@@ -100,10 +111,13 @@ rhubarb = Ingredient.create(name:"rhubarb", season: [1, 2, 3, 4, 5, 6, 7])
 red_chilli = Ingredient.create(name: "red chillies", season: [1, 2, 3, 12])
 red_onion = Ingredient.create(name:"red onion")
 red_wine_vinegar = Ingredient.create(name: "red wine vinager")
+rice = Ingredient.create(name: "rice")
 salt = Ingredient.create(name: "sea salt")
+sambal = Ingredient.create(name: "sambal oelek")
 sesame = Ingredient.create(name: "sesame seeds")
 shallots = Ingredient.create(name: "shallots")
 sherry_vinegar = Ingredient.create(name:"sherry vinegar")
+soy_sauce = Ingredient.create(name: "soy sauce")
 spring_onions = Ingredient.create(name: "spring onions")
 sprouted_mung_beans = Ingredient.create(name: "sprouted mung beans")
 sugar = Ingredient.create(name: "caster sugar")
@@ -114,13 +128,16 @@ thai_basil = Ingredient.create(name: "thai basil")
 thyme = Ingredient.create(name: "thyme")
 tomato = Ingredient.create(name: "tomato", season: [6, 7, 8, 9])
 vanilla_pod = Ingredient.create(name: "vanilla pod")
+v_mayo = Ingredient.create(name: "vegan mayonnaise")
 vegetable_stock = Ingredient.create(name: "vegetable stock")
+vinger_rice = Ingredient.create(name: "rice vinegar")
 vine_tomatoes = Ingredient.create(name: "vine tomatoes", season: [6, 7, 8, 9, 10])
 vodka = Ingredient.create(name:"vodka")
 white_bread = Ingredient.create(name: "white bread")
 white_wine_vinegar = Ingredient.create(name: "white wine vinagar")
 wholegrain_mustard = Ingredient.create(name: "wholegrain mustard")
 wine = Ingredient.create(name: "white wine")
+yeast_flakes = Ingredient.create(name: "yeast flakes")
 za_atar = Ingredient.create(name:"za'atar")
 
 #market seed
@@ -446,6 +463,75 @@ Quantity.create(measurement: 50, ingredient_id: almond.id, recipe_id: tomato_rec
 Quantity.create(measurement: 6, ingredient_id: iberico_ham.id, recipe_id: tomato_recipe4.id, unit: "slices")
 Quantity.create(measurement: 75, ingredient_id: manchego.id, recipe_id: tomato_recipe4.id, unit: "g")
 
+aubergine_recipe3 = Recipe.new(name: "Sticky soy aubergines on gingery peanut fried rice", cooking_time: 45, author: "Daniel Turkington", servings: 4, description: "Packed with aromatic rice and sweet sticky aubergines, this vegan dish is a great alternative to a classic stir-fry", instructions: "Heat the oven to 200C/fan 180C/gas 6. Cut a diamond pattern into the cut sides of the aubergines, being careful not to cut all the way through. Brush the sesame oil all over the cut sides of the aubergines. Heat a large non-stick frying pan over a medium- high heat and cook the aubergine halves for 10 minutes, cut-side down, until they are charred and soft. Tip into a baking dish cut-side up, whisk together 3 tbsp of kecap manis, the sambal oelek, sugar, lime juice and 3 tbsp water. Pour over the aubergines then put in the oven and roast, turning halfway, for 30 minutes or until the sauce has reduced and the aubergines are very tender.
+  \n
+  For the rice, heat a little more sesame oil in the same pan over a high heat and fry the shallots, carrot, ginger, garlic, three-quarters of the chilli and peanuts for 5 minutes until charring at the edges, then add the cold rice and cook for 10-15 minutes or until the rice is really crispy in places.
+  \n
+  Pour in 2 tbsp of kecap manis and mix well, then tip onto a serving platter. Put the aubergine halves on top, drizzling over any sauce. Scatter over the remaining chilli and peanuts, the spring onions and tear over the coriander to serve.")
+
+aubergine_recipe3.photo.attach(io: file16, filename: 'aubergine_recipe3_image.jpg', content_type: 'image/jpg')
+aubergine_recipe3.save
+
+Quantity.create(measurement: 2, ingredient_id: aubergines.id, recipe_id: aubergine_recipe3.id, unit: "large, halved")
+Quantity.create(measurement: 2, ingredient_id: oil.id, recipe_id: aubergine_recipe3.id, unit: "tsp")
+Quantity.create(measurement: 5, ingredient_id: kecap_manis.id, recipe_id: aubergine_recipe3.id, unit: "tbsp")
+Quantity.create(measurement: 1, ingredient_id: sambal.id, recipe_id: aubergine_recipe3.id, unit: "tbsp")
+Quantity.create(measurement: 1, ingredient_id: caster_sugar.id, recipe_id: aubergine_recipe3.id, unit: "tbsp")
+Quantity.create(measurement: 1, ingredient_id: limes.id, recipe_id: aubergine_recipe3.id, unit: "juiced and wedges")
+Quantity.create(measurement: 2, ingredient_id: shallots.id, recipe_id: aubergine_recipe3.id, unit: "thinly sliced")
+Quantity.create(measurement: 1, ingredient_id: carrots.id, recipe_id: aubergine_recipe3.id, unit: "cut into matchsticks")
+Quantity.create(measurement: 2, ingredient_id: ginger.id, recipe_id: aubergine_recipe3.id, unit: "thumb sized pieces")
+Quantity.create(measurement: 4, ingredient_id: garlic.id, recipe_id: aubergine_recipe3.id, unit: "cloves")
+Quantity.create(measurement: 1, ingredient_id: chilli.id, recipe_id: aubergine_recipe3.id, unit: "deseeded, thinly sliced")
+Quantity.create(measurement: 750, ingredient_id: rice.id, recipe_id: aubergine_recipe3.id, unit: "g")
+Quantity.create(measurement: 2, ingredient_id: spring_onions.id, recipe_id: aubergine_recipe3.id, unit: "2")
+Quantity.create(measurement: 1, ingredient_id: coriander_leaves.id, recipe_id: aubergine_recipe3.id, unit: "small bunch")
+Quantity.create(measurement: 100, ingredient_id: peanuts.id, recipe_id: aubergine_recipe3.id, unit: "roughly chopped")
+
+aubergine_recipe4 = Recipe.new(cooking_time: 30, servings: 2, name: "Vegan kale caesar salad with aubergine ‘bacon’", author: "Alex Bottenberg", description: "Swap bacon for crunchy, paprika-smoked aubergine slivers in our vegan twist on the classic caesar salad", instructions: "Heat the oven to 190C/fan 170C/gas 5 and line two baking sheets with baking paper. Use a mandoline or sharp knife to very thinly slice the aubergine in long lengthways slices. Mix the maple syrup, paprika and garlic granules. Put the slices onto the baking sheets and spray lightly with oil. Cook for 10-15 minutes or until beginning to crisp, then brush with the maple syrup mixture and cook for another 5 minutes until really crisp.
+  \n
+  Tip the kale into a large bowl and add the lemon juice and some seasoning. Massage really well with clean hands then leave for 10 minutes. Mix the mayo, mustard, yeast flakes and soy sauce together with 1 tbsp of water, then tip into the kale and mix well. Divide between two plates and break the aubergine ‘bacon’ into shards and sprinkle on top with the croutons.")
+
+aubergine_recipe4.photo.attach(io: file17, filename: 'aubergine_recipe4_image.jpg', content_type: 'image/jpg')
+aubergine_recipe4.save
+
+Quantity.create(measurement: 100, ingredient_id: kale.id, recipe_id: aubergine_recipe4.id, unit: "g")
+Quantity.create(measurement: 1, ingredient_id: lemon.id, recipe_id: aubergine_recipe4.id, unit: "juiced")
+Quantity.create(measurement: 2, ingredient_id: v_mayo.id, recipe_id: aubergine_recipe4.id, unit: "tbsp")
+Quantity.create(measurement: 2, ingredient_id: dijon_mustard.id, recipe_id: aubergine_recipe4.id, unit: "tsp")
+Quantity.create(measurement: 1, ingredient_id: yeast_flakes.id, recipe_id: aubergine_recipe4.id, unit: "tbsp")
+Quantity.create(measurement: 1, ingredient_id: soy_sauce.id, recipe_id: aubergine_recipe4.id, unit: "tbsp")
+Quantity.create(measurement: 20, ingredient_id: croutons.id, recipe_id: aubergine_recipe4.id, unit: "g")
+Quantity.create(measurement: 1, ingredient_id: aubergines.id, recipe_id: aubergine_recipe4.id, unit: "large")
+Quantity.create(measurement: 2, ingredient_id: maple_syrup.id, recipe_id: aubergine_recipe4.id, unit: "tbsp")
+Quantity.create(measurement: 2, ingredient_id: paprika.id, recipe_id: aubergine_recipe4.id, unit: "tsp")
+Quantity.create(measurement: 1, ingredient_id: garlic.id, recipe_id: aubergine_recipe4.id, unit: "tsp")
+Quantity.create(measurement: 1, ingredient_id: oil.id, recipe_id: aubergine_recipe4.id, unit: "tsp")
+
+aubergine_recipe5 = Recipe.new(cooking_time: 40, servings: 2, name: "Sweet soy aubergine noodles", author: "Naomi Kelly", description: "Ditch the take away menu and grab a pan, these low calorie vegetarian noodles are a quick and easy mid-week meal idea guaranteed to hit the spot", instructions: "Mix all the sauce ingredients together and leave to sit while you cook the aubergine.
+  \n
+  Cut the aubergines into thick batons. Put in a bowl and toss with 1 tbsp oil and a good sprinkling of salt.
+  \n
+  Heat a large non-stick frying pan. Add the aubergine and dry fry on a medium/low heat until golden and completely tender and cooked through. Don’t be tempted to add any extra oil as this will make the finished dish too greasy.
+  \n
+  Cook the noodles following the packet instructions. Drain and toss with a few drops of sesame oil then divide between two shallow bowls. Add the sweet soy mix to the aubergine pan and let it bubble up for a couple of minutes.
+  \n
+  Spoon the aubergine and sauce over the noodles then finish with a sprinkle of spring onion, coriander and extra chilli if you like.")
+
+aubergine_recipe5.photo.attach(io: file18, filename: 'aubergine_recipe5_image.jpg', content_type: 'image/jpg')
+aubergine_recipe5.save
+
+Quantity.create(measurement: 2, ingredient_id: aubergines.id, recipe_id: aubergine_recipe5.id, unit: "medium")
+Quantity.create(measurement: 1, ingredient_id: oil.id, recipe_id: aubergine_recipe5.id, unit: "tbsp")
+Quantity.create(measurement: 100, ingredient_id: noodle_egg.id, recipe_id: aubergine_recipe5.id, unit: "g")
+Quantity.create(measurement: 2, ingredient_id: spring_onions.id, recipe_id: aubergine_recipe5.id, unit: "shredded")
+Quantity.create(measurement: 1, ingredient_id: coriander_leaves.id, recipe_id: aubergine_recipe5.id, unit: "handful, chopped")
+Quantity.create(measurement: 3, ingredient_id: soy_sauce.id, recipe_id: aubergine_recipe5.id, unit: "tbsp")
+Quantity.create(measurement: 1, ingredient_id: sugar.id, recipe_id: aubergine_recipe5.id, unit: "tbsp")
+Quantity.create(measurement: 1, ingredient_id: chilli.id, recipe_id: aubergine_recipe5.id, unit: "finely chopped")
+Quantity.create(measurement: 1, ingredient_id: garlic.id, recipe_id: aubergine_recipe5.id, unit: "clove")
+Quantity.create(measurement: 1, ingredient_id: ginger.id, recipe_id: aubergine_recipe5.id, unit: "gwalnut sized piece, finely grated")
+Quantity.create(measurement: 2, ingredient_id: vinger_rice.id, recipe_id: aubergine_recipe5.id, unit: "tbsp")
 
 
 # users seed
