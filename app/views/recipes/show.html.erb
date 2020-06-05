@@ -112,7 +112,7 @@
             <p>Be the first to leave a <strong><%= link_to "review", new_recipe_review_path(@recipe) %></strong> for <%= @recipe.name %></p>
           <% else %>
             <% @recipe.reviews.reverse_each do |review| %>
-              <div class="review-individual">
+              <div class="review-individual" id="review-<%= review.id %>">
                 <ul class="review-list">
                   <li class="rating">
                     <% review.rating.to_i.times do %>
@@ -124,13 +124,13 @@
                   </li>
                   <li class="review-name"><%= review.user.username %></li>
                   <li class="review-content"><%= review.content %></li>
+                  <li class="review-links">
+                    <% if current_user == review.user %>
+                      <%= link_to "Update", edit_recipe_review_path(@recipe, review), class: "btn btn-form update-delete" %>
+                      <%= button_to "Delete", recipe_review_path(@recipe, review), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-form update-delete" %>
+                    <% end %>
+                  </li>
                 </ul>
-                <% if current_user == review.user %>
-                  <div class="review-links">
-                    <%= link_to "Update", edit_recipe_review_path(@recipe, review), class: "btn btn-form update-delete" %>
-                    <%= button_to "Delete", recipe_review_path(@recipe, review), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-form update-delete" %>
-                  </div>
-                <% end %>
               </div>
             <% end %>
 
