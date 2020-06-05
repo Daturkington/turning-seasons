@@ -53,12 +53,11 @@
 }
 
 .review-links {
-  position: absolute;
-  bottom: 5px;
-  right: 5px;
   padding:5px;
   display: flex;
   flex-direction: row;
+  justify-content: flex-end;
+  margin-top: -8px;
 }
 
 .update-delete {
