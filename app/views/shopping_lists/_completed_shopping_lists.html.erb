@@ -3,7 +3,7 @@
     <% if current_user.completed_shopping_lists.present? %>
       <% current_user.completed_shopping_lists.each_with_index do |list, index| %>
         <div class="carousel-item <%= 'active' if index == 0 %>">
-          <div class="d-flex justify-content-around">
+          <div class="d-flex justify-content-center">
             <div class="completed-shopping-card-item">
               <h3><%= list.updated_at.strftime("%d") %> <%= list.updated_at.strftime("%b") %> <%= list.updated_at.strftime("%y") %></h3>
               <ul>
