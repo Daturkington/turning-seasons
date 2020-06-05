@@ -38,3 +38,14 @@
   transition: 0.2s;
   }
 }
+
+.about-page-link a {
+  font-size: 24px;
+  opacity: 0.2;
+  color: black;
+}
+
+.about-page-link a:hover {
+  opacity: 1;
+  color: $highlight;
+  }
