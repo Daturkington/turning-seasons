@@ -1,6 +1,15 @@
 @import "components/favourites";
 @import "components/completed_shopping_lists";
 
+.user-tabs.active {
+  background-color: $background !important;
+  border-color: #d8d0c3 #d8d0c3 $background !important;
+  color: $highlight !important;
+}
+
+.user-nav-tabs {
+  border-bottom: 1px solid #d8d0c3 !important;
+}
 
 .current-recipes-container {
   h2 {

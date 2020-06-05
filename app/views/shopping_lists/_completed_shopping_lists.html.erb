@@ -14,11 +14,14 @@
             </div>
             <div class="recipe-cards-carousel">
               <% list.recipes.each do |rec| %>
-                <div class="recipe-card d-flex">
+                <div class="card-product-shopping">
                   <%= cl_image_tag rec.photo.key %>
                   <div class="card-product-info">
                     <p class="card-product-name"><%= rec.name %></p>
                     <p class="card-product-author"><%= rec.author %></p>
+                  </div>
+                  <div>
+                    <%= link_to 'View', recipe_path(rec), class: "btn btn-ghost" %>
                   </div>
                 </div>
               <% end %>
