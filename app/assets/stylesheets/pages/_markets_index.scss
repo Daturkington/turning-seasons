@@ -1,6 +1,6 @@
 .market-content-box {
 text-align: center;
-padding: 90px;
+padding: 60px 90px;
 }
 
 .map-container {
@@ -9,4 +9,39 @@ padding: 90px;
 
 #map {
   margin-top: 40px;
+}
+
+.recipe_link_map {
+  color:$main-body;
+  font-family: $headers-font;
+  font-size: 36px;
+  font-weight: 400;
+  transition: 0.3s;
+  letter-spacing: 4px;
+  &:hover {
+    color: $highlight;
+  }
+}
+
+.profile_link_map {
+  color:$main-body;
+  font-family: $headers-font;
+  font-size: 36px;
+  font-weight: 400;
+  transition: 0.3s;
+  letter-spacing: 4px;
+  &:hover {
+    color: $highlight;
+  }
+}
+
+.log-link-map {
+  font-family: $body-font;
+  font-size: 18px;
+  text-decoration: none;
+  color: $main-body;
+  padding: 8px;
+  &:hover {
+    color: $highlight;
+  }
 }
